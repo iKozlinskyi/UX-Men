@@ -22,15 +22,26 @@ module.exports = merge(common, {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist")
     },
-    plugins: [new HtmlWebpackPlugin({
-        template: "src/static/index.html"
-    })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: path.resolve(__dirname, "src/static/pages/landing/index.html")
+        }),
+        new HtmlWebpackPlugin({
+            filename: "about.html",
+            template: path.resolve(__dirname, "src/static/pages/about/about.html")
+        })
+    ],
     devtool: 'cheap-module-eval-source-map',
     devServer: {
         compress: true,
         hot: true,
         port: 3000,
         publicPath: "/",
-        historyApiFallback: true
+        historyApiFallback: {
+            rewrites: [
+                { from: /\/about/, to: '/about.html'}
+            ]
+        }
     }
 });

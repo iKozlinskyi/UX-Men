@@ -8,4 +8,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist/about.html'));
+});
+
+
 app.listen(port, () => console.log('app is listening on 5050'));
