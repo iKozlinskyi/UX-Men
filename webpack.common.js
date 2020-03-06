@@ -1,6 +1,9 @@
 module.exports = {
     entry: {
-        main: "./src/index.js"
+        main: [
+            "./src/static/main.js",
+            "./src/static/main.scss"
+        ],
     },
     module: {
         rules: [

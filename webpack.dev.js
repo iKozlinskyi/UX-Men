@@ -23,7 +23,7 @@ module.exports = merge(common, {
         path: path.resolve(__dirname, "dist")
     },
     plugins: [new HtmlWebpackPlugin({
-        template: "src/static/index.html"
+        template: path.resolve(__dirname, "src/static/pages/landing/index.html"),
     })],
     devtool: 'cheap-module-eval-source-map',
     devServer: {
