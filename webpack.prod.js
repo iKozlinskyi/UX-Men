@@ -60,6 +60,12 @@ module.exports = merge(common, {
                 collapseWhitespace: true,
                 removeComments: true,
             },
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Heroes Page',
+            heroes: ['Coffee Man', 'Black Window', 'Server Man', 'Maven'],
+            filename: 'heroes.html',
+            template: '!!ejs-loader!./src/static/pages/heroes/heroes.ejs'
         })
     ]
 });
