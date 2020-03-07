@@ -1,5 +1,6 @@
 body,
 h2,
+h3,
 .hero-list {
   margin: 0;
   padding: 0;
@@ -68,7 +69,8 @@ h2,
 
 .about {
   height: 100vh;
-  background: url('./images/background/bg-about.jpg') no-repeat center top / cover;
+  background: url("./images/background/bg-about.jpg") no-repeat center top /
+    cover;
   color: $text-color--light;
   text-align: center;
   display: flex;
@@ -94,5 +96,81 @@ h2,
 
 .profiles {
   padding: 10% 0;
-  background: linear-gradient(rgb(0, 1, 34), #000000);
+  background: linear-gradient(#ffffff, #000000, #000000);
+}
+
+.details {
+  background-color: #ffffff;
+  padding: 8% 0;
+
+  &__title {
+    font-size: 3em;
+    font-family: $ff-title;
+    text-align: center;
+  }
+
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+    padding-top: 10%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--center {
+      justify-content: center;
+    }
+  }
+}
+
+.detail {
+  font-family: $ff-text;
+  position: relative;
+  max-width: 60%;
+
+  &__background {
+    background: url("./images/background/bg-about-details.jpg") no-repeat center top /
+    cover;
+    position: absolute;
+    z-index: 0;
+
+    &--top {
+      box-shadow: 5px -5px 0 $accent-color--about;
+      left: -15%;
+      height: 100%;
+      width: 60%;
+      top: -25%;
+    }
+
+    &--bottom-right {
+      box-shadow: -5px 5px 0 $accent-color--about;
+      right: -10%;
+      bottom: -40%;
+      height: 50%;
+      width: 60%;
+    }
+  }
+
+  &__info {
+    background-color: #191919;
+    color: $text-color--light;
+    padding: 1em 2em;
+    height: 100%;
+    position: relative;
+  }
+
+  &__title {
+    color: $accent-color--about;
+    font-family: $ff-title;
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
 }
