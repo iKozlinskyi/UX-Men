@@ -14,7 +14,7 @@
     align-items: flex-end;
   }
 
-  &__storytext {
+  &__story-text {
     background-color: rgba(0, 0, 0, .5);
     padding: 20px;
     margin: 0 20px;
@@ -25,12 +25,12 @@
     height: auto;
   }
 
-  &__storytext--storytext1 {
+  &__story-text--story-text1 {
     margin-top: 70px;
     margin-right: 80px;
   }
 
-  &__storytext--storytext2 {
+  &__story-text--story-text2 {
     margin-left: 80px;
   }
 
@@ -41,15 +41,6 @@
 
 }
 
-
-.block__wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.storytext {
-  color: #ffffff;
-}
 
 
 
