@@ -1,3 +1,7 @@
+//----------FONT-IMPORTS------------
+
+@import url('https://fonts.googleapis.com/css?family=Oxanium:300,400,700,800&display=swap');
+
 //----------BREAKPOINTS-------------
 
 $bp-xsmall: 20em; // 320px
@@ -9,6 +13,8 @@ $bp-xxlarge: 160em; // 2560px
 
 
 //----------FONT-FAMILY-------------
+
+$ff-title:'Oxanium', cursive;
 
 $ff-primary: "Poiret One", cursive;
 $ff-secondary: "Comfortaa", cursive;
@@ -31,6 +37,8 @@ $secondary-color: #adafac;
 $secondary-color--lighter: #dddfdb;
 $tertiary-color: #956050;
 $tertiary-color--lighter: #d48a73;
+
+$accent-color--about: #6cd1eb;
 
 
 $danger-color: #f1a3a3;
