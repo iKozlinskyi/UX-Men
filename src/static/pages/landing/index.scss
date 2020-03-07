@@ -60,3 +60,41 @@
   margin-left: 80px;
 }
 
+
+// ------------------ DEADLINE SECTION ------------------
+.deadline {
+  background: url("./images/landing-page/deadline-bg.png") center center no-repeat;
+  background-size: cover;
+  padding-top: 15px;
+  height: 600px;
+  position: relative;
+  &__title {
+    font-size: 56px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    word-spacing: 15px;
+    letter-spacing: 3px;
+  }
+}
+
+.timer {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  &__item {
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+  }
+  &__date {
+    font-size: 60px;
+    display: block;
+    width: 160px;
+    text-align: center;
+  }
+}
