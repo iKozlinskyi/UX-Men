@@ -1,0 +1,62 @@
+// ------------------ TEAM SECTION ------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Monospace, Helvetica, sans-serif;
+}
+
+.team {
+  background: url("./images/backgrounds/team-section.png") center center;
+  background-size: cover;
+}
+
+.team__container {
+  padding: 100px 0;
+}
+
+
+.block__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.team__text-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+.team__storytext {
+  background-color: rgba(0, 0, 0, .5);
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 7px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  width: 350px;
+  height: auto;
+
+}
+
+.team__button-container {
+  margin-top: 230px;
+  text-align: center;
+}
+
+
+.storytext {
+  color: #ffffff;
+}
+
+.team__storytext--storytext1 {
+  margin-top: 70px;
+  margin-right: 80px;
+}
+
+.team__storytext--storytext2 {
+  margin-left: 80px;
+}
+
