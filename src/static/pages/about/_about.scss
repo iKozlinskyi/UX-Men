@@ -128,7 +128,11 @@ h3,
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 5%;
-    padding-top: 10%;
+    padding-top: 15%;
+
+    &:first-of-type {
+      padding-top: 10%;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -233,3 +237,96 @@ h3,
     height: auto;
   }
 }
+
+
+//--------TABLET----------
+@media (max-width: $bp-medium) {
+
+  .detail {
+
+    &__background {
+      &--top {
+        top: -20%;
+        left: -8%;
+      }
+  
+      &--bottom-right {
+        bottom: -20%;
+      }
+    }
+  }
+
+}
+
+//--------MOBILE----------
+
+@media (max-width: $bp-small) {
+
+  .about {
+    &__title {
+      font-size: 4em;
+    }
+
+    &__description {
+      font-size: 1em;
+    }
+  }
+
+  .details {
+
+    &__section {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+  }
+
+  .detail {
+    margin-bottom: 25%;
+    max-width: 70%;
+
+    &__background {
+      &--top {
+        left: -15%;
+        height: 60%;
+        width: 60%;
+        top: -5%;
+      }
+  
+      &--bottom-right {
+        right: -10%;
+        bottom: -15%;
+        height: 50%;
+        width: 80%;
+      }
+    }
+  }
+
+  .hero-list {
+    flex-flow: column wrap;
+
+    &__item {
+      width: 100%;
+      border: none
+    }
+  }
+
+  .hero {
+    &__image {
+      filter: none;
+    }
+  }
+
+  .gitlink {
+
+    &__title {
+      font-size: 1.8em;
+      margin-bottom: 8%;
+    }
+
+    &__image {
+      max-width: 100%;
+    }
+  }
+}
+
+
