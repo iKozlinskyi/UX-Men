@@ -1,4 +1,7 @@
-@import './shared/globals/_variables';
+@import './shared/globals/variables';
+@import './shared/globals/global-settings';
 @import './shared/globals/base';
+@import "./shared/components/components";
+
 @import './pages/landing/index';
 @import './pages/about/about';

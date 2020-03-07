@@ -51,3 +51,37 @@ $success-color: #cef1a3;
 
 $text-color--dark: rgb(82, 82, 82);
 $text-color--light: rgb(255, 255, 255);
+
+
+
+//-------------MIXINS------------------
+
+@mixin animate($name, $duration, $timing, $iteration, $direction) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-iteration-count: $iteration;
+  animation-direction: $direction;
+}
+
+@mixin flex($justify, $align, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+//-------------ANIMATIONS------------------
+
+@keyframes pulsation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.04);
+  }
+}
+
+
+
