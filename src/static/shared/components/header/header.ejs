@@ -1,0 +1,8 @@
+<header>
+    <h1>This is a header <%= title %> </h1>
+    <ul>
+        <% for (let link of links) { %>
+            <li><a href=<%= link.href %>><%= link.name %></a></li>
+        <% } %>
+    </ul>
+</header>
