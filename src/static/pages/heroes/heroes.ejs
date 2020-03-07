@@ -5,13 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>wdwda</title>
+    <title>The Heroes</title>
 </head>
 <body>
-<ul>
-    <% for(let hero of heroes) { %>
-        <li><%= hero %></li>
-    <% } %>
-</ul>
+
+<%- include('../../shared/components/header/header', {
+    title: 'Heroes',
+    links: [{name: 'landing', href: '/'}, {name: 'about', href: '/about'}]
+}) %>
+
+<main>
+    <p>Page body</p>
+</main>
+
+<%- include('../../shared/components/footer/footer') %>
 </body>
 </html>

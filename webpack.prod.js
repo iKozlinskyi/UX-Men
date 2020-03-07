@@ -63,9 +63,13 @@ module.exports = merge(common, {
         }),
         new HtmlWebpackPlugin({
             title: 'Heroes Page',
-            heroes: ['Coffee Man', 'Black Window', 'Server Man', 'Maven'],
             filename: 'heroes.html',
-            template: '!!ejs-loader!./src/static/pages/heroes/heroes.ejs'
+            template: './src/static/pages/heroes/heroes.ejs',
+            minify: {
+                removeAttributeQuotes: true,
+                collapseWhitespace: true,
+                removeComments: true,
+            }
         })
     ]
 });
