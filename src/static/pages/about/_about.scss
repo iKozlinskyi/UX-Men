@@ -30,7 +30,7 @@ h3,
 
     & .hero__image {
       filter: none;
-      transition: 0.5s ease;
+      transition: 0.3s ease;
     }
   }
 
@@ -47,23 +47,23 @@ h3,
   }
 
   &--maven {
-    background: linear-gradient(rgb(34, 0, 49), #000000);
+    background: linear-gradient(rgb(84, 0, 87), #000000);
   }
 
   &--storm {
-    background: linear-gradient(rgb(44, 44, 44), #000000);
+    background: linear-gradient(rgb(75, 75, 75), #000000);
   }
 
   &--widow {
-    background: linear-gradient(rgb(0, 34, 7), #000000);
+    background: linear-gradient(rgb(0, 82, 41), rgb(0, 53, 26), #000000);
   }
 
   &--serverman {
-    background: linear-gradient(rgb(34, 0, 0), #000000);
+    background: linear-gradient(rgb(80, 0, 0), #000000);
   }
 
   &--coffeman {
-    background: linear-gradient(rgb(0, 22, 41), #000000);
+    background: linear-gradient(rgb(0, 42, 78), #000000);
   }
 }
 
@@ -87,6 +87,13 @@ h3,
     font-family: $ff-title;
   }
 
+  &__description {
+    font-family: $ff-text;
+    font-size: 1.3em;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
   &__text {
     &--accent {
       color: $accent-color--about;
@@ -96,7 +103,14 @@ h3,
 
 .profiles {
   padding: 10% 0;
-  background: linear-gradient(#ffffff, #000000, #000000);
+  background: linear-gradient(#ffffff,#ffffff, #000000, #000000);
+
+  &__title {
+    font-size: 3em;
+    font-family: $ff-title;
+    text-align: center;
+    margin-bottom: 5%;
+  }
 }
 
 .details {
@@ -172,5 +186,50 @@ h3,
   &__list {
     margin: 0;
     padding: 0;
+  }
+}
+
+.teamwork {
+  padding: 8% 0;
+
+  &__title {
+    font-size: 3em;
+    font-family: $ff-title;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  &__flex-container {
+    display: flex;
+  }
+
+  &__centered-block {
+    max-width: 50%;
+    margin: auto;
+  }
+}
+
+.gitlink {
+
+  &__title {
+    font-size: 2em;
+    font-family: $ff-text;
+    font-weight: $bold;
+    text-align: center;
+    text-shadow: 3px 3px 0 $accent-color--about;
+    margin-bottom: 5%;
+  }
+
+  &__container {
+    max-width: 50%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
   }
 }
