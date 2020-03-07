@@ -1,3 +1,32 @@
+// ------------------ POSTER SECTION ------------------
+.poster {
+  //background: url("./images/backgrounds/landing-page/poster-section.png") center center;
+  //background-size: cover;
+
+  &__wrapper {
+    padding: 2em 0;
+    display: flex;
+    height: 100vh;
+    @include flex(flex-end, center, column);
+  }
+
+  &__movie-title {
+    font-size: 12em;
+    @include clipped-text("./images/backgrounds/landing-page/background-fonts/metal.png", 4px);
+    @include animate(large-scale-down, 1s, 0, linear, 1, normal, forwards);
+  }
+
+  &__movie-subtitle {
+    opacity: 0;
+    @include animate(fade-in, 2s, 1s, linear, 1, normal, forwards);
+  }
+
+
+}
+
+
+
+
 // ------------------ TEAM SECTION ------------------
 
 .team {
@@ -34,7 +63,7 @@
     margin: 0 35px;
     font-size: 26px;
     box-shadow: 2px 2px 8px #808080;
-    @include animate(pulsation, 0.8s, linear, infinite, alternate);
+    @include animate(pulsation, 0.8s, 0, linear, infinite, alternate, none);
 
     &:hover {
         color: #ffffff;

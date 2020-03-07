@@ -56,12 +56,14 @@ $text-color--light: rgb(255, 255, 255);
 
 //-------------MIXINS------------------
 
-@mixin animate($name, $duration, $timing, $iteration, $direction) {
+@mixin animate($name, $duration, $delay, $timing, $iteration, $direction, $mode: none) {
   animation-name: $name;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-timing-function: $timing;
   animation-iteration-count: $iteration;
   animation-direction: $direction;
+  animation-fill-mode: $mode;
 }
 
 @mixin flex($justify, $align, $direction: row) {
@@ -69,6 +71,14 @@ $text-color--light: rgb(255, 255, 255);
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin clipped-text($url, $text-stroke: 0) {
+  background-image: url($url);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: $text-stroke;
 }
 
 
@@ -80,6 +90,24 @@ $text-color--light: rgb(255, 255, 255);
   }
   100% {
     transform: scale(1.04);
+  }
+}
+
+@keyframes large-scale-down {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 
