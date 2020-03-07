@@ -55,6 +55,7 @@ module.exports = merge(common, {
         new HtmlWebpackPlugin({
             filename: "about.html",
             template: path.resolve(__dirname, "src/static/pages/about/about.html"),
+            chunks: ['landing', 'styles'],
             minify: {
                 removeAttributeQuotes: true,
                 collapseWhitespace: true,
@@ -65,6 +66,7 @@ module.exports = merge(common, {
             title: 'Heroes Page',
             filename: 'heroes.html',
             template: './src/static/pages/heroes/heroes.ejs',
+            chunks: ['about', 'styles'],
             minify: {
                 removeAttributeQuotes: true,
                 collapseWhitespace: true,

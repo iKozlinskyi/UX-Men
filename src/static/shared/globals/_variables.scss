@@ -1,6 +1,7 @@
 //----------FONT-IMPORTS------------
 
-@import url('https://fonts.googleapis.com/css?family=Oxanium:300,400,700,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Oxanium:300,400,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900&display=swap");
 
 //----------BREAKPOINTS-------------
 
@@ -11,12 +12,12 @@ $bp-large: 85.375em; // 1366px
 $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
-
 //----------FONT-FAMILY-------------
 
-$ff-title:'Oxanium', cursive;
+$ff-title: "Oxanium", cursive;
+$ff-text: "Montserrat", sans-serif;
 
-$ff-primary: "Poiret One", cursive;
+$ff-primary: "Montserrat", sans-serif;
 $ff-secondary: "Comfortaa", cursive;
 $ff-tertiary: "Roboto Condensed", sans-serif;
 
@@ -30,6 +31,10 @@ $semi-bold: 600;
 $bold: 700;
 $extra-bold: 800;
 
+//-------------BASE FONT-SIZE------------------
+
+$base-font-size: 16px;
+
 //-------------COLORS------------------
 $primary-color: #5e6e4a;
 $primary-color--lighter: #a0bb7f;
@@ -39,7 +44,6 @@ $tertiary-color: #956050;
 $tertiary-color--lighter: #d48a73;
 
 $accent-color--about: #6cd1eb;
-
 
 $danger-color: #f1a3a3;
 $warning-color: #f1c0a3;
@@ -78,5 +82,6 @@ $text-color--light: rgb(255, 255, 255);
     transform: scale(1.04);
   }
 }
+
 
 

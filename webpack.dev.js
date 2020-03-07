@@ -25,11 +25,13 @@ module.exports = merge(common, {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: path.resolve(__dirname, "src/static/pages/landing/index.html")
+            template: path.resolve(__dirname, "src/static/pages/landing/index.html"),
+            chunks: ['landing', 'styles']
         }),
         new HtmlWebpackPlugin({
             filename: "about.html",
-            template: path.resolve(__dirname, "src/static/pages/about/about.html")
+            template: path.resolve(__dirname, "src/static/pages/about/about.html"),
+            chunks: ['about', 'styles']
         }),
         new HtmlWebpackPlugin({
             title: 'Heroes Page',
