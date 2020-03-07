@@ -1,7 +1,6 @@
 /*Timer*/
 
 export let timer = setInterval(function () {
-
     const second = 1000;
     const minute = second * 60;
     const hour = minute * 60;
@@ -20,8 +19,8 @@ export let timer = setInterval(function () {
 
     if (distance < 0) {
         clearInterval(timer);
-        const promoWrapper = document.getElementsByClassName('deadline')[0];
-        document.body.removeChild(promoWrapper);
+        const deadlineWrapper = document.getElementsByClassName('deadline')[0];
+        document.body.removeChild(deadlineWrapper);
     }
 }, 1000);
 
@@ -29,6 +28,7 @@ export let timer = setInterval(function () {
 
 
 /*Print text*/
+
 let messageCount = 0;
 
 const deadlineTitleMessage = "Will they make it in time?";
@@ -44,11 +44,9 @@ export function printText(message, messageWrapper, timer) {
     }
 }
 
-
-
 window.addEventListener('scroll', function () {
     let messageTop = deadlineTitle.getBoundingClientRect().top;
     if (messageTop >= 240 && messageTop <= 260) {
-        timerDeadlineTitle = setInterval("printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle)", 150);
+        timerDeadlineTitle = setInterval(() => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle), 150);
     }
 });
