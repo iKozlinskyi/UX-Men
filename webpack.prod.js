@@ -60,6 +60,16 @@ module.exports = merge(common, {
                 collapseWhitespace: true,
                 removeComments: true,
             },
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Heroes Page',
+            filename: 'heroes.html',
+            template: './src/static/pages/heroes/heroes.ejs',
+            minify: {
+                removeAttributeQuotes: true,
+                collapseWhitespace: true,
+                removeComments: true,
+            }
         })
     ]
 });

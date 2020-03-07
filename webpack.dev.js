@@ -30,6 +30,11 @@ module.exports = merge(common, {
         new HtmlWebpackPlugin({
             filename: "about.html",
             template: path.resolve(__dirname, "src/static/pages/about/about.html")
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Heroes Page',
+            filename: 'heroes.html',
+            template: './src/static/pages/heroes/heroes.ejs'
         })
     ],
     devtool: 'cheap-module-eval-source-map',
@@ -40,7 +45,8 @@ module.exports = merge(common, {
         publicPath: "/",
         historyApiFallback: {
             rewrites: [
-                { from: /\/about/, to: '/about.html'}
+                { from: /\/about/, to: '/about.html'},
+                { from: /\/heroes/, to: '/heroes.html'}
             ]
         }
     }
