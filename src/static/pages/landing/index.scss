@@ -1,17 +1,72 @@
+// ------------------ TEAM SECTION ------------------
+
+.team {
+  background: url("./images/backgrounds/landing-page/team-section.png") center center;
+  background-size: cover;
+
+  &__container {
+    padding: 100px 0;
+  }
+
+  &__text-container {
+    @include flex(space-evenly, flex-end);
+
+  }
+
+  &__story-text {
+    background-color: rgba(0, 0, 0, .8);
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 7px;
+    width: 350px;
+    height: auto;
+  }
+
+
+  &__button-container {
+    margin-top: 230px;
+    text-align: center;
+  }
+
+  &__button {
+    width: 350px;
+    padding: 10px;
+    margin: 0 35px;
+    font-size: 26px;
+    box-shadow: 2px 2px 8px #808080;
+    @include animate(pulsation, 0.8s, linear, infinite, alternate);
+
+    &:hover {
+        color: #ffffff;
+        background-color: #496D7B;
+        box-shadow: 2px 2px 8px #162125;
+        animation-play-state: paused;
+    }
+
+  }
+
+}
+
+
+
+// ------------------ DEADLINE SECTION ------------------
+
 .deadline {
-  background: url("./images/landing-page/deadline-bg.png") center center no-repeat;
+  background: url("./images/backgrounds/landing-page/deadline-section.png") center center no-repeat;
   background-size: cover;
   padding-top: 15px;
   height: 600px;
   position: relative;
+
   &__title {
     font-size: 56px;
     color: white;
     text-transform: uppercase;
     text-align: center;
-    word-spacing: 15px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
+
+
 }
 
 .timer {
@@ -22,11 +77,13 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+
   &__item {
     display: inline-block;
     font-size: 30px;
     text-align: center;
   }
+
   &__date {
     font-size: 60px;
     display: block;

@@ -31,7 +31,7 @@ export let timer = setInterval(function () {
 
 let messageCount = 0;
 
-const deadlineTitleMessage = "Will they make it in time?";
+const deadlineTitleMessage = "Will they make it before it is too late?";
 const deadlineTitle = document.getElementsByClassName("deadline__title")[0];
 let timerDeadlineTitle;
 
