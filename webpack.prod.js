@@ -7,9 +7,6 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const {generateHtmlPlugins} = require("./utils/generateHtmlPlugins");
 
-const htmlPlugins = generateHtmlPlugins(path.resolve(__dirname, './src/static/pages'));
-
-
 module.exports = merge(common, {
     mode: "production",
     module: {
@@ -46,6 +43,6 @@ module.exports = merge(common, {
         new MiniCssExtractPlugin(
             {filename: "[name].[contentHash].css"}
         ),
-        ...htmlPlugins
+        ...generateHtmlPlugins(path.resolve(__dirname, './src/static/pages'), true)
     ]
 });

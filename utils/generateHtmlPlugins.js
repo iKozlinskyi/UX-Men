@@ -1,7 +1,7 @@
 const { fileTraversal } = require('./fileTraversal');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-function generateHtmlPlugins(templateDir) {
+function generateHtmlPlugins(templateDir, shouldMinify) {
     const templateFiles = fileTraversal(templateDir).filter(file => file.endsWith('.html') || file.endsWith('.ejs'));
     return templateFiles.map(item => {
         const parts = item.split(/[\.\\]/);
@@ -12,7 +12,12 @@ function generateHtmlPlugins(templateDir) {
         return new HtmlWebpackPlugin({
             filename: `${fileName}.html`,
             template: `./${templateRelativePath}.${extension}`,
-            chunks: [chunkName, 'styles']
+            chunks: [chunkName, 'styles'],
+            minify: shouldMinify && {
+                removeAttributeQuotes: true,
+                collapseWhitespace: true,
+                removeComments: true,
+            }
         })
     })
 }

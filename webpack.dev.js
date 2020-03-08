@@ -3,8 +3,6 @@ const common = require("./webpack.common");
 const merge = require("webpack-merge");
 const { generateHtmlPlugins } = require('./utils/generateHtmlPlugins');
 
-const htmlPlugins = generateHtmlPlugins(path.resolve(__dirname, './src/static/pages'));
-
 module.exports = merge(common, {
     mode: "development",
     module: {
@@ -25,7 +23,8 @@ module.exports = merge(common, {
         path: path.resolve(__dirname, "dist")
     },
     plugins: [
-        ...htmlPlugins
+        ...generateHtmlPlugins(path.resolve(__dirname, './src/static/pages'), false)
+
     ],
     devtool: 'cheap-module-eval-source-map',
     devServer: {
@@ -35,9 +34,9 @@ module.exports = merge(common, {
         publicPath: "/",
         historyApiFallback: {
             rewrites: [
-                { from: /\//, to: '/landing.html'},
                 { from: /\/about/, to: '/about.html'},
-                { from: /\/heroes/, to: '/heroes.html'}
+                { from: /\/heroes/, to: '/heroes.html'},
+                { from: /\//, to: '/landing.html'}
             ]
         }
     }
