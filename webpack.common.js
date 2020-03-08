@@ -1,6 +1,6 @@
 module.exports = {
     entry: {
-        landing: "./src/static/pages/landing/index.js",
+        landing: "./src/static/pages/landing/landing.js",
         styles: "./src/static/main.scss"
     },
     module: {

@@ -4,47 +4,11 @@ const merge = require("webpack-merge");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const fs = require('fs');
+const {generateHtmlPlugins} = require("./utils/generateHtmlPlugins");
 
-//Future functionality
-// const walkSync = function(dir, fileList = []) {
-//     filesList = fs.readdirSync(dir);
-//
-//     fileList.forEach(function(file) {
-//         if (fs.statSync(dir + '/' + file).isDirectory()) {
-//             fileList = walkSync(dir + '/' + file, fileList);
-//         }
-//         else {
-//             fileList.push(path.resolve(__dirname, dir,  file));
-//         }
-//     });
-//
-//     return fileList;
-// };
-//
-//
-// function generateHtmlPlugins(templateDir) {
-//     const templateFiles = walkSync(templateDir).filter(file => file.endsWith('.html'));
-//     return templateFiles.map(item => {
-//         const parts = item.split('.');
-//         const name = parts[0];
-//         const extension = parts[1];
-//         return new HtmlWebpackPlugin({
-//             filename: `${name}.html`,
-//             template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-//             minify: {
-//                 removeAttributeQuotes: true,
-//                 collapseWhitespace: true,
-//                 removeComments: true,
-//             }
-//         })
-//     })
-// }
-//
-// const HtmlPlugins = generateHtmlPlugins('./src/static/pages');
-//
+const htmlPlugins = generateHtmlPlugins(path.resolve(__dirname, './src/static/pages'));
+
 
 module.exports = merge(common, {
     mode: "production",
@@ -82,37 +46,6 @@ module.exports = merge(common, {
         new MiniCssExtractPlugin(
             {filename: "[name].[contentHash].css"}
         ),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "src/static/pages/landing/index.html"),
-            filename: "index.html",
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                removeComments: true,
-            },
-        }),
-        new HtmlWebpackPlugin({
-            filename: "about.html",
-            template: path.resolve(__dirname, "src/static/pages/about/about.html"),
-            chunks: ['landing', 'styles'],
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                removeComments: true,
-            },
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Heroes Page',
-            filename: 'heroes.html',
-            template: './src/static/pages/heroes/heroes.ejs',
-            chunks: ['about', 'styles'],
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                removeComments: true,
-            }
-        })
-        // ...HtmlPlugins
-
+        ...htmlPlugins
     ]
 });
