@@ -1,115 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About us</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="block about">
-        <div class="block__wrapper">
-          <h2 class="about__title">Who we are?</h2>
-          <p class="about__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem corporis
-            reiciendis unde, illum labore perferendis.
-          </p>
+      <div class="block__wrapper about__wrapper">
+        <h2 class="about__title">
+          Fast <span class="about__text about__text--accent">React</span> Team
+        </h2>
+        <p class="about__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem corporis
+          reiciendis unde, illum labore perferendis.
+        </p>
+      </div>
+    </header>
+    <section class="block details" id="particle_canvas">
+      <div class="block__wrapper">
+        <h3 class="details__title">About Us</h3>
+        <div class="details__section">
+          <div class="detail">
+            <div class="detail__background detail__background--top"></div>
+            <div
+              class="detail__background detail__background--bottom-right"
+            ></div>
+            <div class="detail__info">
+              <h4 class="detail__title">Genres</h4>
+              <ul class="detail__list">
+                <li class="detail__item">Action</li>
+                <li class="detail__item">Comedy</li>
+                <li class="detail__item">Adventure</li>
+                <li class="detail__item">Drama</li>
+              </ul>
+            </div>
+          </div>
+          <div class="detail">
+            <div class="detail__background detail__background--top"></div>
+            <div
+              class="detail__background detail__background--bottom-right"
+            ></div>
+            <div class="detail__info">
+              <h4 class="detail__title">Directed by</h4>
+              <p class="detail__text">
+                If you find our director, please call us.
+              </p>
+            </div>
+          </div>
         </div>
-      </header>
-      <div class="block section">
-        <div class="block__wrapper">
-          <ul class="hero-list">
-            <li class="hero-list__item">
-              <div class="hero hero--serverman">
-                <a class="hero__link">
-                  <img
-                    src="../../images/heroes/spiderman.png"
-                    alt="serverman"
-                    class="hero__image"
-                  />
-                </a>
-                <div class="hero__logo">
-                  <img
-                    src="../../images/logos/server.svg"
-                    alt="maven-logo"
-                    class="hero__icon"
-                  />
-                </div>
-              </div>
-            </li>
-            <li class="hero-list__item">
-              <div class="hero hero--widow">
-                <a class="hero__link">
-                  <img
-                    src="../../images/heroes/widow.png"
-                    alt="coffeman"
-                    class="hero__image"
-                  />
-                </a>
-                <div class="hero__logo">
-                  <img
-                    src="../../images/logos/terminal.svg"
-                    alt="maven-logo"
-                    class="hero__icon"
-                  />
-                </div>
-              </div>
-            </li>
-            <li class="hero-list__item">
-              <div class="hero hero--maven">
-                <a class="hero__link">
-                  <img
-                    src="../../images/heroes/maven.png"
-                    alt="coffeman"
-                    class="hero__image"
-                  />
-                </a>
-                <div class="hero__logo">
-                  <img
-                    src="../../images/logos/maven.svg"
-                    alt="maven-logo"
-                    class="hero__icon"
-                  />
-                </div>
-              </div>
-            </li>
-            <li class="hero-list__item">
-              <div class="hero hero--storm">
-                <a class="hero__link">
-                  <img
-                    src="../../images/heroes/storm.png"
-                    alt="storm"
-                    class="hero__image"
-                  />
-                </a>
-                <div class="hero__logo">
-                  <img
-                    src="../../images/logos/webstorm.svg"
-                    alt="maven-logo"
-                    class="hero__icon"
-                  />
-                </div>
-              </div>
-            </li>
-            <li class="hero-list__item">
-              <div class="hero hero--coffeman">
-                <a class="hero__link">
-                  <img
-                    src="../../images/heroes/superman.png"
-                    alt="coffeman"
-                    class="hero__image"
-                  />
-                </a>
-                <div class="hero__logo">
-                  <img
-                    src="../../images/logos/coffeescript.svg"
-                    alt="maven-logo"
-                    class="hero__icon"
-                  />
-                </div>
-              </div>
-            </li>
-          </ul>
+        <div class="details__section details__section--center">
+          <div class="detail">
+            <div class="detail__background detail__background--top"></div>
+            <div
+              class="detail__background detail__background--bottom-right"
+            ></div>
+            <div class="detail__info">
+              <h4 class="detail__title">Based On</h4>
+              <p class="detail__text">
+                "...Реальности. Действительно. Однажды я не смог поставить лайк
+                в своей любимой соц сети ПОНТЫграм. Потом я заметил, что лайки с
+                моих фотографий тоже пропали! Это привело меня в ужас, ведь я
+                как раз снимал новый фильм "299 Спартанок", и мне нужны были
+                деньги. Конечно же, благодаря лайкам. Правда потом оказалось,
+                что я забыл включить интернет... Но зато эта история привела к
+                созданию нового шедевра кинематографа"
+              </p>
+              <div class="detail__author">Сбежавший режиссер</div>
+            </div>
+          </div>
         </div>
       </div>
-</body>
+    </section>
+    <section class="block profiles">
+      <div class="block__wrapper">
+        <h3 class="profiles__title">Cast</h3>
+        <ul class="hero-list">
+          <li class="hero-list__item">
+            <div class="hero hero--serverman">
+              <a class="hero__link">
+                <img
+                  src="../../images/heroes/spiderman.png"
+                  alt="serverman"
+                  class="hero__image"
+                />
+              </a>
+              <div class="hero__logo">
+                <img
+                  src="../../images/logos/server.svg"
+                  alt="maven-logo"
+                  class="hero__icon"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="hero-list__item">
+            <div class="hero hero--widow">
+              <a class="hero__link">
+                <img
+                  src="../../images/heroes/widow.png"
+                  alt="coffeman"
+                  class="hero__image"
+                />
+              </a>
+              <div class="hero__logo">
+                <img
+                  src="../../images/logos/terminal.svg"
+                  alt="maven-logo"
+                  class="hero__icon"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="hero-list__item">
+            <div class="hero hero--maven">
+              <a class="hero__link">
+                <img
+                  src="../../images/heroes/maven.png"
+                  alt="coffeman"
+                  class="hero__image"
+                />
+              </a>
+              <div class="hero__logo">
+                <img
+                  src="../../images/logos/maven.svg"
+                  alt="maven-logo"
+                  class="hero__icon"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="hero-list__item">
+            <div class="hero hero--storm">
+              <a class="hero__link">
+                <img
+                  src="../../images/heroes/storm.png"
+                  alt="storm"
+                  class="hero__image"
+                />
+              </a>
+              <div class="hero__logo">
+                <img
+                  src="../../images/logos/webstorm.svg"
+                  alt="maven-logo"
+                  class="hero__icon"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="hero-list__item">
+            <div class="hero hero--coffeman">
+              <a class="hero__link">
+                <img
+                  src="../../images/heroes/superman.png"
+                  alt="coffeman"
+                  class="hero__image"
+                />
+              </a>
+              <div class="hero__logo">
+                <img
+                  src="../../images/logos/coffeescript.svg"
+                  alt="maven-logo"
+                  class="hero__icon"
+                />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="block teamwork">
+      <div class="block__wrapper">
+        <h3 class="teamwork__title">Team Work</h3>
+        <div class="teamwork__flex-container">
+          <div class="teamwork__centered-block gitlink">
+            <div class="gitlink__title">Find Us On Github</div>
+            <div class="gitlink__container">
+              <a
+                href="https://github.com/iKozlinskyi/UX-Men"
+                target="_blank"
+                class="gitlink__link"
+                ><img
+                  src="../../images/logos/github.svg"
+                  alt="github"
+                  class="gitlink__image"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="./shared/components/particle-network/particle-network.js"></script>
+    <script>
+      let canvasDiv = document.getElementById('particle_canvas');
+      let options = {
+        particleColor: '#6cd1eb',
+        background: '',
+        interactive: true,
+        speed: 'medium',
+        density: 'high'
+      }
+
+      let particleCanvas = new ParticleNetwork(canvasDiv, options);
+    </script>
+  </body>
 </html>

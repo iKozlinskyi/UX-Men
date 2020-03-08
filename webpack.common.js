@@ -1,9 +1,7 @@
 module.exports = {
     entry: {
-        main: [
-            "./src/static/main.js",
-            "./src/static/main.scss"
-        ],
+        landing: "./src/static/pages/landing/index.js",
+        styles: "./src/static/main.scss"
     },
     module: {
         rules: [
@@ -26,6 +24,18 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.ejs$/,
+                use: [{
+                    loader: 'html-loader',
+                    options: {
+                        attrs: [':src', ':data-src', 'source:srcset', 'source:data-srcset'],
+                        interpolate: true
+                    }
+                }, {
+                    loader: 'ejs-plain-loader'
+                }]
             }
         ]
     }
