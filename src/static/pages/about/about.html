@@ -17,7 +17,7 @@
         </p>
       </div>
     </header>
-    <section class="block details">
+    <section class="block details" id="particle_canvas">
       <div class="block__wrapper">
         <h3 class="details__title">About Us</h3>
         <div class="details__section">
@@ -72,8 +72,7 @@
         </div>
       </div>
     </section>
-    <section class="block profiles">
-      <div class="block__wrapper">
+    <section class="profiles">
         <h3 class="profiles__title">Cast</h3>
         <ul class="hero-list">
           <li class="hero-list__item">
@@ -188,7 +187,20 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
+    
+    <script src="./shared/components/particle-network/particle-network.js"></script>
+    <script>
+      let canvasDiv = document.getElementById('particle_canvas');
+      let options = {
+        particleColor: '#6cd1eb',
+        background: '',
+        interactive: true,
+        speed: 'medium',
+        density: 'high'
+      }
+
+      let particleCanvas = new ParticleNetwork(canvasDiv, options);
+    </script>
   </body>
 </html>
