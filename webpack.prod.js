@@ -4,8 +4,8 @@ const merge = require("webpack-merge");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const {generateHtmlPlugins} = require("./utils/generateHtmlPlugins");
 
 module.exports = merge(common, {
     mode: "production",
@@ -43,35 +43,6 @@ module.exports = merge(common, {
         new MiniCssExtractPlugin(
             {filename: "[name].[contentHash].css"}
         ),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "src/static/pages/landing/index.html"),
-            filename: "index.html",
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                removeComments: true,
-            },
-        }),
-        new HtmlWebpackPlugin({
-            filename: "about.html",
-            template: path.resolve(__dirname, "src/static/pages/about/about.html"),
-            chunks: ['landing', 'styles'],
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                removeComments: true,
-            },
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Heroes Page',
-            filename: 'heroes.html',
-            template: './src/static/pages/heroes/heroes.ejs',
-            chunks: ['about', 'styles'],
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                removeComments: true,
-            }
-        })
+        ...generateHtmlPlugins(path.resolve(__dirname, './src/static/pages'), true)
     ]
 });
