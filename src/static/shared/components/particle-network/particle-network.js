@@ -32,7 +32,7 @@ class Particle {
     //Draw particle
     this.ctx.beginPath();
     this.ctx.fillStyle = this.particleColor;
-    this.ctx.globalAlpha = 0.7;
+    this.ctx.globalAlpha = 1;
     this.ctx.arc(this.x, this.y, 1.5, 0, 2 * Math.PI);
     this.ctx.fill();
   }
@@ -40,7 +40,7 @@ class Particle {
 
 //Particle Network
 
-class ParticleNetwork {
+export default class ParticleNetwork {
   constructor(canvas, options) {
     this.canvasDiv = canvas;
     this.canvasDiv.size = {
@@ -74,6 +74,8 @@ class ParticleNetwork {
       left: 0,
       bottom: 0,
       right: 0,
+      height:  '100%',
+      width: '100%',
       "z-index": 1
     });
 
@@ -107,7 +109,9 @@ class ParticleNetwork {
 
     //Create canvas & context
     this.canvas = document.createElement("canvas");
-    this.canvasDiv.appendChild(this.canvas);
+    if(this.canvasDiv.hasChildNodes()) {
+      this.canvasDiv.insertBefore(this.canvas, this.canvasDiv.firstElementChild)
+    } else this.canvasDiv.appendChild(this.canvas);
     this.ctx = this.canvas.getContext("2d");
     this.canvas.width = this.canvasDiv.size.width;
     this.canvas.height = this.canvasDiv.size.height;
@@ -116,7 +120,7 @@ class ParticleNetwork {
       position: "absolute",
       top: 0,
       left: 0,
-      "z-index": 20
+      "z-index": 0
     });
 
     //Add resize listener to canvas
