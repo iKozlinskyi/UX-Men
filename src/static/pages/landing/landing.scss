@@ -56,38 +56,63 @@
   background-size: cover;
   padding-top: 15px;
   height: 600px;
-  position: relative;
+  font-family: $ff-title;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
 
   &__title {
-    font-size: 56px;
+    font-size: 52px;
     color: white;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2px;
+    height: 33%;
+    margin-top: 20px;
   }
 
+  &__button {
+    margin-top: 100px;
+    width: 350px;
+    padding: 10px;
+    font-size: 26px;
+    box-shadow: 2px 2px 8px #808080;
+    @include animate(pulsation, 0.8s, linear, infinite, alternate);
 
+    &:hover {
+      color: #ffffff;
+      background: linear-gradient(to bottom left, #000000, #696969);
+      box-shadow: 2px 2px 8px #162125;
+      animation-play-state: paused;
+    }
+
+  }
 }
 
 .timer {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  padding: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  padding-right: 20px;
+  height: 33%;
+  display: flex;
+  align-items: center;
+  border: 5px outset white;
 
   &__item {
     display: inline-block;
-    font-size: 30px;
+    font-size: 36px;
     text-align: center;
   }
 
   &__date {
-    font-size: 60px;
+    font-size: 68px;
     display: block;
-    width: 160px;
+    width: 188px;
     text-align: center;
   }
 }
