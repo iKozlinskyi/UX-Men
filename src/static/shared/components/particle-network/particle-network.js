@@ -67,16 +67,17 @@ export default class ParticleNetwork {
   init() {
     //create background div
     this.bgDiv = document.createElement("div");
-    this.canvasDiv.appendChild(this.bgDiv);
+    if (this.canvasDiv.hasChildNodes()) {
+      this.canvasDiv.insertBefore(this.bgDiv, this.canvasDiv.firstElementChild);
+    } else this.canvasDiv.appendChild(this.bgDiv);
     this.setStyles(this.bgDiv, {
       position: "absolute",
       top: 0,
       left: 0,
       bottom: 0,
       right: 0,
-      height:  '100%',
-      width: '100%',
-      "z-index": 1
+      height: "100%",
+      width: "100%"
     });
 
     //Check if valid background hex color
@@ -109,8 +110,11 @@ export default class ParticleNetwork {
 
     //Create canvas & context
     this.canvas = document.createElement("canvas");
-    if(this.canvasDiv.hasChildNodes()) {
-      this.canvasDiv.insertBefore(this.canvas, this.canvasDiv.firstElementChild)
+    if (this.canvasDiv.hasChildNodes()) {
+      this.canvasDiv.insertBefore(
+        this.canvas,
+        this.canvasDiv.firstElementChild
+      );
     } else this.canvasDiv.appendChild(this.canvas);
     this.ctx = this.canvas.getContext("2d");
     this.canvas.width = this.canvasDiv.size.width;
