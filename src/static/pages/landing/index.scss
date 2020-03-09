@@ -1,9 +1,12 @@
+@import "src/static/shared/globals/variables";
+
 .deadline {
   background: url("./images/landing-page/deadline-bg.png") center center no-repeat;
   background-size: cover;
   padding-top: 15px;
   height: 600px;
   position: relative;
+  font-family: Oxanium, sans-serif;
   &__title {
     font-size: 56px;
     color: white;
