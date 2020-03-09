@@ -11,7 +11,54 @@
     links: [{name: 'landing', href: '/'}, {name: 'about', href: '/about'}]
 }) %> -->
     
-
+    <section class="features block">
+        <div class="block__wrapper">
+            <h2 class="features__title">Character</h2>
+            <section class="features__personality">
+                <h3 class="features__title features__title--smaller">Personality</h3>
+                <ul class="features__list">
+                    <li class="features__item">
+                        <%- include('../../shared/components/skill/skill', {
+                            skillName: "Responsibility",
+                            color: "red",
+                            percentage: "90"
+                        }) %>
+                    </li>
+                    <li class="features__item">
+                        <%- include('../../shared/components/skill/skill', {
+                            skillName: "Humor",
+                            color: "blue",
+                            percentage: "80"
+                        }) %>
+                    </li>
+                    <li class="features__item">
+                        <%- include('../../shared/components/skill/skill', {
+                            skillName: "Calmness",
+                            color: "pink",
+                            percentage: "35"
+                        }) %>
+                    </li>
+                    <li class="features__item">
+                        <%- include('../../shared/components/skill/skill', {
+                            skillName: "Creativity",
+                            color: "yellow",
+                            percentage: "95"
+                        }) %>
+                    </li>
+                    <li class="features__item">
+                        <%- include('../../shared/components/skill/skill', {
+                            skillName: "Communication",
+                            color: "green",
+                            percentage: "75"
+                        }) %>
+                    </li>
+                </ul>
+            </section>
+            <section class="features__powers">
+                <h3 class="features__title features__title--smaller">Powers</h3>
+            </section>
+        </div>
+    </section>
 
 <!-- <%- include('../../shared/components/footer/footer') %> -->
 </body>

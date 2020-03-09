@@ -1,0 +1,23 @@
+.features {
+    text-align: center;
+
+    &__title {
+        font-size: 3em;
+        color: $accent-color--maven;
+        font-family: $ff-title;
+        font-weight: $bold;
+
+        &--smaller {
+            font-size: 2em;
+            font-weight: $regular;
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+}
