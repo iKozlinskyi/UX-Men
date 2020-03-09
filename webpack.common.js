@@ -1,7 +1,8 @@
 module.exports = {
     entry: {
-        landing: "./src/static/pages/landing/index.js",
-        styles: "./src/static/main.scss"
+        landing: "./src/static/pages/landing/landing.js",
+        about: "./src/static/pages/about/about.js",
+        styles: "./src/static/main.scss",
     },
     module: {
         rules: [
