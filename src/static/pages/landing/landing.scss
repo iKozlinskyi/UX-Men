@@ -108,7 +108,7 @@
     padding: 10px;
     font-size: 26px;
     box-shadow: 2px 2px 8px #808080;
-    @include animate(pulsation, 0.8s, linear, infinite, alternate);
+    @include animate(pulsation, 0.8s, 0, linear, infinite, alternate, none);
 
     &:hover {
       color: #ffffff;
