@@ -1,23 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
     <title>The Heroes</title>
-</head>
-<body>
-
-<%- include('../../shared/components/header/header', {
+  </head>
+  <body>
+    <!-- <%- include('../../shared/components/header/header', {
     title: 'Heroes',
     links: [{name: 'landing', href: '/'}, {name: 'about', href: '/about'}]
-}) %>
+}) %> -->
 
-<main>
-    <p>Page body</p>
-</main>
+    <section class="block superhero">
+      <div class="block__wrapper superhero__container">
+        <div class="superhero__main">
+          <div class="superhero__description">
+            <h2 class="superhero__name">Captain Maven</h2>
+            <blockquote class="superhero__blockquote">
+              <p class="superhero__quote">
+                &ldquo;Lorem ipsum dolor sit amet consectetur.&rdquo;
+              </p>
+            </blockquote>
+            <p class="superhero__story">
+              Near death, Carol Danvers was transformed into a powerful warrior
+              for the Kree. Now, returning to Earth years later, she must
+              remember her past in order to to prevent a full invasion by
+              shapeshifting aliens, the Skrulls. Near death, Carol Danvers was
+              transformed into a powerful warrior for the Kree. Now, returning
+              to Earth years later, she must remember her past in order to to
+              prevent a full invasion by shapeshifting aliens, the Skrulls.
+            </p>
+          </div>
+          <div class="superhero__image-container">
+            <img
+              src="../../images/heroes/captain-maven-hp.png"
+              alt="Captain Maven"
+              class="superhero__image"
+            />
+          </div>
+        </div>
+      </div>
+      <section class="block experience">
+        <div class="block__wrapper">
+          <ul class="skill-list">
+            <li class="skill-list__item">
+              <%- include('../../shared/components/skill/skill', {
+                skillName: "Responsibility",
+                color: "green",
+                percentage: "90"
+            }) %>
+            </li>
+            <li class="skill-list__item">
+              <%- include('../../shared/components/skill/skill', {
+                skillName: "Humor",
+                color: "blue",
+                percentage: "80"
+            }) %>
+            </li>
+            <li class="skill-list__item">
+              <%- include('../../shared/components/skill/skill', {
+                skillName: "Calm",
+                color: "pink",
+                percentage: "35"
+            }) %>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="superhero__footer">
+        <div class="superhero__contacts">
+          <div class="contacts">
+            <a href="https://www.linkedin.com" class="contacts__link">
+              <img
+                src="../../images/social/linkedin.svg"
+                alt=""
+                class="contacts__icon"
+              />
+              Linkedin
+            </a>
+            <a href="https://www.github.com" class="contacts__link">
+              <img
+                src="../../images/social/github.svg"
+                alt=""
+                class="contacts__icon"
+              />
+              Github
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<%- include('../../shared/components/footer/footer') %>
-</body>
+    <!-- <%- include('../../shared/components/footer/footer') %> -->
+  </body>
 </html>

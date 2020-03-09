@@ -39,29 +39,69 @@
   }
 
   &--maven {
-    background: linear-gradient(rgb(84, 0, 87), #000000);
+    background: linear-gradient(
+        to bottom,
+        rgba(68, 0, 100, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("./images/backgrounds/about-page/bg-hero.jpg") no-repeat center top /
+        cover;
   }
 
   &--storm {
-    background: linear-gradient(rgb(75, 75, 75), #000000);
+    background: linear-gradient(
+        to bottom,
+        rgba(75, 75, 75, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("./images/backgrounds/about-page/bg-hero.jpg") no-repeat center top /
+        cover;
+
+    // background: linear-gradient(rgb(75, 75, 75), #000000);
   }
 
   &--widow {
-    background: linear-gradient(rgb(0, 82, 41), rgb(0, 53, 26), #000000);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 82, 41, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("./images/backgrounds/about-page/bg-hero.jpg") no-repeat center top /
+        cover;
+    // background: linear-gradient(rgb(0, 82, 41), rgb(0, 53, 26), #000000);
   }
 
   &--serverman {
-    background: linear-gradient(rgb(80, 0, 0), #000000);
+    background: linear-gradient(
+      to bottom,
+      rgba(90, 0, 0, 0.7),
+      rgba(90, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./images/backgrounds/about-page/bg-hero.jpg") no-repeat center top /
+      cover;
+
+    // background: linear-gradient(rgb(80, 0, 0), #000000);
   }
 
   &--coffeman {
-    background: linear-gradient(rgb(0, 42, 78), #000000);
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 26, 49, 0.8),
+      rgba(0, 26, 49, 0.8),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./images/backgrounds/about-page/bg-hero.jpg") no-repeat center top /
+      cover;
+
+    // background: linear-gradient(rgb(0, 42, 78), #000000);
   }
 }
 
 .about {
   height: 100vh;
-  background: url('./images/backgrounds/about-page/bg-about.jpg') no-repeat center top / cover;
+  background: url("./images/backgrounds/about-page/bg-about.jpg") no-repeat
+    center top / cover;
   color: $text-color--light;
   text-align: center;
   display: flex;
@@ -94,7 +134,7 @@
 
 .profiles {
   padding: 10% 0;
-  background: linear-gradient(#ffffff,#ffffff, #000000, #000000);
+  background: linear-gradient(#ffffff, #ffffff, #000000, #000000);
 
   &__title {
     font-size: 3em;
@@ -141,8 +181,8 @@
   max-width: 60%;
 
   &__background {
-    background: url("./images/backgrounds/about-page/bg-about-details.jpg") no-repeat center top /
-    cover;
+    background: url("./images/backgrounds/about-page/bg-about-details.jpg")
+      no-repeat center top / cover;
     position: absolute;
     z-index: 0;
 
@@ -171,11 +211,37 @@
     position: relative;
   }
 
+  &__quotes {
+    font-size: 2em;
+    color: $accent-color--about;
+    font-weight: $bold;
+    padding: 0 0.3em;
+    line-height: 0.2em;
+  }
+
+  &__accent {
+    color: $accent-color--about;
+    font-style: italic;
+  }
+
+  &__author {
+    color: $accent-color--about;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: $semi-bold;
+    font-style: italic;
+  }
+
   &__title {
     color: $accent-color--about;
     font-family: $ff-title;
     font-size: 1.3em;
     text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+
+  &__text {
+    padding: 0.5em 0;
   }
 
   &__list {
@@ -205,7 +271,6 @@
 }
 
 .gitlink {
-
   &__title {
     font-size: 2em;
     font-family: $ff-text;
@@ -229,12 +294,9 @@
   }
 }
 
-
 //--------TABLET----------
 @media (max-width: $bp-medium) {
-
   .detail {
-
     &__background {
       &--top {
         top: -20%;
@@ -246,13 +308,11 @@
       }
     }
   }
-
 }
 
 //--------MOBILE----------
 
 @media (max-width: $bp-small) {
-
   .about {
     &__title {
       font-size: 4em;
@@ -264,7 +324,6 @@
   }
 
   .details {
-
     &__section {
       flex-flow: column nowrap;
       align-items: center;
@@ -297,7 +356,7 @@
 
     &__item {
       width: 100%;
-      border: none
+      border: none;
     }
   }
 
@@ -308,7 +367,6 @@
   }
 
   .gitlink {
-
     &__title {
       font-size: 1.8em;
       margin-bottom: 8%;
@@ -319,5 +377,3 @@
     }
   }
 }
-
-
