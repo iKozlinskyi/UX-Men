@@ -154,3 +154,21 @@
     color: #00a9d9;
   }
 }
+
+
+.skill-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-flow: row wrap; 
+
+  &__item {
+    margin-right: 5%;
+    max-width: 30%;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
