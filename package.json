@@ -7,7 +7,6 @@
     "start": "node app.js",
     "dev": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack  --config webpack.prod.js",
-    "prestart": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
