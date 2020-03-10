@@ -1,25 +1,82 @@
+// ------------------ POSTER SECTION ------------------
+.poster {
+  background: url("./images/backgrounds/landing-page/poster-test.png") center center;
+  background-size: cover;
+
+  &__wrapper {
+    padding: 2em 0;
+    display: flex;
+    height: 100vh;
+    @include flex(flex-end, center, column);
+  }
+
+  &__movie-title {
+    font-size: 12em;
+    @include clipped-text("./images/backgrounds/landing-page/background-fonts/metal.png", 4px);
+    @include animate(large-scale-down, 1s, 0, linear, 1, normal, forwards);
+  }
+
+  &__movie-subtitle {
+    opacity: 0;
+    @include animate(fade-in, 2s, 1s, linear, 1, normal, forwards);
+  }
+}
+
+
+
+
 // ------------------ TEAM SECTION ------------------
 
 .team {
   background: url("./images/backgrounds/landing-page/team-section.png") center center;
   background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
 
   &__container {
-    padding: 100px 0;
+    padding: 150px 0;
+    position: relative;
   }
 
   &__text-container {
-    @include flex(space-evenly, flex-end);
-
+    height: 260px;
+    borde-radius: 3px;
+    background-color: #000000cc;
   }
 
   &__story-text {
-    background-color: rgba(0, 0, 0, .8);
+    font-size: 18px;
+    position: absolute;
+    box-shadow: 2px -2px 0 #2bf5ff;
+    background-color: rgba(82, 178, 194, 0.64);
     padding: 20px;
     margin: 0 20px;
-    border-radius: 7px;
-    width: 350px;
-    height: auto;
+    border-radius: 3px;
+  }
+
+  &__story-text--text1 {
+    width: 400px;
+    left: 0;
+    top: 115px;
+
+  }
+
+  &__story-text--text2 {
+    width: 370px;
+    left: 156px;
+    top: 308px;
+
+  }
+
+  &__story-text--text3 {
+    width: 472px;
+    right: 0;
+    top: 112px;
+  }
+
+  &__story-text--text4 {
+    width: 390px;
+    right: 130px;
+    top: 355px;
   }
 
 
@@ -38,7 +95,7 @@
 
     &:hover {
         color: #ffffff;
-        background-color: #496D7B;
+        background-color: rgba(82, 178, 194, 0.64);
         box-shadow: 2px 2px 8px #162125;
         animation-play-state: paused;
     }
@@ -52,6 +109,7 @@
 // ------------------ DEADLINE SECTION ------------------
 
 .deadline {
+  margin-top: -120px;
   background: url("./images/backgrounds/landing-page/deadline-section.png") center center no-repeat;
   background-size: cover;
   padding-top: 15px;
@@ -72,11 +130,11 @@
     text-align: center;
     letter-spacing: 2px;
     height: 33%;
-    margin-top: 20px;
+    margin-top: 120px;
   }
 
   &__button {
-    margin-top: 100px;
+    margin-top: 110px;
     width: 350px;
     padding: 10px;
     font-size: 26px;
