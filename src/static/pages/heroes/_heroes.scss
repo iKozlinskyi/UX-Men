@@ -132,7 +132,9 @@
   }
 
   &__real-name {
+    display: block;
     font-size: 12px;
+    font-weight: $bold;
     text-transform: uppercase;
 
     @media (min-width: $bp-small) {
@@ -286,7 +288,7 @@
   }
 
   &__story {
-    font-family: Roboto, sans-serif;
+    font-family: $ff-text;
     margin-top: 30px;
     line-height: 1.5;
     color: #202020;
@@ -317,45 +319,39 @@
       height: 100%;
     }
   }
-
-  &__footer {
-    width: 100%;
-    height: 80px;
-
-    &--captain-maven {
-      background-color: rgba(221, 112, 13, 0.8);
-    }
-
-    &--serverman {
-      background-color: rgba(209, 25, 21, 0.8);
-    }
-
-    &--coffeeman {
-      background-color: rgba(38, 88, 136, 0.8);
-    }
-
-    &--black-window {
-      background-color: rgba(32, 32, 23, 0.8);
-    }
-
-    &--web-storm {
-      background-color: rgba(140, 204, 217, 0.8);
-    }
-  }
-
-  &__contacts {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
 }
 
 .contacts {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  height: 80px;
+  &__container {
+    // margin: 0 auto;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+  }
 
   @media (min-width: $bp-small) {
     justify-content: flex-end;
+  }
+
+  &--captain-maven {
+    background-color: rgba(221, 112, 13, 0.8);
+  }
+
+  &--serverman {
+    background-color: rgba(209, 25, 21, 0.8);
+  }
+
+  &--coffeeman {
+    background-color: rgba(38, 88, 136, 0.8);
+  }
+
+  &--black-window {
+    background-color: rgba(32, 32, 23, 0.8);
+  }
+
+  &--web-storm {
+    background-color: rgba(140, 204, 217, 0.8);
   }
 
   &__link {
