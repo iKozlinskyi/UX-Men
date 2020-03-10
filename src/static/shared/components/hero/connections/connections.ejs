@@ -1,0 +1,12 @@
+<section class="block connections">
+  <div class="block__wrapper">
+    <h3 class="connections__title"><%= connectionType %></h3>
+    <div class="connections__container">
+      <% for (let heroName of heroesList) { %>
+      <div class="connections__hero">
+        <%- include('../../hero-card/hero-card.ejs', { heroName }) %>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
