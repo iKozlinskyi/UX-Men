@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const {generateHtmlPlugins} = require("./utils/generateHtmlPlugins");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
     mode: "production",
@@ -44,37 +43,37 @@ module.exports = merge(common, {
         new MiniCssExtractPlugin(
             {filename: "[name].[contentHash].css"}
         ),
-        new HtmlWebpackPlugin({
-            filename: `about.html`,
-            template: `src/static/pages/about/about.html`,
-            chunks: ['about', 'styles'],
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                removeComments: true,
-            }
-        }),
-        new HtmlWebpackPlugin({
-            filename: `heroes.html`,
-            template: `src/static/pages/heroes/heroes.ejs`,
-            chunks: ['heroes', 'styles'],
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                removeComments: true,
-            }
-        }),
-        new HtmlWebpackPlugin({
-            filename: `landing.html`,
-            template: `src/static/pages/landing/landing.html`,
-            chunks: ['landing', 'styles'],
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                removeComments: true,
-            }
-        }),
+        // new HtmlWebpackPlugin({
+        //     filename: `about.html`,
+        //     template: `src/static/pages/about/about.html`,
+        //     chunks: ['about', 'styles'],
+        //     minify: {
+        //         removeAttributeQuotes: true,
+        //         collapseWhitespace: true,
+        //         removeComments: true,
+        //     }
+        // }),
+        // new HtmlWebpackPlugin({
+        //     filename: `heroes.html`,
+        //     template: `src/static/pages/heroes/heroes.ejs`,
+        //     chunks: ['heroes', 'styles'],
+        //     minify: {
+        //         removeAttributeQuotes: true,
+        //         collapseWhitespace: true,
+        //         removeComments: true,
+        //     }
+        // }),
+        // new HtmlWebpackPlugin({
+        //     filename: `landing.html`,
+        //     template: `src/static/pages/landing/landing.html`,
+        //     chunks: ['landing', 'styles'],
+        //     minify: {
+        //         removeAttributeQuotes: true,
+        //         collapseWhitespace: true,
+        //         removeComments: true,
+        //     }
+        // }),
 
-        // ...generateHtmlPlugins(path.resolve('./src/static/pages'), true)
+        ...generateHtmlPlugins(path.resolve(__dirname, './src/static/pages'), true)
     ]
 });
