@@ -18,27 +18,26 @@
     title: 'Heroes',
     links: [{name: 'landing', href: '/'}, {name: 'about', href: '/about'}]
 }) %> -->
-
-    <section class="block superhero">
-      <div class="block__wrapper superhero__container">
-        <div class="superhero__main">
-          <div class="superhero__description">
-            <h2 class="superhero__name">CAPTAIN MAVEN</h2>
-            <blockquote class="superhero__blockquote">
-              <p class="superhero__quote">
-                &ldquo;Lorem ipsum dolor sit amet consectetur.&rdquo;
-              </p>
-            </blockquote>
-            <p class="superhero__story">
-              Near death, Carol Danvers was transformed into a powerful warrior
-              for the Kree. Now, returning to Earth years later, she must
-              remember her past in order to to prevent a full invasion by
-              shapeshifting aliens, the Skrulls. Near death, Carol Danvers was
-              transformed into a powerful warrior for the Kree. Now, returning
-              to Earth years later, she must remember her past in order to to
-              prevent a full invasion by shapeshifting aliens, the Skrulls.
+    <section class=" block presentation presentation--captain-maven">
+      <div class="block__wrapper">
+        <div class="presentation__container">
+          <div
+            class="presentation__background presentation__background--captain-maven"
+          ></div>
+          <div class="presentation__texts">
+            <span class="presentation__real-name">REAL NAME</span>
+            <h2 class="presentation__hero-name">CAPTAIN MAVEN</h2>
+            <p class="presentation__intro">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate, assumenda!
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="block superhero">
+      <div class="block__wrapper">
+        <div class="superhero__container">
           <div class="superhero__image-container">
             <img
               src="../../images/heroes/captain-maven-hp.png"
@@ -46,55 +45,835 @@
               class="superhero__image"
             />
           </div>
+          <div class="superhero__description">
+            <h2 class="superhero__name superhero__name--captain-maven">
+              CAPTAIN MAVEN
+            </h2>
+            <blockquote
+              class="superhero__blockquote superhero__blockquote--captain-maven"
+            >
+              <p class="superhero__quote">
+                &ldquo;Lorem ipsum dolor sit amet consectetur.&rdquo;
+              </p>
+            </blockquote>
+            <p class="superhero__story">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos,
+              placeat necessitatibus deserunt in ut cupiditate consequatur
+              magnam alias earum ex sint officia, quae numquam quo! Natus
+              veritatis repellendus fuga animi iure vel in eum, dolorem fugit
+              aliquid error voluptatibus tempore sed reiciendis dignissimos
+              numquam nostrum sint repellat cupiditate. Expedita eaque,
+              repudiandae cumque sed cum maiores aliquam possimus sapiente optio
+              vero exercitationem nesciunt maxime dolorem iusto qui mollitia.
+              Neque, distinctio harum?
+            </p>
+          </div>
         </div>
       </div>
-      <section class="block experience">
-        <div class="block__wrapper">
-          <ul class="skill-list">
-            <li class="skill-list__item">
-              <%- include('../../shared/components/skill/skill', {
-                skillName: "Responsibility",
-                color: "green",
-                percentage: "90"
-            }) %>
-            </li>
-            <li class="skill-list__item">
-              <%- include('../../shared/components/skill/skill', {
-                skillName: "Humor",
-                color: "blue",
-                percentage: "80"
-            }) %>
-            </li>
-            <li class="skill-list__item">
-              <%- include('../../shared/components/skill/skill', {
-                skillName: "Calm",
-                color: "pink",
-                percentage: "35"
-            }) %>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <div class="superhero__footer">
-        <div class="superhero__contacts">
-          <div class="contacts">
-            <a href="https://www.linkedin.com" class="contacts__link">
-              <img
-                src="../../images/social/linkedin.svg"
-                alt=""
-                class="contacts__icon"
-              />
-              Linkedin
-            </a>
-            <a href="https://www.github.com" class="contacts__link">
-              <img
-                src="../../images/social/github.svg"
-                alt=""
-                class="contacts__icon"
-              />
-              Github
-            </a>
+    </section>
+    <section class="block profile profile--captain-maven">
+      <div class="block__wrapper">
+        <h3 class="profile__title">Profile</h3>
+        <div class="profile__container">
+          <div class="profile__left">
+            <div class="profile__entry">
+              <span class="profile__label">Place of birth:</span>
+              <span class="frofile__text">Earth</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Gender:</span>
+              <span class="frofile__text">Female</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Age:</span>
+              <span class="frofile__text">30</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Occupation:</span>
+              <span class="frofile__text">JS developer</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Like:</span>
+              <span class="frofile__text">Comics, Animals, Swimming</span>
+            </div>
           </div>
+          <div class="profile__right">
+            <div class="profile__entry">
+              <span class="profile__label">Height:</span>
+              <span class="frofile__text">176 cm</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Weight:</span>
+              <span class="frofile__text">65 kg</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Hair:</span>
+              <span class="frofile__text">Brown</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Eyes:</span>
+              <span class="frofile__text">Blue</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Dislike:</span>
+              <span class="frofile__text">Donuts, Design, Fish</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block allies">
+      <div class="block__wrapper">
+        <h3 class="allies__title">Allies</h3>
+        <div class="allies__container">
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--black-window"></div>
+                <span class="ally__name">Black Window</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--web-storm"></div>
+                <span class="ally__name">Web Storm</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--coffeeman"></div>
+                <span class="ally__name">Coffeeman</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--serverman"></div>
+                <span class="ally__name">Serverman</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block contacts contacts--captain-maven">
+      <div class="block__wrapper">
+        <div class="contacts__container">
+          <a
+            href="https://www.linkedin.com"
+            class="contacts__link contacts__link--captain-maven"
+          >
+            <img
+              src="../../images/social/linkedin.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Linkedin
+          </a>
+          <a
+            href="https://www.github.com"
+            class="contacts__link contacts__link--captain-maven"
+          >
+            <img
+              src="../../images/social/github.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Github
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block presentation presentation--serverman">
+      <div class="block__wrapper">
+        <div class="presentation__container">
+          <div
+            class="presentation__background presentation__background--serverman"
+          ></div>
+          <div class="presentation__texts">
+            <span class="presentation__real-name">REAL NAME</span>
+            <h2 class="presentation__hero-name">SERVERMAN</h2>
+            <p class="presentation__intro">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate, assumenda!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block superhero">
+      <div class="block__wrapper">
+        <div class="superhero__container">
+          <div class="superhero__image-container">
+            <img
+              src="../../images/heroes/serverman-hp.png"
+              alt="Captain Maven"
+              class="superhero__image"
+            />
+          </div>
+          <div class="superhero__description">
+            <h2 class="superhero__name superhero__name--serverman">
+              SERVERMAN
+            </h2>
+            <blockquote
+              class="superhero__blockquote superhero__blockquote--serverman"
+            >
+              <p class="superhero__quote">
+                &ldquo;Lorem ipsum dolor sit amet consectetur.&rdquo;
+              </p>
+            </blockquote>
+            <p class="superhero__story">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
+              odit dignissimos expedita, delectus ullam ut nam nulla explicabo
+              sapiente repellendus, at adipisci. Dolorum labore assumenda
+              laudantium dolorem quam veniam autem doloribus quidem eveniet
+              accusamus voluptatum velit ea alias, fugit architecto enim quas
+              maxime porro! Atque, vero eius officia, quae fuga perspiciatis in
+              itaque ad alias animi voluptas obcaecati corporis illum, quibusdam
+              voluptates? Unde blanditiis quos perferendis maxime harum!
+              Maiores, placeat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block profile profile--serverman">
+      <div class="block__wrapper">
+        <h3 class="profile__title">Profile</h3>
+        <div class="profile__container">
+          <div class="profile__left">
+            <div class="profile__entry">
+              <span class="profile__label">Place of birth:</span>
+              <span class="frofile__text">Earth</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Gender:</span>
+              <span class="frofile__text">Female</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Age:</span>
+              <span class="frofile__text">30</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Occupation:</span>
+              <span class="frofile__text">JS developer</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Like:</span>
+              <span class="frofile__text">Comics, Animals, Swimming</span>
+            </div>
+          </div>
+          <div class="profile__right">
+            <div class="profile__entry">
+              <span class="profile__label">Height:</span>
+              <span class="frofile__text">176 cm</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Weight:</span>
+              <span class="frofile__text">65 kg</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Hair:</span>
+              <span class="frofile__text">Brown</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Eyes:</span>
+              <span class="frofile__text">Blue</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Dislike:</span>
+              <span class="frofile__text">Donuts, Design, Fish</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block allies">
+      <div class="block__wrapper">
+        <h3 class="allies__title">Allies</h3>
+        <div class="allies__container">
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--black-window"></div>
+                <span class="ally__name">Black Window</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--web-storm"></div>
+                <span class="ally__name">Web Storm</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--coffeeman"></div>
+                <span class="ally__name">Coffeeman</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--captain-maven"></div>
+                <span class="ally__name">Captain Maven</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block contacts contacts--serverman">
+      <div class="block__wrapper">
+        <div class="contacts__container">
+          <a
+            href="https://www.linkedin.com"
+            class="contacts__link contacts__link--serverman"
+          >
+            <img
+              src="../../images/social/linkedin.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Linkedin
+          </a>
+          <a
+            href="https://www.github.com"
+            class="contacts__link contacts__link--serverman"
+          >
+            <img
+              src="../../images/social/github.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Github
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block presentation presentation--coffeeman">
+      <div class="block__wrapper presentation__container">
+        <div class="presentation__container">
+          <div
+            class="presentation__background presentation__background--coffeeman"
+          ></div>
+          <div class="presentation__texts">
+            <span class="presentation__real-name">REAL NAME</span>
+            <h2 class="presentation__hero-name">COFFEEMAN</h2>
+            <p class="presentation__intro">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate, assumenda!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block superhero">
+      <div class="block__wrapper superhero__container">
+        <div class="superhero__container">
+          <div class="superhero__image-container">
+            <img
+              src="../../images/heroes/coffeeman-hp.png"
+              alt="Captain Maven"
+              class="superhero__image"
+            />
+          </div>
+          <div class="superhero__description">
+            <h2 class="superhero__name superhero__name--coffeeman">
+              COFFEEMAN
+            </h2>
+            <blockquote
+              class="superhero__blockquote superhero__blockquote--coffeeman"
+            >
+              <p class="superhero__quote">
+                &ldquo;Lorem ipsum dolor sit amet consectetur.&rdquo;
+              </p>
+            </blockquote>
+            <p class="superhero__story">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
+              odit dignissimos expedita, delectus ullam ut nam nulla explicabo
+              sapiente repellendus, at adipisci. Dolorum labore assumenda
+              laudantium dolorem quam veniam autem doloribus quidem eveniet
+              accusamus voluptatum velit ea alias, fugit architecto enim quas
+              maxime porro! Atque, vero eius officia, quae fuga perspiciatis in
+              itaque ad alias animi voluptas obcaecati corporis illum, quibusdam
+              voluptates? Unde blanditiis quos perferendis maxime harum!
+              Maiores, placeat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block profile profile--coffeeman">
+      <div class="block__wrapper">
+        <h3 class="profile__title">Profile</h3>
+        <div class="profile__container">
+          <div class="profile__left">
+            <div class="profile__entry">
+              <span class="profile__label">Place of birth:</span>
+              <span class="frofile__text">Earth</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Gender:</span>
+              <span class="frofile__text">Female</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Age:</span>
+              <span class="frofile__text">30</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Occupation:</span>
+              <span class="frofile__text">JS developer</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Like:</span>
+              <span class="frofile__text">Comics, Animals, Swimming</span>
+            </div>
+          </div>
+          <div class="profile__right">
+            <div class="profile__entry">
+              <span class="profile__label">Height:</span>
+              <span class="frofile__text">176 cm</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Weight:</span>
+              <span class="frofile__text">65 kg</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Hair:</span>
+              <span class="frofile__text">Brown</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Eyes:</span>
+              <span class="frofile__text">Blue</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Dislike:</span>
+              <span class="frofile__text">Donuts, Design, Fish</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block allies">
+      <div class="block__wrapper">
+        <h3 class="allies__title">Allies</h3>
+        <div class="allies__container">
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--black-window"></div>
+                <span class="ally__name">Black Window</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--web-storm"></div>
+                <span class="ally__name">Web Storm</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--captain-maven"></div>
+                <span class="ally__name">Captain Maven</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--serverman"></div>
+                <span class="ally__name">Serverman</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block contacts contacts--coffeeman">
+      <div class="block__wrapper">
+        <div class="contacts__container">
+          <a
+            href="https://www.linkedin.com"
+            class="contacts__link contacts__link--coffeeman"
+          >
+            <img
+              src="../../images/social/linkedin.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Linkedin
+          </a>
+          <a
+            href="https://www.github.com"
+            class="contacts__link contacts__link--coffeeman"
+          >
+            <img
+              src="../../images/social/github.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Github
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class=" block presentation presentation--web-storm">
+      <div class="block__wrapper">
+        <div class="presentation__container">
+          <div
+            class="presentation__background presentation__background--web-storm"
+          ></div>
+          <div class="presentation__texts">
+            <span class="presentation__real-name">REAL NAME</span>
+            <h2 class="presentation__hero-name">WEB STORM</h2>
+            <p class="presentation__intro">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate, assumenda!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block superhero">
+      <div class="block__wrapper">
+        <div class="superhero__container">
+          <div class="superhero__image-container">
+            <img
+              src="../../images/heroes/web-storm-hp.png"
+              alt="Captain Maven"
+              class="superhero__image"
+            />
+          </div>
+          <div class="superhero__description">
+            <h2 class="superhero__name superhero__name--web-storm">
+              WEB STORM
+            </h2>
+            <blockquote
+              class="superhero__blockquote superhero__blockquote--web-storm"
+            >
+              <p class="superhero__quote">
+                &ldquo;Lorem ipsum dolor sit amet consectetur.&rdquo;
+              </p>
+            </blockquote>
+            <p class="superhero__story">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
+              odit dignissimos expedita, delectus ullam ut nam nulla explicabo
+              sapiente repellendus, at adipisci. Dolorum labore assumenda
+              laudantium dolorem quam veniam autem doloribus quidem eveniet
+              accusamus voluptatum velit ea alias, fugit architecto enim quas
+              maxime porro! Atque, vero eius officia, quae fuga perspiciatis in
+              itaque ad alias animi voluptas obcaecati corporis illum, quibusdam
+              voluptates? Unde blanditiis quos perferendis maxime harum!
+              Maiores, placeat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block profile profile--web-storm">
+      <div class="block__wrapper">
+        <h3 class="profile__title">Profile</h3>
+        <div class="profile__container">
+          <div class="profile__left">
+            <div class="profile__entry">
+              <span class="profile__label">Place of birth:</span>
+              <span class="frofile__text">Earth</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Gender:</span>
+              <span class="frofile__text">Female</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Age:</span>
+              <span class="frofile__text">30</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Occupation:</span>
+              <span class="frofile__text">JS developer</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Like:</span>
+              <span class="frofile__text">Comics, Animals, Swimming</span>
+            </div>
+          </div>
+          <div class="profile__right">
+            <div class="profile__entry">
+              <span class="profile__label">Height:</span>
+              <span class="frofile__text">176 cm</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Weight:</span>
+              <span class="frofile__text">65 kg</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Hair:</span>
+              <span class="frofile__text">Brown</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Eyes:</span>
+              <span class="frofile__text">Blue</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Dislike:</span>
+              <span class="frofile__text">Donuts, Design, Fish</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block allies">
+      <div class="block__wrapper">
+        <h3 class="allies__title">Allies</h3>
+        <div class="allies__container">
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--black-window"></div>
+                <span class="ally__name">Black Window</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--captain-maven"></div>
+                <span class="ally__name">Captain Maven</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--coffeeman"></div>
+                <span class="ally__name">Coffeeman</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--serverman"></div>
+                <span class="ally__name">Serverman</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block contacts contacts--web-storm">
+      <div class="block__wrapper">
+        <div class="contacts__container">
+          <a
+            href="https://www.linkedin.com"
+            class="contacts__link contacts__link--web-storm"
+          >
+            <img
+              src="../../images/social/linkedin.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Linkedin
+          </a>
+          <a
+            href="https://www.github.com"
+            class="contacts__link contacts__link--web-storm"
+          >
+            <img
+              src="../../images/social/github.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Github
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block presentation presentation--black-window">
+      <div class="block__wrapper">
+        <div class="presentation__container">
+          <div
+            class="presentation__background presentation__background--black-window"
+          ></div>
+          <div class="presentation__texts">
+            <span class="presentation__real-name">REAL NAME</span>
+            <h2 class="presentation__hero-name">BLACK WINDOW</h2>
+            <p class="presentation__intro">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate, assumenda!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block superhero">
+      <div class="block__wrapper">
+        <div class="superhero__container">
+          <div class="superhero__image-container">
+            <img
+              src="../../images/heroes/black-window-hp.png"
+              alt="Captain Maven"
+              class="superhero__image"
+            />
+          </div>
+          <div class="superhero__description">
+            <h2 class="superhero__name superhero__name--black-window">
+              BLACK WINDOW
+            </h2>
+            <blockquote
+              class="superhero__blockquote superhero__blockquote--black-window"
+            >
+              <p class="superhero__quote">
+                &ldquo;Lorem ipsum dolor sit amet consectetur.&rdquo;
+              </p>
+            </blockquote>
+            <p class="superhero__story">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
+              odit dignissimos expedita, delectus ullam ut nam nulla explicabo
+              sapiente repellendus, at adipisci. Dolorum labore assumenda
+              laudantium dolorem quam veniam autem doloribus quidem eveniet
+              accusamus voluptatum velit ea alias, fugit architecto enim quas
+              maxime porro! Atque, vero eius officia, quae fuga perspiciatis in
+              itaque ad alias animi voluptas obcaecati corporis illum, quibusdam
+              voluptates? Unde blanditiis quos perferendis maxime harum!
+              Maiores, placeat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block profile profile--black-window">
+      <div class="block__wrapper">
+        <h3 class="profile__title">Profile</h3>
+        <div class="profile__container">
+          <div class="profile__left">
+            <div class="profile__entry">
+              <span class="profile__label">Place of birth:</span>
+              <span class="frofile__text">Earth</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Gender:</span>
+              <span class="frofile__text">Female</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Age:</span>
+              <span class="frofile__text">30</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Occupation:</span>
+              <span class="frofile__text">JS developer</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Like:</span>
+              <span class="frofile__text">Comics, Animals, Swimming</span>
+            </div>
+          </div>
+          <div class="profile__right">
+            <div class="profile__entry">
+              <span class="profile__label">Height:</span>
+              <span class="frofile__text">176 cm</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Weight:</span>
+              <span class="frofile__text">65 kg</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Hair:</span>
+              <span class="frofile__text">Brown</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Eyes:</span>
+              <span class="frofile__text">Blue</span>
+            </div>
+            <div class="profile__entry">
+              <span class="profile__label">Dislike:</span>
+              <span class="frofile__text">Donuts, Design, Fish</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block allies">
+      <div class="block__wrapper">
+        <h3 class="allies__title">Allies</h3>
+        <div class="allies__container">
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--captain-maven"></div>
+                <span class="ally__name">Captain Maven</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--web-storm"></div>
+                <span class="ally__name">Web Storm</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--coffeeman"></div>
+                <span class="ally__name">Coffeeman</span>
+              </a>
+            </div>
+          </div>
+          <div class="allies__ally">
+            <div class="ally">
+              <a href="#" class="ally__link">
+                <div class="ally__photo ally__photo--serverman"></div>
+                <span class="ally__name">Serverman</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block contacts contacts--black-window">
+      <div class="block__wrapper">
+        <div class="contacts__container">
+          <a
+            href="https://www.linkedin.com"
+            class="contacts__link contacts__link--black-window"
+          >
+            <img
+              src="../../images/social/linkedin.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Linkedin
+          </a>
+          <a
+            href="https://www.github.com"
+            class="contacts__link contacts__link--black-window"
+          >
+            <img
+              src="../../images/social/github.svg"
+              alt=""
+              class="contacts__icon"
+            />
+            Github
+          </a>
         </div>
       </div>
     </section>
