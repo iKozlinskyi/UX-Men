@@ -3,11 +3,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7), rgba(41, 41, 41, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.7), rgba(41, 41, 41, 0));
   display: flex;
   justify-content: flex-end;
   flex-flow: row nowrap;
   padding: 1.5em 7%;
+  z-index: 3000;
 }
 
 .nav {
