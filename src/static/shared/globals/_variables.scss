@@ -5,9 +5,12 @@
 
 //----------BREAKPOINTS-------------
 
-$bp-xsmall: 20em; // 320px
+$bp-xxsmall: 20em; // 320px
+$bp-xsmall: 36em;// 576px
 $bp-small: 48em; // 768px
+$bp-medium-small: 61.25em; // 980px
 $bp-medium: 64em; // 1024px
+$bp-medium-large: 71.25em; // 1140px
 $bp-large: 85.375em; // 1366px
 $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
@@ -43,6 +46,8 @@ $secondary-color--lighter: #dddfdb;
 $tertiary-color: #956050;
 $tertiary-color--lighter: #d48a73;
 
+$bg-color--dark: #191919;
+
 $accent-color--about: #6cd1eb;
 $accent-color--maven: #ebc96c;
 
@@ -55,34 +60,6 @@ $text-color--light: rgb(255, 255, 255);
 
 
 
-//-------------MIXINS------------------
-
-@mixin animate($name, $duration, $timing, $iteration, $direction) {
-  animation-name: $name;
-  animation-duration: $duration;
-  animation-timing-function: $timing;
-  animation-iteration-count: $iteration;
-  animation-direction: $direction;
-}
-
-@mixin flex($justify, $align, $direction: row) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-
-//-------------ANIMATIONS------------------
-
-@keyframes pulsation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.04);
-  }
-}
 
 
 
