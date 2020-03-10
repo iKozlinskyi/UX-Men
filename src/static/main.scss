@@ -1,8 +1,11 @@
 @import "./shared/globals/variables";
+@import "./shared/globals/mixins";
+@import "./shared/globals/animations";
 @import "./shared/globals/global-settings";
 @import "./shared/globals/base";
-@import "./shared/components/components";
+@import "./shared/components/styles/components";
 
 @import "./pages/landing/landing";
 @import "./pages/about/about";
 @import "./pages/heroes/heroes";
+@import "./pages/maven/maven";
