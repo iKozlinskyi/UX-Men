@@ -1,0 +1,65 @@
+.skill {
+  width: 100%;
+
+  &__name {
+    font-family: $ff-text;
+    font-weight: $semi-bold;
+    text-align: center;
+  }
+
+  &__svg {
+    margin: 0 auto;
+  }
+}
+
+.skill-circle {
+  display: block;
+  max-width: 80%;
+  height: 9.375em; //150px
+
+  &__bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+
+  &__circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+
+    &.green {
+      stroke: #4cc790;
+    }
+
+    &.blue {
+      stroke: #3c9ee5;
+    }
+
+    &.red {
+      stroke: #e53c3c;
+    }
+
+    &.pink {
+        stroke: #e53c7d;
+      }
+
+    &.yellow {
+      stroke: #e5da3c;
+    }
+  }
+
+  &__percentage {
+    fill: #666;
+    font-family: $ff-title;
+    font-size: 0.4em;
+    text-anchor: middle;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}

@@ -18,4 +18,8 @@ app.get('/heroes', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/heroes.html'));
 });
 
+app.get('/maven', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist/maven.ejs'));
+})
+
 app.listen(port, () => console.log('app is listening on 5050'));

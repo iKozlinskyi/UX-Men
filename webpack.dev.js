@@ -36,6 +36,7 @@ module.exports = merge(common, {
             rewrites: [
                 { from: /\/about/, to: '/about.html'},
                 { from: /\/heroes/, to: '/heroes.html'},
+                { from: /\/maven/, to: '/maven.html'},
                 { from: /\//, to: '/landing.html'}
             ]
         }

@@ -211,12 +211,37 @@
     position: relative;
   }
 
+  &__quotes {
+    font-size: 2em;
+    color: $accent-color--about;
+    font-weight: $bold;
+    padding: 0 0.3em;
+    line-height: 0.2em;
+  }
+
+  &__accent {
+    color: $accent-color--about;
+    font-style: italic;
+  }
+
+  &__author {
+    color: $accent-color--about;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: $semi-bold;
+    font-style: italic;
+  }
+
   &__title {
     color: $accent-color--about;
     font-family: $ff-title;
     font-size: 1.3em;
     text-transform: uppercase;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.5em;
+  }
+
+  &__text {
+    padding: 0.5em 0;
   }
 
   &__list {
