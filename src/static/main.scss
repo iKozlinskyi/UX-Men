@@ -2,6 +2,12 @@
 @import "./shared/globals/global-settings";
 @import "./shared/globals/base";
 @import "./shared/components/components";
+@import "./shared/components/hero/introduction/introduction";
+@import "./shared/components/hero/superhero/superhero";
+@import "./shared/components/hero/profile/profile";
+@import "./shared/components/hero/connections/connections";
+@import "./shared/components/hero/contacts/contacts";
+@import "./shared/components/hero-card/hero-card";
 
 @import "./pages/landing/landing";
 @import "./pages/about/about";
