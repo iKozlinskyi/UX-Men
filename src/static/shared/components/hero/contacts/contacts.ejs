@@ -1,0 +1,28 @@
+<section class="block contacts contacts--<%= heroName.toLowerCase().split(" ").join("-") %>">
+  <div class="block__wrapper">
+    <div class="contacts__container">
+      <a
+        href=<%= social.linkedIn %>
+        class="contacts__link contacts__link--<%= heroName.toLowerCase().split(" ").join("-") %>"
+      >
+        <img
+          src="../../images/social/linkedin.svg"
+          alt="LinkedIn"
+          class="contacts__icon"
+        />
+        Linkedin
+      </a>
+      <a
+        href=<%= social.github %>
+        class="contacts__link contacts__link--<%= heroName.toLowerCase().split(" ").join("-") %>"
+      >
+        <img
+          src="../../images/social/github.svg"
+          alt="Github"
+          class="contacts__icon"
+        />
+        Github
+      </a>
+    </div>
+  </div>
+</section>
