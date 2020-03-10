@@ -405,3 +405,93 @@
     height: 34px;
   }
 }
+
+.profile {
+  background-color: #e7e7e7;
+  color: #202020;
+  font-family: $ff-text;
+  font-size: 14px;
+  padding: 70px 0;
+
+  @media (min-width: $bp-medium) {
+    font-size: 16px;
+  }
+
+  &--captain-maven &__label {
+    color: #dd700d;
+  }
+
+  &--serverman &__label {
+    color: #d11915;
+  }
+
+  &--coffeeman &__label {
+    color: #265888;
+  }
+
+  &--black-window &__label {
+    color: #202017;
+  }
+
+  &--web-storm &__label {
+    color: #8cccd9;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    justify-content: space-between;
+
+    @media (min-width: $bp-small) {
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    font-family: $ff-title;
+  }
+
+  &__left {
+    @media (min-width: $bp-small) {
+      width: 45%;
+    }
+  }
+
+  &__right {
+    @media (min-width: $bp-small) {
+      width: 45%;
+    }
+  }
+
+  &__entry {
+    display: flex;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-bottom: 2px solid lightgrey;
+  }
+
+  &__label {
+    flex-shrink: 0;
+    display: block;
+    font-weight: 700;
+    color: #d11915;
+
+    min-width: 130px;
+
+    @media (min-width: $bp-small) {
+      // width: 40%;
+    }
+
+    @media (min-width: $bp-medium) {
+      // width: 30%;
+    }
+  }
+
+  &__text {
+    display: block;
+  }
+}
