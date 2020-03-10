@@ -1,0 +1,17 @@
+//-------------MIXINS------------------
+
+@mixin animate($name, $duration, $timing, $iteration, $direction) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing;
+    animation-iteration-count: $iteration;
+    animation-direction: $direction;
+  }
+  
+  @mixin flex($justify, $align, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  
