@@ -549,3 +549,23 @@
     text-align: center;
   }
 }
+
+.background-root {
+  height: 300px;
+  display: flex;
+
+  &__good-side {
+    height: 100%;
+    width: 50%;
+    background: rgb(2,55,31);
+    background: linear-gradient(90deg, rgba(2,55,31,1) 0%, rgba(0,0,0,1) 52%, rgba(0,0,0,1) 100%);
+  }
+
+  &__bad-side {
+    background-color: red;
+    height: 100%;
+    width: 50%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(71,1,1,1) 100%);
+  }
+}
