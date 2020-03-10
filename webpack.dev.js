@@ -37,7 +37,8 @@ module.exports = merge(common, {
                 { from: /\/about/, to: '/about.html'},
                 { from: /\/heroes/, to: '/heroes.html'},
                 { from: /\/maven/, to: '/maven.html'},
-                { from: /\//, to: '/landing.html'}
+                { from: /^\/$/, to: '/landing.html'},
+                { from: /./, to: '/not-found.html'}
             ]
         }
     }
