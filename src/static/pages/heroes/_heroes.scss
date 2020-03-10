@@ -180,18 +180,6 @@
   }
 
   &__container {
-    height: 100%;
-  }
-
-  &__main {
-    height: 100%;
-  }
-
-  &__intro {
-    height: 100%;
-  }
-
-  &__main {
     @media (min-width: $bp-small) {
       display: flex;
       flex-direction: row;
@@ -323,10 +311,11 @@
 
 .contacts {
   height: 80px;
-  padding: 0 30px;
+
   &__container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 0 30px;
   }
 
   @media (min-width: $bp-small) {
