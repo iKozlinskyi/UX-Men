@@ -50,3 +50,11 @@ window.addEventListener('scroll', function () {
         timerDeadlineTitle = setInterval(() => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle), 150);
     }
 });
+
+
+/* Go to About page */
+const teamPageButton = document.querySelector('.team__button--clicked');
+
+teamPageButton.addEventListener('click', function() {
+    window.location.pathname = '/about';
+});
