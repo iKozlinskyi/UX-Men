@@ -36,6 +36,7 @@ module.exports = merge(common, {
         { from: /\/maven/, to: "/maven.html" },
         { from: /\/coffeeman/, to: "/coffeeman.html" },
         { from: /\/blackWindow/, to: "/blackWindow.html" },
+        { from: /\/serverman/, to: "/serverman.html" },
         { from: /^\/$/, to: "/landing.html" },
         { from: /./, to: "/not-found.html" },
       ],
