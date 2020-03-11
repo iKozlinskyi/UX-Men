@@ -61,5 +61,34 @@ $text-color--light: rgb(255, 255, 255);
 
 
 
+//-------------ANIMATIONS------------------
+
+@keyframes pulsation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes large-scale-down {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 
 
