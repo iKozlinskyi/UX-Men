@@ -21,8 +21,238 @@
     @include clipped-text("./images/backgrounds/landing-page/background-fonts/metal.png", 4px);
     @include animate(large-scale-down, 1s, 0, linear, 1, normal, forwards);
   }
-  
+
 }
+
+
+
+
+// ------------------ BEGIN STORY SECTION ------------------
+
+.story {
+  display: flex;
+  position: relative;
+  &__button {
+    margin-top: 150px;
+    width: 350px;
+    padding: 10px;
+    font-size: 26px;
+    box-shadow: 2px 2px 8px #808080;
+
+    &:hover {
+      color: #ffffff;
+      background: linear-gradient(to bottom left, blue, #FF0000);
+      box-shadow: 2px 2px 8px #CD5C5C;
+    }
+
+    &-wrapper {
+      height: 300px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+      text-align: center;
+      background: url("./images/backgrounds/landing-page/begin-story-bg3.jpg") 400% 0 no-repeat;
+      background-size: cover;
+    }
+
+  }
+}
+
+.begin-story {
+  height: 700px;
+  width: 50%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background: url("./images/backgrounds/landing-page/begin-story-bg1.jpg") center center no-repeat;
+  background-size: cover;
+
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon-love {
+    height: 80px;
+    width: 80px;
+    animation: pulsationBig 2s infinite;
+
+    //@include animate(pulsationBig, 1s, linear, infinite, alternate);
+
+  }
+
+  &__description {
+    font-family: Oxanium, sans-serif;
+    font-size: 25px;
+    text-indent: 40px;
+    width: 70%;
+    color: white;
+
+    &-paragraph {
+      margin-bottom: 50px;
+    }
+  }
+
+}
+
+
+.no-likes {
+  height: 700px;
+  width: 50%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background: url("./images/backgrounds/landing-page/begin-story-bg2.jpg") center center no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    font-family: Oxanium, sans-serif;
+    font-size: 25px;
+    text-indent: 40px;
+    width: 55%;
+    color: white;
+}
+
+  &__img-wrapper {
+    position: relative;
+    margin-top: 162px;
+  }
+
+  &__img {
+    height: 350px;
+  }
+
+  &__left-tear {
+    position: absolute;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 20px solid blue;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    animation-name: left-tears;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+  }
+
+  &__left-tear1 {
+    bottom: 66%;
+    left: 36%;
+    transform: rotate(60deg);
+  }
+
+  &__left-tear2 {
+    bottom: 61%;
+    left: 37%;
+    transform: rotate(55deg);
+  }
+
+  &__left-tear3 {
+    bottom: 65%;
+    left: 26%;
+    transform: rotate(55deg);
+  }
+
+  &__left-tear4 {
+    bottom: 59%;
+    left: 28%;
+    transform: rotate(55deg);
+  }
+
+  &__left-tear5 {
+    bottom: 53%;
+    left: 30%;
+    transform: rotate(45deg);
+  }
+
+  &__right-tear {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 20px solid blue;
+    border-radius: 100%;
+    animation-name: right-tears;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+  }
+
+  &__right-tear1 {
+    bottom: 66%;
+    right: 35%;
+    transform: rotate(-60deg);
+  }
+
+  &__right-tear2 {
+    bottom: 61%;
+    right: 33%;
+    transform: rotate(-55deg);
+  }
+
+  &__right-tear3 {
+    bottom: 65%;
+    right: 24%;
+    transform: rotate(-55deg);
+  }
+
+  &__right-tear4 {
+    bottom: 59%;
+    right: 25%;
+    transform: rotate(-55deg);
+  }
+
+  &__right-tear5 {
+    bottom: 53%;
+    right: 28%;
+    transform: rotate(-45deg);
+  }
+}
+
+
+
+@keyframes left-tears {
+  0% {
+    margin-left: 0;
+    margin-bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    margin-left: -15%;
+    margin-bottom: -30%;
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes right-tears {
+  0% {
+    margin-right: 0;
+    margin-bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    margin-right: -15%;
+    margin-bottom: -30%;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -237,7 +467,6 @@
   }
 
 
-
 }
 
 .timer {
@@ -262,7 +491,10 @@
   &__date {
     font-size: 68px;
     display: block;
-    width: 188px;
+    width: 190px;
     text-align: center;
   }
 }
+
+
+
