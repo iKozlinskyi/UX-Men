@@ -31,7 +31,7 @@ export let timer = setInterval(function () {
 
 let messageCount = 0;
 
-const deadlineTitleMessage = "Will they make it before it is too late?";
+const deadlineTitleMessage = "Will they make it before the deadline?";
 const deadlineTitle = document.getElementsByClassName("deadline__title")[0];
 let timerDeadlineTitle;
 
@@ -46,7 +46,15 @@ export function printText(message, messageWrapper, timer) {
 
 window.addEventListener('scroll', function () {
     let messageTop = deadlineTitle.getBoundingClientRect().top;
-    if (messageTop >= 240 && messageTop <= 260) {
-        timerDeadlineTitle = setInterval(() => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle), 150);
+    if (messageTop <=250) {
+        timerDeadlineTitle = setInterval(() => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle), 300);
     }
+});
+
+
+/* Go to About page */
+const teamPageButton = document.querySelector('.team__button--clicked');
+
+teamPageButton.addEventListener('click', function() {
+    window.location.pathname = '/about';
 });

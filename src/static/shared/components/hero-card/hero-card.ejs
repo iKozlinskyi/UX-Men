@@ -1,0 +1,13 @@
+<div class="hero-card">
+  <% const links = {
+    'Captain Maven' : '/captain-maven',
+    'Serverman': '/serverman',
+    'Coffeeman': '/coffeeman',
+    'Web Storm': '/web-storm',
+    'Black Window': '/black-window'
+  } %> 
+  <a href="<%= links[heroName] %>" class="hero-card__link">
+    <div class="hero-card__photo hero-card__photo--<%= heroName.toLowerCase().split(" ").join("-") %>"></div>
+    <span class="hero-card__name"><%= heroName %></span>
+  </a>
+</div>

@@ -1,0 +1,28 @@
+<section class="block superhero">
+  <div class="block__wrapper">
+    <div class="superhero__container">
+      <div class="superhero__image-container">
+        <img
+          src=<%= imagePath%>
+          alt="Captain Maven"
+          class="superhero__image"
+        />
+      </div>
+      <div class="superhero__description">
+        <h2 class="superhero__name superhero__name--<%= heroName.toLowerCase().split(" ").join("-") %>">
+          <%= heroName %>
+        </h2>
+        <blockquote
+          class="superhero__blockquote superhero__blockquote--<%= heroName.toLowerCase().split(" ").join("-") %>"
+        >
+          <p class="superhero__quote">
+            &ldquo;<%= quote %>&rdquo;
+          </p>
+        </blockquote>
+        <p class="superhero__story">
+          <%= story %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

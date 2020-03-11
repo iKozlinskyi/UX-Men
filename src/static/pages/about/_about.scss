@@ -135,6 +135,7 @@
 .profiles {
   padding: 10% 0;
   background: linear-gradient(#ffffff, #ffffff, #000000, #000000);
+  overflow: hidden;
 
   &__title {
     font-size: 3em;
