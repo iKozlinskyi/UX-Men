@@ -12,7 +12,8 @@ cursor.classList.add('superhero__story-cursor');
 story.appendChild(cursor);
 
 
-
+const superheroImageContainer = document.getElementsByClassName('superhero__image-container')[0];
+superheroImageContainer.classList.add('superhero__image-container-blackWidow');
 
 
 /*Print text*/
@@ -35,7 +36,12 @@ function printText(message, messageWrapper, timer) {
 
 window.addEventListener('scroll', function () {
     let messageTop = storyDescription.getBoundingClientRect().top;
+
+    if (timerStoryDescription) {
+        return;
+    }
+
     if (messageTop <=250) {
-        timerStoryDescription = setInterval(() => printText(storyDescriptionMessage, storyDescription, timerStoryDescription), 250);
+        timerStoryDescription = setInterval(() => printText(storyDescriptionMessage, storyDescription, timerStoryDescription), 80);
     }
 });
