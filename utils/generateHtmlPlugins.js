@@ -13,6 +13,7 @@ function generateHtmlPlugins(templateDir, shouldMinify) {
         const templateRelativePath = parts.slice(parts.indexOf('src'), parts.length - 1).join(delimiter);
         return new HtmlWebpackPlugin({
             filename: `${fileName}.html`,
+            favicon: 'favicon.ico',
             template: `./${templateRelativePath}.${extension}`,
             chunks: [chunkName, 'styles'],
             minify: shouldMinify && {
