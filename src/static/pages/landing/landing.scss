@@ -1,8 +1,7 @@
 // ------------------ POSTER SECTION ------------------
 .poster {
-  background: url("./images/backgrounds/landing-page/poster-section.png") center center no-repeat;
-  background-size: cover;
-
+  background: url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat center top / cover;
+  // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
   &__wrapper {
     font-family: $ff-tertiary;
@@ -15,11 +14,16 @@
     background-color: black;
   }
 
-  &__movie-title {
-    font-size: 12em;
-    -webkit-text-stroke-color: #363636;
-    @include clipped-text("./images/backgrounds/landing-page/background-fonts/metal.png", 4px);
-    @include animate(large-scale-down, 1s, 0, linear, 1, normal, forwards);
+  &__title {
+    font-size: 8em;
+    font-weight: $bold;
+    font-family: $ff-title;
+    text-transform: uppercase;
+    color: $text-color--light;
+  }
+
+  &__accent {
+    color: $accent-color;
   }
 
 }
