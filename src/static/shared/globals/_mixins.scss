@@ -34,3 +34,9 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: $text-stroke;
   }
+
+  @mixin basic-text($color) {
+    font-family: $ff-text;
+    font-weight: $light;
+    color: $color;
+  }

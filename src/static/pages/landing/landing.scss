@@ -34,71 +34,45 @@
 .story {
   display: flex;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
-  &__button {
-    margin-top: 150px;
-    width: 350px;
-    padding: 10px;
-    font-size: 26px;
-    box-shadow: 2px 2px 8px #808080;
+  background-color: $bg-color--light;
+  padding: 1% 0;
 
-    &:hover {
-      color: #ffffff;
-      background: linear-gradient(to bottom left, blue, #FF0000);
-      box-shadow: 2px 2px 8px #CD5C5C;
+  &--gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+     url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat center top / cover;
+  }
+
+  &--to-right {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+  }
+
+  &--to-left {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  &__article {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
+    margin-bottom: 5%;
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 
-    &-wrapper {
-      height: 300px;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      margin: 0;
-      clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
-      text-align: center;
-      background: url("./images/backgrounds/landing-page/begin-story-bg3.jpg") 400% 0 no-repeat;
-      background-size: cover;
-    }
+  &__text {
+    @include basic-text($text-color--light);
+    font-size: 1.5em;
+    padding: 10% 0;
+  }
 
+  &__text-accent {
+    color: $accent-color;
+    font-style: italic;
   }
 }
 
-.begin-story {
-  height: 700px;
-  width: 50%;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  background: url("./images/backgrounds/landing-page/begin-story-bg1.jpg") center center no-repeat;
-  background-size: cover;
-
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__icon-love {
-    height: 80px;
-    width: 80px;
-    animation: pulsationBig 2s infinite;
-
-    //@include animate(pulsationBig, 1s, linear, infinite, alternate);
-
-  }
-
-  &__description {
-    font-family: Oxanium, sans-serif;
-    font-size: 25px;
-    text-indent: 40px;
-    width: 70%;
-    color: white;
-
-    &-paragraph {
-      margin-bottom: 50px;
-    }
-  }
-
-}
 
 .no-likes {
   height: 700px;
