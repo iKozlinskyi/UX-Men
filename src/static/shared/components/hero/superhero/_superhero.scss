@@ -1,0 +1,136 @@
+.superhero {
+  @media (min-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 100px;
+  }
+
+  &__container {
+    @media (min-width: $bp-small) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__description {
+    width: 100%;
+    padding: 0 30px 80px 30px;
+
+    @media (min-width: $bp-small) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+    }
+  }
+
+  &__name {
+    padding: 20px 0;
+    font-family: $ff-title;
+    font-size: 32px;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    @media (min-width: 500px) {
+      font-size: 48px;
+    }
+
+    @media (min-width: $bp-small) {
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: 56px;
+    }
+
+    @media (min-width: $bp-medium) {
+      font-size: 64px;
+    }
+
+    @media (min-width: $bp-large) {
+      font-size: 80px;
+    }
+
+    &--captain-maven {
+      color: #dd700d;
+    }
+
+    &--serverman {
+      color: #d11915;
+    }
+
+    &--coffeeman {
+      color: #265888;
+    }
+
+    &--black-window {
+      color: #202017;
+    }
+
+    &--web-storm {
+      color: #8cccd9;
+    }
+  }
+
+  &__blockquote {
+    padding: 10px 20px;
+    border-left: 5px solid #000;
+    margin-top: 4px;
+    background-color: #e7e7e7;
+    font-style: italic;
+    font-size: 18px;
+
+    &--captain-maven {
+      border-left-color: #dd700d;
+    }
+
+    &--serverman {
+      border-left-color: #d11915;
+    }
+
+    &--coffeeman {
+      border-left-color: #265888;
+    }
+
+    &--black-window {
+      border-left-color: #202017;
+    }
+
+    &--web-storm {
+      border-left-color: #8cccd9;
+    }
+  }
+
+  &__story {
+    font-family: $ff-text;
+    margin-top: 30px;
+    line-height: 1.5;
+    color: #202020;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  &__image-container {
+    display: flex;
+    align-items: center;
+    max-width: 320px;
+    padding: 20px 30px 0px 30px;
+    margin: 0 auto;
+
+    @media (min-width: $bp-small) {
+      max-width: none;
+      padding: 20px 20px 40px 20px;
+      max-height: 680px;
+    }
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+
+    @media (min-width: $bp-small) {
+      height: 100%;
+    }
+  }
+}

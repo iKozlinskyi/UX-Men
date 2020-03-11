@@ -5,9 +5,12 @@
 
 //----------BREAKPOINTS-------------
 
-$bp-xsmall: 20em; // 320px
+$bp-xxsmall: 20em; // 320px
+$bp-xsmall: 36em;// 576px
 $bp-small: 48em; // 768px
+$bp-medium-small: 61.25em; // 980px
 $bp-medium: 64em; // 1024px
+$bp-medium-large: 71.25em; // 1140px
 $bp-large: 85.375em; // 1366px
 $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
@@ -57,6 +60,35 @@ $text-color--light: rgb(255, 255, 255);
 
 
 
+
+//-------------ANIMATIONS------------------
+
+@keyframes pulsation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes large-scale-down {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 
 
 
