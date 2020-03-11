@@ -48,8 +48,13 @@ export function printText(message, messageWrapper, timer) {
 
 window.addEventListener('scroll', function () {
     let messageTop = deadlineTitle.getBoundingClientRect().top;
+
+    if (timerDeadlineTitle) {
+        return;
+    }
+
     if (messageTop <=250) {
-        timerDeadlineTitle = setInterval(() => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle), 300);
+        timerDeadlineTitle = setInterval(() => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle), 90);
     }
 });
 
@@ -80,3 +85,13 @@ window.onload = function() {
 };
 
 
+
+
+const navItem = document.getElementsByClassName('nav__item');
+
+for (let i=0; i<navItem.length; i++) {
+
+    navItem[i].addEventListener('click', ()=> {
+        navItem[i].classList.add('nav__item-active')
+    })
+}
