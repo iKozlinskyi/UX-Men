@@ -22,12 +22,12 @@ app.get("/coffeeman", (req, res) => {
   res.sendFile(path.join(__dirname, "dist/coffeeman.html"));
 });
 
-app.get("/blackWindow", (req, res) => {
+app.get("/black-window", (req, res) => {
   res.sendFile(path.join(__dirname, "dist/blackWindow.html"));
 });
 
-app.get("/maven", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/maven.ejs"));
+app.get("/captain-maven", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist/maven.html"));
 });
 
 app.use("*", (req, res) => {
