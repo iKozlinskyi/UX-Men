@@ -46,7 +46,7 @@ export function printText(message, messageWrapper, timer) {
 
 window.addEventListener('scroll', function () {
     let messageTop = deadlineTitle.getBoundingClientRect().top;
-    if (messageTop >= 240 && messageTop <= 260) {
-        timerDeadlineTitle = setInterval(() => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle), 150);
+    if (messageTop <=250) {
+        timerDeadlineTitle = setInterval(() => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle), 300);
     }
 });
