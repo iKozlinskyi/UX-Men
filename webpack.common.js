@@ -2,6 +2,7 @@ module.exports = {
     entry: {
         landing: "./src/static/pages/landing/landing.js",
         about: "./src/static/pages/about/about.js",
+        blackWindow: "./src/static/pages/blackWindow/blackWindow.js",
         styles: "./src/static/main.scss",
     },
     module: {
