@@ -1,4 +1,6 @@
-//Particle class
+const REGEX_HEX = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
+const REGEX_IMAGE = /\.(gif|jpg|jpeg|tiff|png)$/i;
+
 class Particle {
   constructor(parent) {
     this.canvas = parent.canvas;
@@ -38,25 +40,20 @@ class Particle {
   }
 }
 
-//Particle Network
-
 export default class ParticleNetwork {
   constructor(canvas, options) {
-    this.canvasDiv = canvas;
-    this.canvasDiv.size = {
-      width: this.canvasDiv.offsetWidth,
-      height: this.canvasDiv.offsetHeight
+    this.canvasWrapper = canvas;
+    this.canvasWrapper.size = {
+      width: this.canvasWrapper.offsetWidth,
+      height: this.canvasWrapper.offsetHeight
     };
 
     //Set options
-    options = options !== undefined ? options : {};
+    options = options ? options : {};
     this.options = {
-      particleColor:
-        options.particleColor !== undefined ? options.particleColor : "#fff",
-      background:
-        options.background !== undefined ? options.background : "#1a252f",
-      interactive:
-        options.interactive !== undefined ? options.interactive : true,
+      particleColor: options.particleColor ? options.particleColor : "#fff",
+      background: options.background ? options.background : "transparent",
+      interactive: options.interactive ? options.interactive : false,
       velocity: this.setVelocity(options.speed),
       density: this.setDensity(options.density)
     };
@@ -65,12 +62,8 @@ export default class ParticleNetwork {
   }
 
   init() {
-    //create background div
-    this.bgDiv = document.createElement("div");
-    if (this.canvasDiv.hasChildNodes()) {
-      this.canvasDiv.insertBefore(this.bgDiv, this.canvasDiv.firstElementChild);
-    } else this.canvasDiv.appendChild(this.bgDiv);
-    this.setStyles(this.bgDiv, {
+    this.canvasBackground = document.createElement("div");
+    this.setStyles(this.canvasBackground, {
       position: "absolute",
       top: 0,
       left: 0,
@@ -80,46 +73,15 @@ export default class ParticleNetwork {
       width: "100%"
     });
 
-    //Check if valid background hex color
-    if (/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(this.options.background)) {
-      this.setStyles(this.bgDiv, {
-        background: this.options.background
-      });
-    }
-    //else check if valid image
-    else if (/\.(gif|jpg|jpeg|tiff|png)$/i.test(this.options.background)) {
-      this.setStyles(this.bgDiv, {
-        background: `url("${this.options.background}") no-repeat center`,
-        "background-size": "cover"
-      });
-    }
-    //else set transparent
-    else {
-      this.setStyles(this.bgDiv, {
-        background: "transparent"
-      });
-    }
-
-    //Check if valid particleColor
-    if (
-      !/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(this.options.particleColor)
-    ) {
-      console.error("Please specify a valid particleColor hexadecimal color");
-      return false;
-    }
+    this.setCanvasBackground(this.options.background);
+    if (!this.isParticleColorValid(this.options.particleColor)) return false;
 
     //Create canvas & context
     this.canvas = document.createElement("canvas");
-    if (this.canvasDiv.hasChildNodes()) {
-      this.canvasDiv.insertBefore(
-        this.canvas,
-        this.canvasDiv.firstElementChild
-      );
-    } else this.canvasDiv.appendChild(this.canvas);
     this.ctx = this.canvas.getContext("2d");
-    this.canvas.width = this.canvasDiv.size.width;
-    this.canvas.height = this.canvasDiv.size.height;
-    this.setStyles(this.canvasDiv, { position: "relative" });
+    this.canvas.width = this.canvasWrapper.size.width;
+    this.canvas.height = this.canvasWrapper.size.height;
+    this.setStyles(this.canvasWrapper, { position: "relative" });
     this.setStyles(this.canvas, {
       position: "absolute",
       top: 0,
@@ -127,36 +89,38 @@ export default class ParticleNetwork {
       "z-index": 0
     });
 
+    this.canvasWrapper.insertBefore(
+      this.canvasBackground,
+      this.canvasWrapper.firstElementChild
+    );
+    this.canvasWrapper.insertBefore(
+      this.canvas,
+      this.canvasWrapper.firstElementChild.nextSibling
+    );
+
     //Add resize listener to canvas
     window.addEventListener(
       "resize",
       function() {
         //Check if div has changed size
         if (
-          this.canvasDiv.offsetWidth === this.canvasDiv.size.width &&
-          this.canvasDiv.offsetHeight === this.canvasDiv.size.height
+          this.canvasWrapper.offsetWidth === this.canvasWrapper.size.width &&
+          this.canvasWrapper.offsetHeight === this.canvasWrapper.size.height
         ) {
           return false;
         }
 
         //Scale canvas
-        this.canvas.width = this.canvasDiv.size.width = this.canvasDiv.offsetWidth;
-        this.canvas.height = this.canvasDiv.size.height = this.canvasDiv.offsetHeight;
+        this.canvas.width = this.canvasWrapper.size.width = this.canvasWrapper.offsetWidth;
+        this.canvas.height = this.canvasWrapper.size.height = this.canvasWrapper.offsetHeight;
 
         //Set timeout to wait until end of resize event
         clearTimeout(this.resetTimer);
         this.resetTimer = setTimeout(
           function() {
             //Reset Particles
-            this.particles = [];
-            for (
-              let i = 0;
-              i <
-              (this.canvas.width * this.canvas.height) / this.options.density;
-              i++
-            ) {
-              this.particles.push(new Particle(this));
-            }
+            this.initParticles();
+
             if (this.options.interactive) {
               this.particles.push(this.mouseParticle);
             }
@@ -170,14 +134,7 @@ export default class ParticleNetwork {
     );
 
     //Initialize particles
-    this.particles = [];
-    for (
-      let i = 0;
-      i < (this.canvas.width * this.canvas.height) / this.options.density;
-      i++
-    ) {
-      this.particles.push(new Particle(this));
-    }
+    this.initParticles();
 
     if (this.options.interactive) {
       //Add mouse particle if interactive
@@ -229,7 +186,7 @@ export default class ParticleNetwork {
 
       //Draw connections
       for (let j = this.particles.length - 1; j > i; j--) {
-        let distance = Math.sqrt(
+        const distance = Math.sqrt(
           Math.pow(this.particles[i].x - this.particles[j].x, 2) +
             Math.pow(this.particles[i].y - this.particles[j].y, 2)
         );
@@ -251,7 +208,24 @@ export default class ParticleNetwork {
     }
   }
 
-  //Helper method to set velocity multiplier
+  initParticles() {
+    this.particles = [];
+    const particlesCount =
+      (this.canvas.width * this.canvas.height) / this.options.density;
+
+    for (let i = 0; i < particlesCount; i++) {
+      this.particles.push(new Particle(this));
+    }
+  }
+
+  isParticleColorValid(color) {
+    if (!REGEX_HEX.test(color)) {
+      console.error("Please specify a valid particleColor hexadecimal color");
+      return false;
+    }
+    return true;
+  }
+
   setVelocity(speed) {
     if (speed === "fast") {
       return 1;
@@ -262,17 +236,34 @@ export default class ParticleNetwork {
     } else return 0.66;
   }
 
-  //Helper method to set density multiplier
+  setCanvasBackground(background) {
+    if (REGEX_HEX.test(background)) {
+      this.setStyles(this.canvasBackground, {
+        background: background
+      });
+    } else if (REGEX_IMAGE.test(background)) {
+      this.setStyles(this.canvasBackground, {
+        background: `url("${background}") no-repeat center`,
+        "background-size": "cover"
+      });
+    } else {
+      this.setStyles(this.canvasBackground, {
+        background: "transparent"
+      });
+    }
+  }
+
   setDensity(density) {
     if (density === "high") {
       return 5000;
+    } else if (density === "medium") {
+      return 10000;
     } else if (density === "low") {
       return 20000;
     }
     return !isNaN(parseInt(density, 10)) ? density : 1000;
   }
 
-  //Helper method to set multiple styles
   setStyles(div, styles) {
     for (let property in styles) {
       div.style[property] = styles[property];
