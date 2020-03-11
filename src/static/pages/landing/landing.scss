@@ -1,25 +1,27 @@
 // ------------------ POSTER SECTION ------------------
 .poster {
-  //background: url("./images/backgrounds/landing-page/poster-section.png") center center;
-  //background-size: cover;
+  background: url("./images/backgrounds/landing-page/poster-section.png") center center no-repeat;
+  background-size: cover;
+
 
   &__wrapper {
-    padding: 2em 0;
-    display: flex;
+    font-family: $ff-tertiary;
     height: 100vh;
+    padding: 10em 0;
     @include flex(flex-end, center, column);
+  }
+
+  &__text-container {
+    background-color: black;
   }
 
   &__movie-title {
     font-size: 12em;
+    -webkit-text-stroke-color: #363636;
     @include clipped-text("./images/backgrounds/landing-page/background-fonts/metal.png", 4px);
     @include animate(large-scale-down, 1s, 0, linear, 1, normal, forwards);
   }
-
-  &__movie-subtitle {
-    opacity: 0;
-    @include animate(fade-in, 2s, 1s, linear, 1, normal, forwards);
-  }
+  
 }
 
 
@@ -31,6 +33,7 @@
   background: url("./images/backgrounds/landing-page/team-section.png") center center;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+
 
   &__container {
     padding: 8% 0;
@@ -98,8 +101,8 @@
 
     &:hover {
         color: #ffffff;
-        background-color: rgba(82, 178, 194, 0.64);
-        box-shadow: 2px 2px 8px #162125;
+        background: linear-gradient(to bottom left, #29545e, #387280);
+        box-shadow: 2px 2px 8px #1e343d;
         animation-play-state: paused;
     }
 
@@ -211,12 +214,11 @@
 // ------------------ DEADLINE SECTION ------------------
 
 .deadline {
-  margin-top: -140px;
+  margin-top: -10%;
   background: url("./images/backgrounds/landing-page/deadline-section.png") center center no-repeat;
   background-size: cover;
-  padding-top: 15px;
-  height: 600px;
-  font-family: $ff-title;
+  padding-top: 6%;
+  font-family: $ff-text;
 
   &__container {
     display: flex;
@@ -226,18 +228,23 @@
   }
 
   &__title {
-    font-size: 52px;
+    white-space: nowrap;
+    font-size: 50px;
     color: white;
     text-transform: uppercase;
     text-align: center;
+    font-weight: $bold;
     letter-spacing: 2px;
-    height: 33%;
+    height: 55px;
     margin-top: 120px;
   }
 
+  &__button-container {
+    padding: 10% 0;
+  }
+
   &__button {
-    margin-top: 150px;
-    width: 350px;
+    width: 390px;
     padding: 10px;
     font-size: 26px;
     box-shadow: 2px 2px 8px #808080;
@@ -245,8 +252,8 @@
 
     &:hover {
       color: #ffffff;
-      background: linear-gradient(to bottom left, #000000, #696969);
-      box-shadow: 2px 2px 8px #162125;
+      background: linear-gradient(to bottom left, #29545e, #387280);
+      box-shadow: 2px 2px 8px #1e343d;
       animation-play-state: paused;
     }
 
@@ -254,14 +261,17 @@
 }
 
 .timer {
+  margin-top: 100px;
   color: white;
   text-transform: uppercase;
   text-align: center;
-  padding-right: 20px;
   height: 33%;
   display: flex;
   align-items: center;
-  border: 5px outset white;
+  padding: 1.11111111em;
+  border-radius: 3px;
+  box-shadow: 2px -2px 0 #2bf5ff;
+  background-color: rgba(82, 178, 194, 0.64);
 
   &__item {
     display: inline-block;

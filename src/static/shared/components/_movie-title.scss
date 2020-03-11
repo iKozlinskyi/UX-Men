@@ -1,15 +1,8 @@
 .movie-title {
-  font-family: 'Monserat', sans-serif;
+  font-family: $ff-title;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: bold;
   color: #606060;
   //@include clipped-text('./metal.jpg', 4px);
-}
-
-.movie-subtitle {
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #606060;
 }
