@@ -32,8 +32,6 @@
 .story {
   display: flex;
   position: relative;
-  margin-top: 200px;
-  margin-bottom: 200px;
   &__button {
     margin-top: 150px;
     width: 350px;
@@ -79,7 +77,9 @@
   &__icon-love {
     height: 80px;
     width: 80px;
-    @include animate(pulsationBig, 1s, linear, infinite, alternate);
+    animation: pulsationBig 2s infinite;
+
+    //@include animate(pulsationBig, 1s, linear, infinite, alternate);
 
   }
 
@@ -467,7 +467,6 @@
   }
 
 
-
 }
 
 .timer {
@@ -492,7 +491,7 @@
   &__date {
     font-size: 68px;
     display: block;
-    width: 188px;
+    width: 190px;
     text-align: center;
   }
 }
