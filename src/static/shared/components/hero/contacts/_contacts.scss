@@ -1,0 +1,80 @@
+.contacts {
+  height: 80px;
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $bp-small) {
+    justify-content: flex-end;
+  }
+
+  &--captain-maven {
+    background-color: rgba(221, 112, 13, 0.8);
+  }
+
+  &--serverman {
+    background-color: rgba(209, 25, 21, 0.8);
+  }
+
+  &--coffeeman {
+    background-color: rgba(38, 88, 136, 0.8);
+  }
+
+  &--black-window {
+    background-color: rgba(32, 32, 23, 0.8);
+  }
+
+  &--web-storm {
+    background-color: rgba(140, 204, 217, 0.8);
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 120px;
+    height: 90px;
+    margin-top: -50px;
+    margin-right: 3%;
+    color: #fff;
+    font-size: 16px;
+    font-family: monospace;
+    text-decoration: none;
+
+    &--captain-maven {
+      background-color: #dd700d;
+    }
+
+    &--serverman {
+      background-color: #d11915;
+    }
+
+    &--coffeeman {
+      background-color: #265888;
+    }
+
+    &--black-window {
+      background-color: #202017;
+    }
+
+    &--web-storm {
+      background-color: #8cccd9;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    height: 34px;
+  }
+}

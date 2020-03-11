@@ -1,3 +1,32 @@
+// ------------------ POSTER SECTION ------------------
+.poster {
+  background: url("./images/backgrounds/landing-page/poster-section.png") center center no-repeat;
+  background-size: cover;
+
+
+  &__wrapper {
+    font-family: $ff-tertiary;
+    height: 100vh;
+    padding: 10em 0;
+    @include flex(flex-end, center, column);
+  }
+
+  &__text-container {
+    background-color: black;
+  }
+
+  &__movie-title {
+    font-size: 12em;
+    -webkit-text-stroke-color: #363636;
+    @include clipped-text("./images/backgrounds/landing-page/background-fonts/metal.png", 4px);
+    @include animate(large-scale-down, 1s, 0, linear, 1, normal, forwards);
+  }
+
+}
+
+
+
+
 // ------------------ BEGIN STORY SECTION ------------------
 
 .story {
@@ -233,44 +262,164 @@
 .team {
   background: url("./images/backgrounds/landing-page/team-section.png") center center;
   background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+
 
   &__container {
-    padding: 100px 0;
+    padding: 8% 0;
+
   }
 
   &__text-container {
-    @include flex(space-evenly, flex-end);
-
+    margin: 3.8888888em 0;
+    @include flex(space-around, flex-start);
+    flex-wrap: wrap;
+    padding-bottom: 0.8888888em;
+    background-color: #000000cc;
   }
 
   &__story-text {
-    background-color: rgba(0, 0, 0, .8);
-    padding: 20px;
-    margin: 0 20px;
-    border-radius: 7px;
-    width: 350px;
-    height: auto;
+    font-size: 18px;
+    box-shadow: 2px -2px 0 #2bf5ff;
+    background-color: rgba(82, 178, 194, 0.64);
+    padding: 1.11111111em;
+    border-radius: 3px;
+  }
+
+  &__story-text--text1 {
+    width: 23.611111em;
+    order: 0;
+  }
+
+  &__story-text--text2 {
+    width: 19.7222222em;
+    order: 3;
+    margin-top: -1.94444444em;
+    margin-left: 8.88888888em;
+  }
+
+  &__story-text--text3 {
+    order: 2;
+    width: 27.22222222em;
+  }
+
+  &__story-text--text4 {
+    order: 4;
+    width: 21.66666666em;
+    margin-right: 1.125em;
+    margin-top: 1em;
+  }
+
+  &__story-text--decorate {
+    color: #14e9ffe6;
+    font-weight: $bold;
   }
 
 
   &__button-container {
-    margin-top: 230px;
+    padding: 3.84615385em 0;
     text-align: center;
   }
 
   &__button {
-    width: 350px;
-    padding: 10px;
-    margin: 0 35px;
-    font-size: 26px;
-    box-shadow: 2px 2px 8px #808080;
-    @include animate(pulsation, 0.8s, linear, infinite, alternate);
 
-    &:hover {
-        color: #ffffff;
-        background-color: #496D7B;
-        box-shadow: 2px 2px 8px #162125;
-        animation-play-state: paused;
+    margin: 0 3%;
+  }
+
+}
+
+
+// 1140px
+@media (max-width: $bp-medium-large) {
+  .team {
+
+    &__story-text--text2 {
+      margin-left: initial; //!!!!
+    }
+
+    &__story-text--text4 {
+      width: 21.66666666em;
+      margin-right: initial;
+    }
+
+  }
+}
+
+
+// 980px
+@media (max-width: $bp-medium-small) {
+  .team {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    &__text-container {
+      margin: 10%;
+      @include flex(center, center, column);
+      flex-wrap: wrap;
+      padding-bottom: 2%;
+    }
+
+    &__story-text {
+      font-size: 16px;
+      margin: 2.5% 0;
+    }
+
+    &__story-text--text1 {
+      width: 23.611111em;
+      order: 1;
+    }
+
+    &__story-text--text2 {
+      width: 30.611111em;
+      order: 2;
+    }
+
+    &__story-text--text3 {
+      order: 3;
+      width: 23.611111em;
+    }
+
+    &__story-text--text4 {
+      order: 4;
+      width: 21.611111em;
+    }
+
+    &__button-container {
+      padding: 0 0 8%;
+      text-align: center;
+    }
+
+    &__button {
+      margin: 1.5% 3%;
+      width: 16.666666666em;
+      padding: 1%;
+      font-size: 24px;
+
+    }
+
+  }
+
+}
+
+// 576px
+@media (max-width: $bp-xsmall) {
+
+  .team {
+
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+    &__text-container {
+      margin: 1.875em;
+      padding-bottom: 2%;
+    }
+
+    &__story-text {
+      width: 75%;
+    }
+
+    &__button {
+      width: 56%;
+      padding: 1.2%;
+      font-size: 4vw;
     }
 
   }
@@ -279,14 +428,15 @@
 
 
 
+
 // ------------------ DEADLINE SECTION ------------------
 
 .deadline {
+  margin-top: -10%;
   background: url("./images/backgrounds/landing-page/deadline-section.png") center center no-repeat;
   background-size: cover;
-  padding-top: 15px;
-  height: 600px;
-  font-family: $ff-title;
+  padding-top: 6%;
+  font-family: $ff-text;
 
   &__container {
     display: flex;
@@ -296,42 +446,42 @@
   }
 
   &__title {
-    font-size: 52px;
+    white-space: nowrap;
+    font-size: 50px;
     color: white;
     text-transform: uppercase;
     text-align: center;
+    font-weight: $bold;
     letter-spacing: 2px;
-    height: 33%;
-    margin-top: 20px;
+    height: 55px;
+    margin-top: 120px;
+  }
+
+  &__button-container {
+    padding: 10% 0;
   }
 
   &__button {
-    margin-top: 100px;
-    width: 350px;
-    padding: 10px;
-    font-size: 26px;
-    box-shadow: 2px 2px 8px #808080;
-    @include animate(pulsation, 0.8s, linear, infinite, alternate);
-
-    &:hover {
-      color: #ffffff;
-      background: linear-gradient(to bottom left, #000000, #696969);
-      box-shadow: 2px 2px 8px #162125;
-      animation-play-state: paused;
-    }
-
+    width: 17.461538em;
+    padding: 2%;
   }
+
+
+
 }
 
 .timer {
+  margin-top: 100px;
   color: white;
   text-transform: uppercase;
   text-align: center;
-  padding-right: 20px;
   height: 33%;
   display: flex;
   align-items: center;
-  border: 5px outset white;
+  padding: 1.11111111em;
+  border-radius: 3px;
+  box-shadow: 2px -2px 0 #2bf5ff;
+  background-color: rgba(82, 178, 194, 0.64);
 
   &__item {
     display: inline-block;

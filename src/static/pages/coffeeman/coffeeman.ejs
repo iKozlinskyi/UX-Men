@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Coffeeman</title>
+  </head>
+  <body>
+
+    <%- include('../../shared/components/hero/introduction/introduction.ejs',
+      {
+        realName: 'Mykhailo Kostiuk',
+        heroName: 'Coffeeman',
+        introText: 'Experienced supporting hero, who is welcome to any team.'
+      })
+    %>
+
+    <%- include('../../shared/components/hero/superhero/superhero.ejs', 
+      { 
+        heroName: 'Coffeeman',
+        quote: 'No one is going to sleep tonight until we\'re done.',
+        story: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos,
+        placeat necessitatibus deserunt in ut cupiditate consequatur magnam alias
+        earum ex sint officia, quae numquam quo! Natus veritatis repellendus fuga
+        animi iure vel in eum, dolorem fugit aliquid error voluptatibus tempore sed
+        reiciendis dignissimos numquam nostrum sint repellat cupiditate. Expedita
+        eaque, repudiandae cumque sed cum maiores aliquam possimus sapiente optio
+        vero exercitationem nesciunt maxime dolorem iusto qui mollitia. Neque,
+        distinctio harum?`,
+        imagePath: '../../images/heroes/coffeeman-hp.png'
+      })
+    %>
+    
+    <%- include('../../shared/components/hero/profile/profile.ejs',
+      { 
+        heroName: 'Coffeeman',
+        placeOfBirth: `Planet Coffeeca`,
+        gender: 'Male',
+        age: '29',
+        occupation: 'Barista',
+        likes: 'Dogs, Spiders, Rum',
+        height: '183',
+        weight: '78',
+        hair: 'Light Brown',
+        eyes: 'Grey',
+        dislikes: 'Noise, Heat, Radish'
+      })
+    %>
+    
+    <%- include('../../shared/components/hero/connections/connections.ejs',
+      {
+        connectionType: 'Allies',
+        heroesList: [`Captain Maven`, `Serverman`, `Web Storm`, `Black Window`]
+      })
+    %>
+
+    <%- include('../../shared/components/hero/contacts/contacts.ejs',
+      {
+        heroName: 'Coffeeman',
+        social: 
+          { linkedIn: 'https://www.linkedin.com/in/mikhail-kostiuk-28a915bb/',
+            github: 'https://github.com/mikhail-kostiuk'
+          }
+      })
+    %>
+  </body>
+</html>
