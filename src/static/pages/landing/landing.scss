@@ -25,13 +25,12 @@
 }
 
 
-
-
 // ------------------ BEGIN STORY SECTION ------------------
 
 .story {
   display: flex;
   position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
   &__button {
     margin-top: 150px;
     width: 350px;
@@ -96,7 +95,6 @@
   }
 
 }
-
 
 .no-likes {
   height: 700px;
@@ -245,11 +243,62 @@
   }
 }
 
+// ------------------ CONFLICT SECTION ------------------
+.conflict {
+
+  &__wrapper {
+    padding: 6% 0;
+  }
+
+  &__text-wrapper {
+    @include flex(space-between, center);
+  }
+
+  &__image-container {
+    z-index: 1;
+  }
+
+  &__text-container {
+    padding: 0 3% 1%;
+    background-color: #000000cc;
+    @include flex(center, space-between, column);
+    z-index: 1;
+  }
+
+  &__story-text {
+    font-size: 18px;
+    box-shadow: 2px -2px 0 #2bf5ff;
+    background-color: rgba(82, 178, 194, 0.64);
+    padding: 1.11111111em;
+    border-radius: 3px;
+  }
+
+  &__story-text--decorate {
+    color: #14e9ffe6;
+    font-weight: $bold;
+  }
 
 
+  &__story-text--text1 {
+    width: 35.1111111em;
 
+  }
+  &__story-text--text2 {
+    width: 27.111111em;
+    margin-left: 30%;
+    margin-top: 3%;
+  }
 
+  &__button-container {
+    margin-top: 8%;
+    text-align: center;
+  }
 
+  &__button {
+    background-color: rgba(82, 178, 194, 0.64);
+  }
+
+}
 
 
 

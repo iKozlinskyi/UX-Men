@@ -1,3 +1,5 @@
+import ParticleNetwork from  "../../shared/components/particle-network/particle-network";
+
 /*Timer*/
 
 export let timer = setInterval(function () {
@@ -58,3 +60,23 @@ const teamPageButton = document.querySelector('.team__button--clicked');
 teamPageButton.addEventListener('click', function() {
     window.location.pathname = '/about';
 });
+
+
+
+//
+
+window.onload = function() {
+    const canvasDiv = document.getElementById("particle_canvas");
+
+    const options = {
+        particleColor: "#006bff",
+        background: "",
+        interactive: false,
+        speed: "medium",
+        density: "high"
+    };
+
+    new ParticleNetwork(canvasDiv, options);
+};
+
+
