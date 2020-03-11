@@ -87,6 +87,7 @@ teamPageButton.addEventListener("click", function() {
   window.location.pathname = "/about";
 });
 
+<<<<<<< HEAD
 window.onload = function() {
   const canvasDiv = document.getElementById("particle_canvas");
 
@@ -100,3 +101,29 @@ window.onload = function() {
 
   new ParticleNetwork(canvasDiv, options);
 };
+=======
+// /*Background-gradient animation*/
+const backgroundRoot =  document.querySelector('.pick-side__background-root');
+const heroes =  document.querySelector('.pick-side__heroes');
+const villains =  document.querySelector('.pick-side__villains');
+
+
+heroes.addEventListener('mouseover', () => {
+    backgroundRoot.style.transform = 'translateX(25%)';
+});
+
+villains.addEventListener('mouseover', () => {
+    backgroundRoot.style.transform = 'translateX(-25%)';
+});
+
+heroes.addEventListener('mouseout', () => {
+    backgroundRoot.style.transform = 'translateX(0%)';
+});
+
+villains.addEventListener('mouseout', () => {
+    backgroundRoot.style.transform = 'translateX(0%)';
+});
+
+
+
+>>>>>>> add buttons and background animation
