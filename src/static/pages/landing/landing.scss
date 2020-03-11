@@ -92,20 +92,8 @@
   }
 
   &__button {
-    width: 13.4615385em;
-    padding: 1%;
+
     margin: 0 3%;
-    font-size: 26px;
-    box-shadow: 2px 2px 8px #808080;
-    @include animate(pulsation, 0.8s, 0, linear, infinite, alternate, none);
-
-    &:hover {
-        color: #ffffff;
-        background: linear-gradient(to bottom left, #29545e, #387280);
-        box-shadow: 2px 2px 8px #1e343d;
-        animation-play-state: paused;
-    }
-
   }
 
 }
@@ -244,20 +232,12 @@
   }
 
   &__button {
-    width: 390px;
-    padding: 10px;
-    font-size: 26px;
-    box-shadow: 2px 2px 8px #808080;
-    @include animate(pulsation, 0.8s, 0, linear, infinite, alternate, none);
-
-    &:hover {
-      color: #ffffff;
-      background: linear-gradient(to bottom left, #29545e, #387280);
-      box-shadow: 2px 2px 8px #1e343d;
-      animation-play-state: paused;
-    }
-
+    width: 17.461538em;
+    padding: 2%;
   }
+
+
+
 }
 
 .timer {
