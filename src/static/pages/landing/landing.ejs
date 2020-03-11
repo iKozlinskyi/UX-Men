@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<%- include('../../shared/components/header/header') %>
+
+
+<div class="block poster">
+    <div class="block__wrapper poster__wrapper">
+        <h1 class="poster__movie-title movie-title movie-title--clipped">UX-Men</h1>
+        <button class="button poster__button">Read the Story</button>
+    </div>
+</div>
+
+
+<section class="story">
+
+    <div class="begin-story">
+
+        <div class="begin-story__container">
+
+            <img src="../../images/landing/icon-heart.svg" alt="" class="begin-story__icon-love">
+
+            <div class="begin-story__description">
+                <p class="begin-story__description-paragraph">For many years people and programmers had lived in
+                    harmony.
+                    Without wars
+                    and code reviews.</p>
+                <p class="begin-story__description-paragraph">But once...</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="no-likes">
+
+        <div class="block__wrapper no-likes__container">
+
+            <p class="no-likes__description"> ...something horrible did happen – likes from all social media had
+                suddenly started to disappear. And there was no possibility to like you friends’ pictures and no
+                possibility
+                to see who appreciated your posts. There was none. The panic broke out. The world was standing on
+                the
+                verge
+                of a total collapse. And this is how our story begins.</p>
+
+
+            <div class="no-likes__img-wrapper">
+                <img src="../../images/landing/nobodylikesyou.png" alt="" class="no-likes__img">
+
+                <div class="no-likes__left-tear no-likes__left-tear1"></div>
+                <div class="no-likes__left-tear no-likes__left-tear2"></div>
+                <div class="no-likes__left-tear no-likes__left-tear3"></div>
+                <div class="no-likes__left-tear no-likes__left-tear4"></div>
+                <div class="no-likes__left-tear no-likes__left-tear5"></div>
+
+                <div class="no-likes__right-tear no-likes__right-tear1"></div>
+                <div class="no-likes__right-tear no-likes__right-tear2"></div>
+                <div class="no-likes__right-tear no-likes__right-tear3"></div>
+                <div class="no-likes__right-tear no-likes__right-tear4"></div>
+                <div class="no-likes__right-tear no-likes__right-tear5"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="story__button-wrapper">
+        <button class="button story__button">Continue reading</button>
+    </div>
+
+</section>
+
+
+
+<section class="block team">
+    <div class="block__wrapper team__container">
+        <div class="team__text-container">
+            <div class="team__story-text team__story-text--text1 story-text">
+                The governments around the globe gathered behind closed doors to find a solution. There was no time
+                for second thoughts.
+            </div>
+            <div class="team__story-text team__story-text--text2 story-text">
+                It was instantly decided to create a <span class="team__story-text--decorate">Fast React Team</span> of the most powerful
+                <span class="team__story-text--decorate">UX-Men</span> on Earth for this mission.
+            </div>
+            <div class="team__story-text team__story-text--text3 story-text">
+                To stop Bugman and ruin his plans UX-Men have to fight all bugs and go to the most <span class="team__story-text--decorate">dangerous</span> and
+                <span class="team__story-text--decorate">unexplainable place</span>  of the Internet – to <span class="team__story-text--decorate">Odnoklassniki</span>, to find an intact piece of code and heal all
+                other social media with it.
+            </div>
+            <div class="team__story-text team__story-text--text4 story-text">
+                But who are they, our heroes?
+            </div>
+        </div>
+        <div class="team__button-container">
+            <button class="button team__button team__button--clicked">Meet The Team</button>
+            <button class="button team__button">Continue reading</button>
+        </div>
+    </div>
+</section>
+
+
+<section class="deadline">
+    <div class="block__wrapper deadline__container">
+        <div class="deadline__title"></div>
+        <ul class="timer">
+            <li class="timer__item"><span id="days" class="timer__date"></span>days</li>
+            <li class="timer__item"><span id="hours" class="timer__date"></span>Hours</li>
+            <li class="timer__item"><span id="minutes" class="timer__date"></span>Minutes</li>
+            <li class="timer__item"><span id="seconds" class="timer__date"></span>Seconds</li>
+        </ul>
+        <div class="deadline__button-container">
+            <button class="button deadline__button">You cannot stay aside!</button>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
