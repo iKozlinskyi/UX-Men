@@ -52,7 +52,7 @@
     }
 
     &--captain-maven {
-      color: #dd700d;
+      color: $accent-color--maven;
     }
 
     &--serverman {
@@ -81,7 +81,7 @@
     font-size: 18px;
 
     &--captain-maven {
-      border-left-color: #dd700d;
+      border-left-color: $accent-color--maven;
     }
 
     &--serverman {

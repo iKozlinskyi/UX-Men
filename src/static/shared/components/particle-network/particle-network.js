@@ -41,7 +41,7 @@ class Particle {
 }
 
 export default class ParticleNetwork {
-  constructor(canvas, options) {
+  constructor(canvas, options = {}) {
     this.canvasWrapper = canvas;
     this.canvasWrapper.size = {
       width: this.canvasWrapper.offsetWidth,
@@ -49,7 +49,6 @@ export default class ParticleNetwork {
     };
 
     //Set options
-    options = options ? options : {};
     this.options = {
       particleColor: options.particleColor ? options.particleColor : "#fff",
       background: options.background ? options.background : "transparent",
@@ -101,7 +100,7 @@ export default class ParticleNetwork {
     //Add resize listener to canvas
     window.addEventListener(
       "resize",
-      function() {
+      () => {
         //Check if div has changed size
         if (
           this.canvasWrapper.offsetWidth === this.canvasWrapper.size.width &&
@@ -117,7 +116,7 @@ export default class ParticleNetwork {
         //Set timeout to wait until end of resize event
         clearTimeout(this.resetTimer);
         this.resetTimer = setTimeout(
-          function() {
+          () => {
             //Reset Particles
             this.initParticles();
 
@@ -127,10 +126,10 @@ export default class ParticleNetwork {
 
             //Update canvas
             requestAnimationFrame(this.update.bind(this));
-          }.bind(this),
+          },
           500
         );
-      }.bind(this)
+      }
     );
 
     //Initialize particles
@@ -190,10 +189,8 @@ export default class ParticleNetwork {
           Math.pow(this.particles[i].x - this.particles[j].x, 2) +
             Math.pow(this.particles[i].y - this.particles[j].y, 2)
         );
-        if (distance > 120) {
-          continue;
-        }
-
+        if (distance <= 120) {
+          
         this.ctx.beginPath();
         this.ctx.strokeStyle = this.options.particleColor;
         this.ctx.globalAlpha = (120 - distance) / 120;
@@ -201,6 +198,8 @@ export default class ParticleNetwork {
         this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
         this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
         this.ctx.stroke();
+        }
+
       }
     }
     if (this.options.velocity !== 0) {
