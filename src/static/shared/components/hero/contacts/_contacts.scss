@@ -12,7 +12,7 @@
   }
 
   &--captain-maven {
-    background-color: rgba(221, 112, 13, 0.8);
+    background-color: $accent-color--maven;
   }
 
   &--serverman {
@@ -46,7 +46,7 @@
     text-decoration: none;
 
     &--captain-maven {
-      background-color: #dd700d;
+      background-color: $accent-color--maven;
     }
 
     &--serverman {
