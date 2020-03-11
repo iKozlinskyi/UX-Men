@@ -34,7 +34,7 @@
 .story {
   display: flex;
   position: relative;
-  background-color: $bg-color--light;
+  background-color: $bg-color--dark;
   padding: 1% 0;
 
   &--gradient {
@@ -50,8 +50,12 @@
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   }
 
-  &__article {
+  &__wrapper {
     width: 50%;
+    margin: 0 auto;
+  }
+
+  &__article {
     margin: auto;
     text-align: center;
 
@@ -59,6 +63,24 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5% 0;
+  }
+
+  &__item {
+    flex: 0 1 50%;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   &__text {
