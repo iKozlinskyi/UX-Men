@@ -133,149 +133,6 @@
   }
 }
 
-.no-likes {
-  height: 700px;
-  width: 50%;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  background: url("./images/backgrounds/landing-page/begin-story-bg2.jpg")
-    center center no-repeat;
-  background-size: cover;
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__description {
-    font-family: Oxanium, sans-serif;
-    font-size: 25px;
-    text-indent: 40px;
-    width: 55%;
-    color: white;
-  }
-
-  &__img-wrapper {
-    position: relative;
-    margin-top: 162px;
-  }
-
-  &__img {
-    height: 350px;
-  }
-
-  &__left-tear {
-    position: absolute;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 20px solid blue;
-    width: 0;
-    height: 0;
-    border-radius: 100%;
-    animation-name: left-tears;
-    animation-duration: 2.3s;
-    animation-iteration-count: infinite;
-  }
-
-  &__left-tear1 {
-    bottom: 66%;
-    left: 36%;
-    transform: rotate(60deg);
-  }
-
-  &__left-tear2 {
-    bottom: 61%;
-    left: 37%;
-    transform: rotate(55deg);
-  }
-
-  &__left-tear3 {
-    bottom: 65%;
-    left: 26%;
-    transform: rotate(55deg);
-  }
-
-  &__left-tear4 {
-    bottom: 59%;
-    left: 28%;
-    transform: rotate(55deg);
-  }
-
-  &__left-tear5 {
-    bottom: 53%;
-    left: 30%;
-    transform: rotate(45deg);
-  }
-
-  &__right-tear {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 20px solid blue;
-    border-radius: 100%;
-    animation-name: right-tears;
-    animation-duration: 2.3s;
-    animation-iteration-count: infinite;
-  }
-
-  &__right-tear1 {
-    bottom: 66%;
-    right: 35%;
-    transform: rotate(-60deg);
-  }
-
-  &__right-tear2 {
-    bottom: 61%;
-    right: 33%;
-    transform: rotate(-55deg);
-  }
-
-  &__right-tear3 {
-    bottom: 65%;
-    right: 24%;
-    transform: rotate(-55deg);
-  }
-
-  &__right-tear4 {
-    bottom: 59%;
-    right: 25%;
-    transform: rotate(-55deg);
-  }
-
-  &__right-tear5 {
-    bottom: 53%;
-    right: 28%;
-    transform: rotate(-45deg);
-  }
-}
-
-@keyframes left-tears {
-  0% {
-    margin-left: 0;
-    margin-bottom: 0;
-    opacity: 1;
-  }
-  100% {
-    margin-left: -15%;
-    margin-bottom: -30%;
-    opacity: 0;
-  }
-}
-
-@keyframes right-tears {
-  0% {
-    margin-right: 0;
-    margin-bottom: 0;
-    opacity: 1;
-  }
-  100% {
-    margin-right: -15%;
-    margin-bottom: -30%;
-    opacity: 0;
-  }
-}
 
 // ------------------ CONFLICT SECTION ------------------
 .conflict {
@@ -487,68 +344,103 @@
 // ------------------ DEADLINE SECTION ------------------
 
 .deadline {
+  font-family: $ff-title;
+  background-color: rgb(240, 240, 240);
+  clip-path: polygon(0 0%, 100% 7%, 100% 100%, 0 100%);
   margin-top: -10%;
-  background: url("./images/backgrounds/landing-page/deadline-section.png")
-    center center no-repeat;
-  background-size: cover;
-  padding-top: 6%;
-  font-family: $ff-text;
 
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
+    padding: 12% 0 12% 0;
+
   }
 
   &__title {
-    white-space: nowrap;
-    font-size: 50px;
-    color: white;
+    margin: 0 25px;
+    font-size: 2.1em;
+    height: 30%;
+    color: $text-color--dark;
     text-transform: uppercase;
     text-align: center;
     font-weight: $bold;
     letter-spacing: 2px;
-    height: 55px;
-    margin-top: 120px;
-  }
-
-  &__button-container {
-    padding: 10% 0;
-  }
-
-  &__button {
-    width: 17.461538em;
-    padding: 2%;
   }
 }
 
 .timer {
-  margin-top: 100px;
-  color: white;
+  margin: 100px 25px 0 25px;
+  color: $text-color--dark;
   text-transform: uppercase;
-  text-align: center;
-  height: 33%;
-  display: flex;
-  align-items: center;
-  padding: 1.11111111em;
-  border-radius: 3px;
-  box-shadow: 2px -2px 0 #2bf5ff;
-  background-color: rgba(82, 178, 194, 0.64);
+  padding: 1em;
+  border: 4px solid #14e9ffe6;
 
   &__item {
     display: inline-block;
-    font-size: 36px;
+    font-size: 1.5em;
     text-align: center;
   }
 
   &__date {
-    font-size: 68px;
+    font-size: 2em;
     display: block;
     width: 190px;
     text-align: center;
+    font-weight: $bold;
   }
 }
+
+
+@media  (max-width: $bp-xsmall) {
+  .deadline {
+
+    &__title {
+      font-size: 1.2em;
+    }
+  }
+
+  .timer {
+    text-align: center;
+    margin-top: 50px;
+
+    &__item {
+      font-size: 1.2em;
+    }
+
+    &__date {
+      font-size: 1.2em;
+      width: 110px;
+    }
+  }
+}
+
+
+
+@media  (min-width: 577px) and (max-width: $bp-medium-small) {
+  .deadline {
+
+    &__title {
+      font-size: 1.6em;
+    }
+  }
+
+  .timer {
+    text-align: center;
+    margin-top: 80px;
+
+    &__item {
+      font-size: 1.5em;
+    }
+
+    &__date {
+      font-size: 1.5em;
+      width: 140px;
+    }
+  }
+}
+
 
 //------------------------------PICK SIDE SECTION-----------------------------------
 
