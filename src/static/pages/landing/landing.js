@@ -26,6 +26,8 @@ import {
     villainPickerMessage,
     villainResultMessage
 } from "../../shared/globals/constants";
+import {getPollResults} from "../../../../utils/getPollResults";
+import {sendNewPollResults} from "../../../../utils/sendNewPollResults";
 /*Timer*/
 
 export let timer = setInterval(function() {
@@ -137,18 +139,20 @@ villainsSection.addEventListener('mouseout', returnGradient);
 //===============
 // Poll bar state
 
-const heroesAlliesCount = 143;
-const bugmanAlliesCount = 28;
-const heroesFraction = getFraction(heroesAlliesCount, bugmanAlliesCount);
-const pollBar = document.querySelector('.meter__level');
+const setPollResults = ({ heroes, villains }) => {
 
-pollBar.style.width = decimalToPercent(heroesFraction);
+    const heroesFraction = getFraction(heroes, villains);
+    const pollBar = document.querySelector('.meter__level');
 
-const heroesAlliesCounter = document.querySelector('.poll__heroes-allies');
-const bugmanAlliesCounter = document.querySelector('.poll__bugman-allies');
+    pollBar.style.width = decimalToPercent(heroesFraction);
 
-heroesAlliesCounter.innerText = heroesAlliesCount;
-bugmanAlliesCounter.innerText = bugmanAlliesCount;
+    const heroesAlliesCounter = document.querySelector('.poll__heroes-allies');
+    const bugmanAlliesCounter = document.querySelector('.poll__bugman-allies');
+
+    heroesAlliesCounter.innerText = heroes;
+    bugmanAlliesCounter.innerText = villains;
+
+};
 
 //Poll bar toggle
 
@@ -242,11 +246,23 @@ okButton.addEventListener('click', (e) => {
     }
 
     e.preventDefault();
-    toggleElementGently(pollBlock);
-    toggleElementGently(form);
-    form.style.zIndex = '20';
 
-    messageContainer.innerText = message;
+    getPollResults().then(results => {
+
+        if (clickedButton === heroesButton) {
+            results = {...results, heroes: results.heroes + 1}
+        } else {
+            results = {...results, villains: results.villains + 1}
+        }
+
+        toggleElementGently(pollBlock);
+        toggleElementGently(form);
+        form.style.zIndex = '20';
+
+        messageContainer.innerText = message;
+        setPollResults(results);
+        sendNewPollResults(JSON.stringify(results));
+    })
 });
 
 

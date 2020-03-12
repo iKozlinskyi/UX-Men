@@ -8,4 +8,6 @@ a chance to change your mind. Please, choose wisely this time.`;
 export const heroResultMessage = `Perfect! Now you can see how other people voted in this battle.`;
 
 export const villainResultMessage = `It was your choice, I don't mind. But now you have to face the heroes and the army they are leading.
-Byt the way, here is how other people voted so far.`
+Byt the way, here is how other people voted so far.`;
+
+export const firebaseUrl = 'https://ux-men-94729.firebaseio.com/poll.json';
