@@ -5,7 +5,6 @@ module.exports = {
         blackWindow: "./src/static/pages/blackWindow/blackWindow.js",
         maven: "./src/static/pages/maven/maven.js",
         notFound: "./src/static/pages/notFound/notFound.js",
-        skill: "./src/static/shared/components/skill/skill.js",
         styles: "./src/static/main.scss",
     },
     module: {

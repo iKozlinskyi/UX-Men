@@ -12,13 +12,6 @@
   }
 }
 
-[data-aos="skill-animation"] {
-  animation: progress 1s ease-out forwards;
-  &.aos-animate {
-    transform: skewX(0);
-    opacity: 1;
-  }
-}
 
 .skill-circle {
   display: block;
