@@ -3,6 +3,7 @@ module.exports = {
         landing: "./src/static/pages/landing/landing.js",
         about: "./src/static/pages/about/about.js",
         blackWindow: "./src/static/pages/blackWindow/blackWindow.js",
+        notFound: "./src/static/pages/notFound/notFound.js",
         styles: "./src/static/main.scss",
     },
     module: {
