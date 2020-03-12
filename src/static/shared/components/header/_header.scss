@@ -7,7 +7,7 @@
   display: flex;
   justify-content: flex-end;
   flex-flow: row nowrap;
-  padding: 1.3em 7%;
+  padding: 1.5em 7%;
   z-index: 3000;
 }
 
@@ -31,7 +31,6 @@
 
     &-active {
       border-bottom: 2px solid $accent-color--about;
-      position: relative;
     }
   }
 
@@ -69,7 +68,6 @@
   background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
   background: rgba(0, 0, 0, 0.8);
   padding: 0.5em 0.5em;
-
   display: none;
 
   &__link {

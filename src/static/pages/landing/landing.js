@@ -1,4 +1,7 @@
-import ParticleNetwork from  "../../shared/components/particle-network/particle-network";
+import ParticleNetwork from "../../shared/components/particle-network/particle-network";
+import {activeLink} from "../../shared/utils/active-link-style";
+
+activeLink();
 
 /*Timer*/
 
@@ -27,8 +30,6 @@ export let timer = setInterval(function () {
 }, 1000);
 
 
-
-
 /*Print text*/
 
 let messageCount = 0;
@@ -53,7 +54,7 @@ window.addEventListener('scroll', function () {
         return;
     }
 
-    if (messageTop <=250) {
+    if (messageTop <= 250) {
         timerDeadlineTitle = setInterval(() => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle), 90);
     }
 });
@@ -62,15 +63,14 @@ window.addEventListener('scroll', function () {
 /* Go to About page */
 const teamPageButton = document.querySelector('.team__button--clicked');
 
-teamPageButton.addEventListener('click', function() {
+teamPageButton.addEventListener('click', function () {
     window.location.pathname = '/about';
 });
 
 
-
 //
 
-window.onload = function() {
+window.onload = function () {
     const canvasDiv = document.getElementById("particle_canvas");
 
     const options = {
@@ -85,13 +85,3 @@ window.onload = function() {
 };
 
 
-
-
-const navItem = document.getElementsByClassName('nav__item');
-
-for (let i=0; i<navItem.length; i++) {
-
-    navItem[i].addEventListener('click', ()=> {
-        navItem[i].classList.add('nav__item-active')
-    })
-}

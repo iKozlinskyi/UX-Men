@@ -1,3 +1,6 @@
+import {activeLink} from "../../shared/utils/active-link-style";
+activeLink();
+
 import ParticleNetwork from  "../../shared/components/particle-network/particle-network";
 window.onload = function() {
   const canvasDiv = document.getElementById("particle_canvas");
@@ -20,6 +23,6 @@ window.onload = function() {
   
   new ParticleNetwork(canvasDiv, options);
   new ParticleNetwork(canvasDivT, optionsTeamWork);
-}
+};
 
 
