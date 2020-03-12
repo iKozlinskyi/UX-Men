@@ -1,3 +1,6 @@
+import {activeLink} from "../../shared/utils/active-link-style";
+activeLink();
+
 /*Add new elements*/
 
 const story = document.getElementsByClassName('superhero__story')[0];
