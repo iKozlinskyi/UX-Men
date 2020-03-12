@@ -565,7 +565,7 @@
   font-size: 1.1em;
   color: #FFFFFF;
   text-align: center;
-  transition: all 0.2s;
+  transition: background-color  0.2s;
   background: transparent;
   cursor: pointer;
   font-family: "Oxanium", cursive;
@@ -606,6 +606,15 @@
     font-size: 1.8em;
   }
 
+  &__message {
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+  }
+
   &__background-root {
     height: 100%;
     width: 200%;
@@ -626,12 +635,8 @@
   $button-height: 75px;
 
   &__side-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
+    @include center-absolute;
+
     width: 180px;
     height: $button-height;
     outline:none;
@@ -656,6 +661,8 @@
   }
 
   &__poll {
+    @include center-absolute;
+
     position: absolute;
     width: 80vw;
     bottom: 0;
@@ -665,6 +672,11 @@
     margin: auto;
     color: white;
     height: 100px;
+  }
+
+  &__form {
+    @include center-transition;
+    top: 60%;
   }
 }
 
@@ -681,10 +693,11 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  transition: 0.3s ease;
+  transition: 0.4s ease;
 
   &__meter {
     width: 100%;
+    top: 0;
   }
 }
 

@@ -201,22 +201,24 @@
     </div>-->
 </section>
 <section class="pick-side">
-    <div class="pick-side__background-root">
-
-    </div>
-    <div class="pick-side__side">
-        <button class="pick-side__side-button pick-side__side-button--heroes glow-button">Heroes</button>
-    </div>
-    <div class="pick-side__side">
-        <button class="pick-side__side-button pick-side__side-button--villains glow-button">Bugman</button>
-    </div>
+    <div class="pick-side__background-root"></div>
     <h2 class="pick-side__title">
         Which side would you choose?
     </h2>
-
+    <div class="pick-side__message hidden-gently"></div>
+    <div class="pick-side__side">
+        <button data-side="heroes" class="pick-side__side-button pick-side__side-button--heroes glow-button">Heroes</button>
+    </div>
+    <div class="pick-side__side">
+        <button data-side="villains" class="pick-side__side-button pick-side__side-button--villains glow-button">Bugman</button>
+    </div>
+    <form action="#" class="pick-side__form" method="get">
+        <a href="" class="glow-button">Cancel</a>
+        <a href="" class="glow-button">Ok</a>
+    </form>
     <div class="pick-side__poll poll hidden-gently">
-        <div data-side="heroes" class="poll__title poll__title">Heroes allies: <span class="poll__heroes-allies"></span></div>
-        <div data-side="villains" class="poll__title poll__title">Bugman allies: <span class="poll__bugman-allies"></span></div>
+        <div class="poll__title poll__title">Heroes allies: <span class="poll__heroes-allies"></span></div>
+        <div class="poll__title poll__title">Bugman allies: <span class="poll__bugman-allies"></span></div>
         <div class="poll__meter meter">
             <div class="meter__level"></div>
         </div>

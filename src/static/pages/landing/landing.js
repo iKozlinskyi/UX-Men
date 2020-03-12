@@ -19,7 +19,8 @@ activeLink();
 
 import { getFraction } from "../../shared/utils/getFraction";
 import { decimalToPercent } from "../../shared/utils/decimalToPercent";
-import {toggleElementGently} from "../../shared/utils/toggleElementGently";
+import { toggleElementGently } from "../../shared/utils/toggleElementGently";
+import {heroPickerMessage, villainPickerMessage} from "../../shared/globals/constants";
 /*Timer*/
 
 export let timer = setInterval(function() {
@@ -107,13 +108,13 @@ window.onload = function() {
 
 // /*Background-gradient animation*/
 const backgroundRoot =  document.querySelector('.pick-side__background-root');
-const [heroes, villains] =  document.querySelectorAll('.pick-side__side');
+const [heroesSection, villainsSection] =  document.querySelectorAll('.pick-side__side');
 
-const moveGradientFromHeroes = () => {
+const moveGradientToHeroes = () => {
     backgroundRoot.style.transform = 'translateX(25%)';
 };
 
-const moveGradientFromVillains = () => {
+const moveGradientToVillains = () => {
     backgroundRoot.style.transform = 'translateX(-25%)';
 };
 
@@ -121,11 +122,12 @@ const returnGradient = () => {
     backgroundRoot.style.transform = 'translateX(0%)';
 };
 
-heroes.addEventListener('mouseover', moveGradientFromHeroes);
-villains.addEventListener('mouseover', moveGradientFromVillains);
 
-heroes.addEventListener('mouseout', returnGradient);
-villains.addEventListener('mouseout', returnGradient);
+heroesSection.addEventListener('mouseover', moveGradientToHeroes);
+villainsSection.addEventListener('mouseover', moveGradientToVillains);
+
+heroesSection.addEventListener('mouseout', returnGradient);
+villainsSection.addEventListener('mouseout', returnGradient);
 
 //===============
 // Poll bar state
@@ -147,33 +149,41 @@ bugmanAlliesCounter.innerText = bugmanAlliesCount;
 
 const heroesButton = document.querySelector('.pick-side__side-button--heroes');
 const villainsButton = document.querySelector('.pick-side__side-button--villains');
+const mesageContainer = document.querySelector('.pick-side__message');
 
-const buttons = [heroesButton, villainsButton];
 const pollBlock = document.querySelector('.poll');
-const handleHeroesButtonClick = () => {
-    moveGradientFromHeroes();
+
+const showMessage = (element, text) => {
+    toggleElementGently(element);
+    element.innerText = text;
 };
 
-const handleVillainsButtonClick = () => {
-    moveGradientFromVillains();
-};
+heroesButton.addEventListener('click', function() {
+    toggleElementGently(pollBlock);
+    toggleElementGently(villainsButton);
 
-const buttonToFunctionMap = {
-    heroes: handleHeroesButtonClick,
-    villains: handleHeroesButtonClick,
-};
+    heroesSection.removeEventListener('mouseout', returnGradient);
+    villainsSection.removeEventListener('mouseover', moveGradientToVillains);
+    villainsSection.removeEventListener('mouseout', returnGradient);
 
-buttons.forEach(b => {
-    b.addEventListener('click', e => {
-        toggleElementGently(pollBlock);
-        const buttonSide = e.target.data['side'];
+    this.style.left = '100%';
+    this.style.bottom = '50%';
+    this.style.transform = 'translateX(-50%)';
 
-        //Call function assigned to this button
-        buttonToFunctionMap[buttonSide]();
+    showMessage(mesageContainer, heroPickerMessage)
+});
 
-        buttons.forEach(b => {
-            b.style.bottom = '30%';
-            b.removeEventListener(returnGradient);  //TODO check this
-        })
-    })
+villainsButton.addEventListener('click', function() {
+    toggleElementGently(pollBlock);
+    toggleElementGently(heroesButton);
+
+    villainsSection.removeEventListener('mouseout', returnGradient);
+    heroesSection.removeEventListener('mouseover', moveGradientToHeroes);
+    heroesSection.removeEventListener('mouseout', returnGradient);
+
+    this.style.right = '100%';
+    this.style.bottom = '50%';
+    this.style.transform = 'translateX(-50%)';
+    showMessage(mesageContainer, villainPickerMessage)
+
 });
