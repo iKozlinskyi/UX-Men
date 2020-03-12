@@ -12,7 +12,7 @@
   }
 
   &__text-container {
-    background-color: $dark-transparent-0;
+    background-color: $dark-transparent-100;
   }
 
   &__title {
@@ -20,7 +20,7 @@
     font-weight: $bold;
     font-family: $ff-title;
     text-transform: uppercase;
-    color: $light-transparent-0;
+    color: $light-transparent-100;
   }
 
   &__accent {
@@ -34,12 +34,12 @@
   margin-top: -10%;
   display: flex;
   position: relative;
-  background-color: $bg-story--light;
+  background-color: $bg-light-primary;
   padding: 14% 0 14% 0;
 
   &--gradient {
-    background: linear-gradient(to top, $dark-transparent-0, $dark-transparent-70),
-      linear-gradient(to bottom, $dark-transparent-0, $dark-transparent-70),
+    background: linear-gradient(to top, $dark-transparent-100, $dark-transparent-70),
+      linear-gradient(to bottom, $dark-transparent-100, $dark-transparent-70),
       url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat center top /
         cover;
   }
@@ -101,7 +101,7 @@
   }
 
   &__text {
-    @include basic-text($light-transparent-0);
+    @include basic-text($light-transparent-100);
     // box-shadow: 7px -7px 0 #6cd1eb;
     font-size: 1.2em;
     padding: 5%;
@@ -109,7 +109,7 @@
     // background-color: #191919;
 
     &--black {
-      color: $text-color--dark;
+      color: $neutral-dark;
     }
 
     &--framed {
@@ -343,7 +343,7 @@
 
 .deadline {
   font-family: $ff-title;
-  background-color: $bg-story--light;
+  background-color: $bg-light-primary;
   clip-path: polygon(0 0%, 100% 7%, 100% 100%, 0 100%);
   margin-top: -10%;
 
@@ -360,7 +360,7 @@
     margin: 0 25px;
     font-size: 2.1em;
     min-height: 70px;
-    color: $text-color--dark;
+    color: $neutral-dark;
     text-transform: uppercase;
     text-align: center;
     font-weight: $bold;
@@ -370,7 +370,7 @@
 
 .timer {
   margin: 100px 25px 0 25px;
-  color: $text-color--dark;
+  color: $neutral-dark;
   text-transform: uppercase;
   padding: 1em;
   border: 4px solid $accent-color-90;
@@ -445,12 +445,12 @@
 .glow-button {
   display: inline-block;
   padding: 0.5em 1.5em;
-  border: 1px solid $light-transparent-0;
+  border: 1px solid $light-transparent-100;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 300;
   font-size: 1.1em;
-  color: $light-transparent-0;
+  color: $light-transparent-100;
   text-align: center;
   transition: background-color  0.2s;
   background: transparent;
@@ -488,13 +488,13 @@
     left: 50%;
     top: 5%;
     transform: translateX(-50%);
-    color: $light-transparent-0;
+    color: $light-transparent-100;
     font-family: "Oxanium", cursive;
     font-size: 1.8em;
   }
 
   &__message {
-    color: $light-transparent-0;
+    color: $light-transparent-100;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -538,12 +538,12 @@
   }
 
   &__side-button--heroes:hover {
-    color: $dark-transparent-0;
+    color: $dark-transparent-100;
     background-color:lightblue;
   }
 
   &__side-button--villains:hover {
-    color: $dark-transparent-0;
+    color: $dark-transparent-100;
     background-color: $danger-color;
   }
 
@@ -557,7 +557,7 @@
     right: 0;
     top: 50%;
     margin: auto;
-    color: $light-transparent-0;
+    color: $light-transparent-100;
     height: 100px;
   }
 
