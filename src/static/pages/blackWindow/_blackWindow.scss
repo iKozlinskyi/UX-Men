@@ -1,8 +1,7 @@
 .superhero__story {
 
   &-blackWindow {
-    width: 527px;
-    height: 350px;
+    min-height: 350px;
     background-color: black;
     color: #1ff042;
     padding: 30px;
@@ -24,9 +23,8 @@
   }
 }
 
-
 .superhero__image-container-blackWidow {
-  min-width: 490px;
+  margin-right: 220px;
 }
 
 .introduction--black-window {
@@ -44,5 +42,12 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+
+@media (max-width: $bp-medium) {
+  .superhero__image-container-blackWidow {
+    margin: 0 auto;
   }
 }

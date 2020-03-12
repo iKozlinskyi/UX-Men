@@ -23,9 +23,13 @@ superheroImageContainer.classList.add('superhero__image-container-blackWidow');
 
 /*Print text*/
 
-const storyDescriptionMessage = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, placeat necessitatibus deserunt in ut cupiditate consequatur magnam alias earum ex sint officia, quae numquam quo! Natus veritatis repellendus fuga animi iure vel in eum, dolorem fugit aliquid error voluptatibus tempore sed reiciendis dignissimos numquam nostrum sint repellat cupiditate. Expedita eaque.";
-let timerStoryDescription;
+const storyDescriptionMessage = `I exist at all computers. To find me just search 'cmd' and I will appear.
+It's definitely a magic.
+Do you have any errors and don’t know how to fix them?
+Don't worry, I am always here to help. No errors can hide from me. I will find all of them and even print them in red.
+You can always rely on me. But just don’t ignore the errors and you will have code without bugs.`;
 
+let timerStoryDescription;
 
 window.addEventListener('scroll', function () {
     let messageTop = storyDescription.getBoundingClientRect().top;
@@ -34,7 +38,8 @@ window.addEventListener('scroll', function () {
         return;
     }
 
-    if (messageTop <=300) {
-        timerStoryDescription = setInterval(() => printText(storyDescriptionMessage, storyDescription, timerStoryDescription), 80);
+    if (messageTop <=350) {
+        timerStoryDescription = setInterval(() =>
+            printText(storyDescriptionMessage, storyDescription, timerStoryDescription), 80);
     }
 });
