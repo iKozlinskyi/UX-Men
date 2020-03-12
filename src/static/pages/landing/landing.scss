@@ -556,7 +556,7 @@
 .pick-side {
   overflow: hidden;
   display: flex;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   background: url("https://opiniojuris.org/wp-content/uploads/29440531895_09f8f7f78c_k.jpg") center center;
@@ -569,6 +569,8 @@
     top: 10%;
     transform: translateX(-50%);
     color: white;
+    font-family: "Oxanium", cursive;
+    font-size: 1.8em;
   }
 
   &__background-root {
@@ -581,14 +583,7 @@
     transition: 0.3s ease-out;
   }
 
-  &__heroes {
-    width: 50%;
-    height: 100%;
-    z-index: 10;
-    position: relative;
-  }
-
-  &__villains {
+  &__side {
     width: 50%;
     height: 100%;
     z-index: 10;
@@ -597,34 +592,23 @@
 
   $button-height: 75px;
 
-  &__heroes-button {
+  &__side-button {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     margin: auto;
-    width: 200px;
+    width: 180px;
     height: $button-height;
   }
 
-  &__heroes-button:hover {
+  &__side-button--heroes:hover {
     color:#000000;
     background-color:lightblue;
   }
 
-  &__villains-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 200px;
-    height: $button-height;
-  }
-
-  &__villains-button:hover {
+  &__side-button--villains:hover {
     color: #000000;
     background-color: lightcoral;
   }
@@ -643,6 +627,7 @@
   transition: all 0.2s;
   background: transparent;
   cursor: pointer;
+  font-family: "Oxanium", cursive;
 }
 
 .glow-button::before {
@@ -658,11 +643,11 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-@media all and (max-width: 30em) {
-   .glow-button {
-    display: block;
-    margin: 0.4em auto;
-  }
-}
-
+//@media all and (min-width: $bp-xsmall) {
+//   .glow-button {
+//    display: block;
+//    width: 300px;
+//  }
+//}
+// TODO Doesn`t work
 

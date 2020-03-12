@@ -104,8 +104,7 @@ window.onload = function() {
 
 // /*Background-gradient animation*/
 const backgroundRoot =  document.querySelector('.pick-side__background-root');
-const heroes =  document.querySelector('.pick-side__heroes');
-const villains =  document.querySelector('.pick-side__villains');
+const [heroes, villains] =  document.querySelectorAll('.pick-side__side');
 
 
 heroes.addEventListener('mouseover', () => {
