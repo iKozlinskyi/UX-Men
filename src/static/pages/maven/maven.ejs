@@ -30,20 +30,20 @@
       placeOfBirth: "Javaland",
       gender: "Female",
       age: "22",
-      occupation: "",
-      likes: "Cats, Witty jokes, Graipfruits",
+      occupation: "Сonundrums solving",
+      likes: "Cats, Witty jokes, Grapefruits",
       height: "167",
       weight: "60",
       hair: "Dark Brown",
       eyes: "Green",
-      dislikes: "Bla, Stupid jokes, Bla"
+      dislikes: "Spiders, Stupid jokes, Stewed cabbage"
     }) %>
     
     <% const skills = [
       { skillName: "Responsibility", color: "red", percentage: "90" },
       { skillName: "Calmness", color: "pink", percentage: "35" },
-      { skillName: "Creativity", color: "yellow", percentage: "95" },
-      { skillName: "Communication", color: "green", percentage: "75" }            
+      { skillName: "Talkativeness", color: "yellow", percentage: "99" },
+      { skillName: "Perfectionism", color: "green", percentage: "78" }            
    ]; %>
 
     <section class="block features">
@@ -59,44 +59,6 @@
         </ul>
       </div>
     </section>
-    <!-- <section class="features features--dark block">
-      <div class="block__wrapper bubbles">
-        <div class="bubbles__row">
-          <div class="bubbles__item bubbles__item--bottom">
-            <%- include('../../shared/components/power/power', { iconName:
-            "speed.svg", hero: "maven", powerName: "Speed Beyond The Sound",
-            powerDescription: "Быстрее всех соберет команду, блаблаблабла" }) %>
-          </div>
-          <div class="bubbles__item">
-            <%- include('../../shared/components/power/power', { iconName:
-            "agility.svg", hero: "maven", powerName: "Agility",
-            powerDescription: "Быстрее всех соберет команду, блаблаблабла" }) %>
-          </div>
-        </div>
-        <div class="bubbles__row bubbles__row--center">
-          <div class="bubbles__item">
-            <h2 class="features__title">Powers</h2>
-          </div>
-        </div>
-        <div class="bubbles__row">
-          <div class="bubbles__item bubbles__item--top">
-            <%- include('../../shared/components/power/power', { iconName:
-            "durable-fabric.svg", hero: "maven", powerName: "Durability",
-            powerDescription: "Быстрее всех соберет команду, блаблаблабла" }) %>
-          </div>
-          <div class="bubbles__item">
-            <%- include('../../shared/components/power/power', { iconName:
-            "wizard.svg", hero: "maven", powerName: "7th Sense",
-            powerDescription: "Быстрее всех соберет команду, блаблаблабла" }) %>
-          </div>
-          <div class="bubbles__item bubbles__item--top">
-            <%- include('../../shared/components/power/power', { iconName:
-            "puzzle.svg", hero: "maven", powerName: "Comprehension",
-            powerDescription: "Быстрее всех соберет команду, блаблаблабла" }) %>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <%- include('../../shared/components/hero/connections/connections.ejs', {
       connectionType: "Allies",
