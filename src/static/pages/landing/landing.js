@@ -63,10 +63,10 @@ window.addEventListener("scroll", function() {
     return;
   }
 
-  if (messageTop <= 300) {
+  if (messageTop <= 350) {
     timerDeadlineTitle = setInterval(
       () => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle),
-      90
+      80
     );
   }
 });
