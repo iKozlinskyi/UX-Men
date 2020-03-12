@@ -17,6 +17,9 @@ AOS.init({
 
 activeLink();
 
+import { getFraction } from "../../shared/utils/getFraction";
+import { decimalToPercent } from "../../shared/utils/decimalToPercent";
+import {toggleElementGently} from "../../shared/utils/toggleElementGently";
 /*Timer*/
 
 export let timer = setInterval(function() {
@@ -106,22 +109,71 @@ window.onload = function() {
 const backgroundRoot =  document.querySelector('.pick-side__background-root');
 const [heroes, villains] =  document.querySelectorAll('.pick-side__side');
 
-
-heroes.addEventListener('mouseover', () => {
+const moveGradientFromHeroes = () => {
     backgroundRoot.style.transform = 'translateX(25%)';
-});
+};
 
-villains.addEventListener('mouseover', () => {
+const moveGradientFromVillains = () => {
     backgroundRoot.style.transform = 'translateX(-25%)';
-});
+};
 
-heroes.addEventListener('mouseout', () => {
+const returnGradient = () => {
     backgroundRoot.style.transform = 'translateX(0%)';
+};
+
+heroes.addEventListener('mouseover', moveGradientFromHeroes);
+villains.addEventListener('mouseover', moveGradientFromVillains);
+
+heroes.addEventListener('mouseout', returnGradient);
+villains.addEventListener('mouseout', returnGradient);
+
+//===============
+// Poll bar state
+
+const heroesAlliesCount = 143;
+const bugmanAlliesCount = 28;
+const heroesFraction = getFraction(heroesAlliesCount, bugmanAlliesCount);
+const pollBar = document.querySelector('.meter__level');
+
+pollBar.style.width = decimalToPercent(heroesFraction);
+
+const heroesAlliesCounter = document.querySelector('.poll__heroes-allies');
+const bugmanAlliesCounter = document.querySelector('.poll__bugman-allies');
+
+heroesAlliesCounter.innerText = heroesAlliesCount;
+bugmanAlliesCounter.innerText = bugmanAlliesCount;
+
+//Poll bar toggle
+
+const heroesButton = document.querySelector('.pick-side__side-button--heroes');
+const villainsButton = document.querySelector('.pick-side__side-button--villains');
+
+const buttons = [heroesButton, villainsButton];
+const pollBlock = document.querySelector('.poll');
+const handleHeroesButtonClick = () => {
+    moveGradientFromHeroes();
+};
+
+const handleVillainsButtonClick = () => {
+    moveGradientFromVillains();
+};
+
+const buttonToFunctionMap = {
+    heroes: handleHeroesButtonClick,
+    villains: handleHeroesButtonClick,
+};
+
+buttons.forEach(b => {
+    b.addEventListener('click', e => {
+        toggleElementGently(pollBlock);
+        const buttonSide = e.target.data['side'];
+
+        //Call function assigned to this button
+        buttonToFunctionMap[buttonSide]();
+
+        buttons.forEach(b => {
+            b.style.bottom = '30%';
+            b.removeEventListener(returnGradient);  //TODO check this
+        })
+    })
 });
-
-villains.addEventListener('mouseout', () => {
-    backgroundRoot.style.transform = 'translateX(0%)';
-});
-
-
-
