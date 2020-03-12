@@ -2,6 +2,8 @@ import ParticleNetwork from "../../shared/components/particle-network/particle-n
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { activeLink } from "../../shared/utils/active-link-style";
+import { printText } from "../../shared/utils/printText";
+activeLink();
 
 AOS.init();
 AOS.init({
@@ -15,7 +17,6 @@ AOS.init({
   anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
 
-activeLink();
 
 /*Timer*/
 
@@ -48,22 +49,11 @@ export let timer = setInterval(function() {
   }
 }, 1000);
 
+
 /*Print text*/
-
-let messageCount = 0;
-
 const deadlineTitleMessage = "Will they make it before the deadline?";
 const deadlineTitle = document.getElementsByClassName("deadline__title")[0];
 let timerDeadlineTitle;
-
-export function printText(message, messageWrapper, timer) {
-  messageWrapper.innerHTML = message.substring(0, messageCount);
-  if (messageCount === message.length) {
-    clearInterval(timer);
-  } else {
-    messageCount++;
-  }
-}
 
 window.addEventListener("scroll", function() {
   let messageTop = deadlineTitle.getBoundingClientRect().top;
@@ -72,7 +62,7 @@ window.addEventListener("scroll", function() {
     return;
   }
 
-  if (messageTop <= 250) {
+  if (messageTop <= 300) {
     timerDeadlineTitle = setInterval(
       () => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle),
       90
@@ -80,12 +70,9 @@ window.addEventListener("scroll", function() {
   }
 });
 
-/* Go to About page */
-const teamPageButton = document.querySelector(".team__button--clicked");
 
-teamPageButton.addEventListener("click", function() {
-  window.location.pathname = "/about";
-});
+
+/*Canvas*/
 
 window.onload = function() {
   const canvasDiv = document.getElementById("particle_canvas");

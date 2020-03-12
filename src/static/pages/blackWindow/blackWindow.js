@@ -1,3 +1,4 @@
+import { printText } from "../../shared/utils/printText";
 import {activeLink} from "../../shared/utils/active-link-style";
 activeLink();
 
@@ -19,22 +20,11 @@ const superheroImageContainer = document.getElementsByClassName('superhero__imag
 superheroImageContainer.classList.add('superhero__image-container-blackWidow');
 
 
-/*Print text*/
 
-let messageCount = 0;
+/*Print text*/
 
 const storyDescriptionMessage = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, placeat necessitatibus deserunt in ut cupiditate consequatur magnam alias earum ex sint officia, quae numquam quo! Natus veritatis repellendus fuga animi iure vel in eum, dolorem fugit aliquid error voluptatibus tempore sed reiciendis dignissimos numquam nostrum sint repellat cupiditate. Expedita eaque.";
 let timerStoryDescription;
-
-
-function printText(message, messageWrapper, timer) {
-    messageWrapper.innerHTML = message.substring(0, messageCount);
-    if (messageCount === message.length) {
-        clearInterval(timer);
-    } else {
-        messageCount++;
-    }
-}
 
 
 window.addEventListener('scroll', function () {
@@ -44,7 +34,7 @@ window.addEventListener('scroll', function () {
         return;
     }
 
-    if (messageTop <=250) {
+    if (messageTop <=300) {
         timerStoryDescription = setInterval(() => printText(storyDescriptionMessage, storyDescription, timerStoryDescription), 80);
     }
 });
