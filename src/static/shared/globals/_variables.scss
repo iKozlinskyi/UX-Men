@@ -55,24 +55,34 @@ $accent-color--about: #6cd1eb;
 $accent-color--maven: #ebc96c;
 $accent-color--odnoklassniki: #eb9b6c;
 
+$terminal-color: #1ff042;
+$ocean-color: #0000CD;
 $attention-color: #b6002f;
 $signal-color: #eb474c;
 $danger-color: #f1a3a3;
 $warning-color: #f1c0a3;
 $success-color: #cef1a3;
 
+$text-color--neutral: rgba(41, 41, 41, 0);
+$text-color--neutral2: #808080;
 $text-color--dark: rgb(82, 82, 82);
 $text-color--light: rgb(255, 255, 255);
 
 $bg-story--light: rgb(240, 240, 240);
+$bg-shape-light: #e7e7e7;
+
+
 $text-story-light: rgba(82, 178, 194, 0.64);
 $stroke-color: #2bf5ff;
 
 $dark-transparent-0: rgb(0, 0, 0);
 $dark-transparent-80: rgba(0, 0, 0, 0.8);
 $dark-transparent-70: rgba(0, 0, 0, 0.7);
+$dark-transparent-50: rgba(0, 0, 0, 0.5);
 $dark-transparent-40: rgba(0, 0, 0, 0.4);
 
+
+$light-transparent-0: rgb(255, 255, 255);
 $light-transparent-30: rgba(255, 255, 255, 0.3);
 
 

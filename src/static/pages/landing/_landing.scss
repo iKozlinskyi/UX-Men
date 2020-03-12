@@ -20,7 +20,7 @@
     font-weight: $bold;
     font-family: $ff-title;
     text-transform: uppercase;
-    color: $text-color--light;
+    color: $light-transparent-0;
   }
 
   &__accent {
@@ -101,7 +101,7 @@
   }
 
   &__text {
-    @include basic-text($text-color--light);
+    @include basic-text($light-transparent-0);
     // box-shadow: 7px -7px 0 #6cd1eb;
     font-size: 1.2em;
     padding: 5%;
@@ -202,7 +202,7 @@
     @include flex(space-around, flex-start);
     flex-wrap: wrap;
     padding-bottom: 0.8888888em;
-    background-color: #000000cc;
+    background-color: $dark-transparent-80;
   }
 
   &__story-text {
@@ -445,12 +445,12 @@
 .glow-button {
   display: inline-block;
   padding: 0.5em 1.5em;
-  border: 1px solid $text-color--light;
+  border: 1px solid $light-transparent-0;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 300;
   font-size: 1.1em;
-  color: $text-color--light;
+  color: $light-transparent-0;
   text-align: center;
   transition: background-color  0.2s;
   background: transparent;
@@ -488,13 +488,13 @@
     left: 50%;
     top: 5%;
     transform: translateX(-50%);
-    color: $text-color--light;
+    color: $light-transparent-0;
     font-family: "Oxanium", cursive;
     font-size: 1.8em;
   }
 
   &__message {
-    color: $text-color--light;
+    color: $light-transparent-0;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -557,7 +557,7 @@
     right: 0;
     top: 50%;
     margin: auto;
-    color: $text-color--light;
+    color: $light-transparent-0;
     height: 100px;
   }
 
@@ -592,7 +592,7 @@
   border-radius: 2px;
   box-shadow:
           inset 0 2px 9px  $light-transparent-30,
-          inset 0 -2px 6px rgba(0,0,0,0.4);
+          inset 0 -2px 6px $dark-transparent-40;
 
   &__level {
     height: 100%;

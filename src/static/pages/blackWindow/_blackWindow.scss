@@ -3,8 +3,8 @@
   &-blackWindow {
     width: 527px;
     height: 350px;
-    background-color: black;
-    color: #1ff042;
+    background-color: $dark-transparent-0;
+    color: $terminal-color;
     padding: 30px;
     text-align: justify;
   }
