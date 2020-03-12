@@ -83,5 +83,3 @@ window.onload = function () {
 
     new ParticleNetwork(canvasDiv, options);
 };
-
-

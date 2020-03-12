@@ -36,7 +36,7 @@ app.get("/webstorm", (req, res) => {
 });
 
 app.use("*", (req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "dist/not-found.html"));
+  res.status(404).sendFile(path.join(__dirname, "dist/notFound.html"));
 });
 
 app.listen(port, () => console.log("app is listening on 5050"));
