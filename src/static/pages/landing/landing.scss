@@ -1,13 +1,15 @@
 // ------------------ POSTER SECTION ------------------
 .poster {
-  background: url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat center top / cover;
+  background: url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat
+    center top / cover;
+  height: 100vh;
   // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
   &__wrapper {
     font-family: $ff-tertiary;
     height: 100vh;
-    padding: 10em 0;
-    @include flex(flex-end, center, column);
+    // padding: 10em 0;
+    @include flex(center, center, column);
   }
 
   &__text-container {
@@ -25,79 +27,110 @@
   &__accent {
     color: $accent-color;
   }
-
 }
-
 
 // ------------------ BEGIN STORY SECTION ------------------
 
 .story {
+  margin-top: -10%;
   display: flex;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
-  &__button {
-    margin-top: 150px;
-    width: 350px;
-    padding: 10px;
-    font-size: 26px;
-    box-shadow: 2px 2px 8px #808080;
+  // background-color: $bg-color--dark;
+  background-color: rgb(240, 240, 240);
+  padding: 14% 0 14% 0;
 
-    &:hover {
-      color: #ffffff;
-      background: linear-gradient(to bottom left, blue, #FF0000);
-      box-shadow: 2px 2px 8px #CD5C5C;
-    }
-
-    &-wrapper {
-      height: 300px;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      margin: 0;
-      clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
-      text-align: center;
-      background: url("./images/backgrounds/landing-page/begin-story-bg3.jpg") 400% 0 no-repeat;
-      background-size: cover;
-    }
-
+  &--gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+      url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat center top /
+        cover;
   }
-}
 
-.begin-story {
-  height: 700px;
-  width: 50%;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  background: url("./images/backgrounds/landing-page/begin-story-bg1.jpg") center center no-repeat;
-  background-size: cover;
+  &--no-margin {
+    margin-top: 0;
+  }
 
+  &--bugman {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    padding: 8% 0;
+  }
 
-  &__container {
+  &--clip-left {
+    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  &--clip-right {
+    clip-path: polygon(0 0%, 100% 7%, 100% 100%, 0 100%);
+  }
+
+  &--clip {
+    clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 91%);
+  }
+
+  &__wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &__article {
+    margin: auto;
+    text-align: center;
+
+    margin-bottom: 5%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__row {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5% 0;
   }
 
-  &__icon-love {
-    height: 80px;
-    width: 80px;
-    animation: pulsationBig 2s infinite;
-
-    //@include animate(pulsationBig, 1s, linear, infinite, alternate);
-
+  &__item {
+    // flex: 0 1 50%;
+    width: 40%;
   }
 
-  &__description {
-    font-family: Oxanium, sans-serif;
-    font-size: 25px;
-    text-indent: 40px;
-    width: 70%;
-    color: white;
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 4px solid $accent-color;
+  }
 
-    &-paragraph {
-      margin-bottom: 50px;
+  &__text {
+    @include basic-text($text-color--light);
+    // box-shadow: 7px -7px 0 #6cd1eb;
+    font-size: 1.2em;
+    padding: 5%;
+    margin-top: 5%;
+    // background-color: #191919;
+
+    &--black {
+      color: $text-color--dark;
+    }
+
+    &--framed {
+      box-shadow: 7px -7px 0 $accent-color;
+      background-color: $bg-color--dark;
+    }
+
+    &--odnoklassniki {
+      color: $accent-color--odnoklassniki;
+      text-transform: uppercase;
+      font-weight: $bold;
+      font-size: 2em;
     }
   }
 
+  &__text-accent {
+    color: $accent-color;
+    font-style: italic;
+  }
 }
 
 .no-likes {
@@ -105,7 +138,8 @@
   width: 50%;
   padding-top: 30px;
   padding-bottom: 20px;
-  background: url("./images/backgrounds/landing-page/begin-story-bg2.jpg") center center no-repeat;
+  background: url("./images/backgrounds/landing-page/begin-story-bg2.jpg")
+    center center no-repeat;
   background-size: cover;
 
   &__container {
@@ -119,7 +153,7 @@
     text-indent: 40px;
     width: 55%;
     color: white;
-}
+  }
 
   &__img-wrapper {
     position: relative;
@@ -217,8 +251,6 @@
   }
 }
 
-
-
 @keyframes left-tears {
   0% {
     margin-left: 0;
@@ -231,8 +263,6 @@
     opacity: 0;
   }
 }
-
-
 
 @keyframes right-tears {
   0% {
@@ -249,7 +279,6 @@
 
 // ------------------ CONFLICT SECTION ------------------
 .conflict {
-
   &__wrapper {
     padding: 6% 0;
   }
@@ -282,10 +311,8 @@
     font-weight: $bold;
   }
 
-
   &__story-text--text1 {
     width: 35.1111111em;
-
   }
   &__story-text--text2 {
     width: 27.111111em;
@@ -301,26 +328,18 @@
   &__button {
     background-color: rgba(82, 178, 194, 0.64);
   }
-
 }
-
-
-
-
-
-
 
 // ------------------ TEAM SECTION ------------------
 
 .team {
-  background: url("./images/backgrounds/landing-page/team-section.png") center center;
+  background: url("./images/backgrounds/landing-page/team-section.png") center
+    center;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
 
-
   &__container {
     padding: 8% 0;
-
   }
 
   &__text-container {
@@ -368,24 +387,19 @@
     font-weight: $bold;
   }
 
-
   &__button-container {
     padding: 3.84615385em 0;
     text-align: center;
   }
 
   &__button {
-
     margin: 0 3%;
   }
-
 }
-
 
 // 1140px
 @media (max-width: $bp-medium-large) {
   .team {
-
     &__story-text--text2 {
       margin-left: initial; //!!!!
     }
@@ -394,10 +408,8 @@
       width: 21.66666666em;
       margin-right: initial;
     }
-
   }
 }
-
 
 // 980px
 @media (max-width: $bp-medium-small) {
@@ -446,18 +458,13 @@
       width: 16.666666666em;
       padding: 1%;
       font-size: 24px;
-
     }
-
   }
-
 }
 
 // 576px
 @media (max-width: $bp-xsmall) {
-
   .team {
-
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 
     &__text-container {
@@ -474,19 +481,15 @@
       padding: 1.2%;
       font-size: 4vw;
     }
-
   }
-
 }
-
-
-
 
 // ------------------ DEADLINE SECTION ------------------
 
 .deadline {
   margin-top: -10%;
-  background: url("./images/backgrounds/landing-page/deadline-section.png") center center no-repeat;
+  background: url("./images/backgrounds/landing-page/deadline-section.png")
+    center center no-repeat;
   background-size: cover;
   padding-top: 6%;
   font-family: $ff-text;
@@ -518,8 +521,6 @@
     width: 17.461538em;
     padding: 2%;
   }
-
-
 }
 
 .timer {
