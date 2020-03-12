@@ -41,7 +41,7 @@
   height: 100vh;
   background: url("./images/backgrounds/about-page/bg-about.jpg") no-repeat
     center top / cover;
-  color: $text-color--light;
+  color: $light-transparent-0;
   text-align: center;
   display: flex;
 
@@ -84,7 +84,7 @@
 }
 
 .details {
-  background-color: #ffffff;
+  background-color: $light-transparent-0;
   padding: 8% 0;
 
   &__title {
@@ -144,7 +144,7 @@
 
   &__info {
     background-color: #191919;
-    color: $text-color--light;
+    color: $light-transparent-0;
     padding: 1em 2em;
     height: 100%;
     position: relative;

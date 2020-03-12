@@ -3,7 +3,7 @@
     padding: 5% 0;
 
     &--dark {
-        background-color:#e7e7e7;;
+        background-color: $bg-shape-light;
     }
 
     &__title {
@@ -38,7 +38,7 @@
         margin: 0 auto;
 
         &:nth-child(2) {
-            height:6em;
+            height: 6em;
         }
 
         &--center {

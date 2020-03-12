@@ -6,14 +6,14 @@
   outline: none;
   border: none;
   border-radius: 20px;
-  background-color: white;
+  background-color: $light-transparent-0;
   text-transform: uppercase;
   font-weight: bold;
   white-space: nowrap;
   @include animate(pulsation, 0.8s, 0, linear, infinite, alternate, none);
 
   &:hover {
-    color: #ffffff;
+    color: $light-transparent-0;
     background: linear-gradient(to bottom left, #29545e, #387280);
     box-shadow: 2px 2px 8px #1e343d;
     animation-play-state: paused;

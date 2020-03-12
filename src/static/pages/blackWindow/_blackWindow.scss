@@ -2,8 +2,8 @@
 
   &-blackWindow {
     min-height: 350px;
-    background-color: black;
-    color: #1ff042;
+    background-color: $dark-transparent-0;;
+    color: $terminal-color;
     padding: 30px;
     text-align: justify;
   }
@@ -15,7 +15,7 @@
   &-cursor {
     width: 12px;
     height: 22px;
-    background-color: #1ff042;
+    background-color: $terminal-color;
     display: inline-block;
     animation-name: cursor-blink;
     animation-duration: 1.25s;

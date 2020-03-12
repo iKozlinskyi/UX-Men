@@ -2,18 +2,17 @@
 .poster {
   background: url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat
     center top / cover;
-  height: 100vh;
-  // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    height: 100vh;
+
 
   &__wrapper {
     font-family: $ff-tertiary;
     height: 100vh;
-    // padding: 10em 0;
     @include flex(center, center, column);
   }
 
   &__text-container {
-    background-color: black;
+    background-color: $dark-transparent-0;
   }
 
   &__title {
@@ -21,7 +20,7 @@
     font-weight: $bold;
     font-family: $ff-title;
     text-transform: uppercase;
-    color: $text-color--light;
+    color: $light-transparent-0;
   }
 
   &__accent {
@@ -35,13 +34,12 @@
   margin-top: -10%;
   display: flex;
   position: relative;
-  // background-color: $bg-color--dark;
-  background-color: rgb(240, 240, 240);
+  background-color: $bg-story--light;
   padding: 14% 0 14% 0;
 
   &--gradient {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(to top, $dark-transparent-0, $dark-transparent-70),
+      linear-gradient(to bottom, $dark-transparent-0, $dark-transparent-70),
       url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat center top /
         cover;
   }
@@ -103,7 +101,7 @@
   }
 
   &__text {
-    @include basic-text($text-color--light);
+    @include basic-text($light-transparent-0);
     // box-shadow: 7px -7px 0 #6cd1eb;
     font-size: 1.2em;
     padding: 5%;
@@ -150,21 +148,21 @@
 
   &__text-container {
     padding: 0 3% 1%;
-    background-color: #000000cc;
+    background-color: $dark-transparent-80;
     @include flex(center, center, column);
     z-index: 1;
   }
 
   &__story-text {
     font-size: 18px;
-    box-shadow: 2px -2px 0 #2bf5ff;
-    background-color: rgba(82, 178, 194, 0.64);
+    box-shadow: 2px -2px 0 $stroke-color;
+    background-color: $text-story-light;
     padding: 1.11111111em;
     border-radius: 3px;
   }
 
   &__story-text--decorate {
-    color: #14e9ffe6;
+    color: $accent-color-90;
     font-weight: $bold;
   }
 
@@ -183,7 +181,7 @@
   }
 
   &__button {
-    background-color: rgba(82, 178, 194, 0.64);
+    background-color: $text-story-light;
   }
 }
 
@@ -204,13 +202,13 @@
     @include flex(space-around, flex-start);
     flex-wrap: wrap;
     padding-bottom: 0.8888888em;
-    background-color: #000000cc;
+    background-color: $dark-transparent-80;
   }
 
   &__story-text {
     font-size: 18px;
-    box-shadow: 2px -2px 0 #2bf5ff;
-    background-color: rgba(82, 178, 194, 0.64);
+    box-shadow: 2px -2px 0 $stroke-color;
+    background-color: $text-story-light;
     padding: 1.11111111em;
     border-radius: 3px;
   }
@@ -240,7 +238,7 @@
   }
 
   &__story-text--decorate {
-    color: #14e9ffe6;
+    color: $accent-color-90;
     font-weight: $bold;
   }
 
@@ -345,7 +343,7 @@
 
 .deadline {
   font-family: $ff-title;
-  background-color: rgb(240, 240, 240);
+  background-color: $bg-story--light;
   clip-path: polygon(0 0%, 100% 7%, 100% 100%, 0 100%);
   margin-top: -10%;
 
@@ -375,7 +373,7 @@
   color: $text-color--dark;
   text-transform: uppercase;
   padding: 1em;
-  border: 4px solid #14e9ffe6;
+  border: 4px solid $accent-color-90;
 
   &__item {
     display: inline-block;
@@ -447,12 +445,12 @@
 .glow-button {
   display: inline-block;
   padding: 0.5em 1.5em;
-  border: 1px solid #FFFFFF;
+  border: 1px solid $light-transparent-0;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 300;
   font-size: 1.1em;
-  color: #FFFFFF;
+  color: $light-transparent-0;
   text-align: center;
   transition: background-color  0.2s;
   background: transparent;
@@ -470,7 +468,7 @@
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: $dark-transparent-70;
 }
 
 
@@ -490,13 +488,13 @@
     left: 50%;
     top: 5%;
     transform: translateX(-50%);
-    color: white;
+    color: $light-transparent-0;
     font-family: "Oxanium", cursive;
     font-size: 1.8em;
   }
 
   &__message {
-    color: white;
+    color: $light-transparent-0;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -532,21 +530,21 @@
   }
 
   &__side-button--heroes {
-    border-color: #65c5eb;
+    border-color: $accent-color;
   }
 
   &__side-button--villains {
-    border-color: #eb474c;
+    border-color: $signal-color;
   }
 
   &__side-button--heroes:hover {
-    color:#000000;
+    color: $dark-transparent-0;
     background-color:lightblue;
   }
 
   &__side-button--villains:hover {
-    color: #000000;
-    background-color: lightcoral;
+    color: $dark-transparent-0;
+    background-color: $danger-color;
   }
 
   &__poll {
@@ -559,7 +557,7 @@
     right: 0;
     top: 50%;
     margin: auto;
-    color: white;
+    color: $light-transparent-0;
     height: 100px;
   }
 
@@ -569,7 +567,7 @@
   }
 
   &__ok {
-    color: rgb(60,130,60)
+    color: $success-color;
   }
 }
 
@@ -590,19 +588,19 @@
 
 .meter {
   height: 40px;
-  background: #b6002f;
+  background: $attention-color;
   border-radius: 2px;
   box-shadow:
-          inset 0 2px 9px  rgba(255,255,255,0.3),
-          inset 0 -2px 6px rgba(0,0,0,0.4);
+          inset 0 2px 9px  $light-transparent-30,
+          inset 0 -2px 6px $dark-transparent-40;
 
   &__level {
     height: 100%;
     border-radius: 1px;
     background-color: rgb(16, 114, 194);
     box-shadow:
-            inset 0 2px 9px  rgba(255,255,255,0.3),
-            inset 0 -2px 6px rgba(0,0,0,0.4);
+            inset 0 2px 9px  $light-transparent-30,
+            inset 0 -2px 6px $dark-transparent-40;
     position: relative;
     overflow: hidden;
     width: 70%;
