@@ -1,6 +1,7 @@
 import ParticleNetwork from "../../shared/components/particle-network/particle-network";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { activeLink } from "../../shared/utils/active-link-style";
 
 AOS.init();
 AOS.init({
@@ -13,6 +14,8 @@ AOS.init({
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
+
+activeLink();
 
 /*Timer*/
 
@@ -64,10 +67,15 @@ export function printText(message, messageWrapper, timer) {
 
 window.addEventListener("scroll", function() {
   let messageTop = deadlineTitle.getBoundingClientRect().top;
+
+  if (timerDeadlineTitle) {
+    return;
+  }
+
   if (messageTop <= 250) {
     timerDeadlineTitle = setInterval(
       () => printText(deadlineTitleMessage, deadlineTitle, timerDeadlineTitle),
-      300
+      90
     );
   }
 });
@@ -78,8 +86,6 @@ const teamPageButton = document.querySelector(".team__button--clicked");
 teamPageButton.addEventListener("click", function() {
   window.location.pathname = "/about";
 });
-
-//
 
 window.onload = function() {
   const canvasDiv = document.getElementById("particle_canvas");

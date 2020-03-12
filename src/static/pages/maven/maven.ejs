@@ -10,7 +10,7 @@
     <%- include('../../shared/components/hero/introduction/introduction.ejs', {
       realName: "Daria Diachuk",
       heroName: "Captain Maven",
-      introText: "This isn't about writing some piece of code. It's about creating something fascinating."
+      introText: "Gathers everyone in one place at one time."
     }) %>
 
     <%- include('../../shared/components/hero/superhero/superhero.ejs', {
@@ -23,21 +23,20 @@
     
     <%- include('../../shared/components/hero/profile/profile.ejs', {
       heroName: "Captain Maven",
-      placeOfBirth: "Blabla",
+      placeOfBirth: "Javaland",
       gender: "Female",
       age: "22",
       occupation: "Blabla",
-      likes: "Bla, Bla, Bla",
+      likes: "Cats, Witty jokes, Graipfruits",
       height: "167",
       weight: "60",
       hair: "Dark Brown",
       eyes: "Green",
-      dislikes: "Bla, Bla, Bla"
+      dislikes: "Bla, Stupid jokes, Bla"
     }) %>
     
     <% const skills = [
       { skillName: "Responsibility", color: "red", percentage: "90" },
-      { skillName: "Humor", color: "blue", percentage: "80" },
       { skillName: "Calmness", color: "pink", percentage: "35" },
       { skillName: "Creativity", color: "yellow", percentage: "95" },
       { skillName: "Communication", color: "green", percentage: "75" }            
@@ -56,7 +55,7 @@
         </ul>
       </div>
     </section>
-    <section class="features features--dark block">
+    <!-- <section class="features features--dark block">
       <div class="block__wrapper bubbles">
         <div class="bubbles__row">
           <div class="bubbles__item bubbles__item--bottom">
@@ -93,7 +92,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <%- include('../../shared/components/hero/connections/connections.ejs', {
       connectionType: "Allies",

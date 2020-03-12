@@ -294,7 +294,7 @@
   &__text-container {
     padding: 0 3% 1%;
     background-color: #000000cc;
-    @include flex(center, space-between, column);
+    @include flex(center, center, column);
     z-index: 1;
   }
 

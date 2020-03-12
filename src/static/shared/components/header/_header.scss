@@ -22,10 +22,15 @@
 
   &__item {
     margin-right: 1.5em;
+    padding-bottom: 5px;
     position: relative;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &-active {
+      border-bottom: 2px solid $accent-color--about;
     }
   }
 
@@ -63,7 +68,6 @@
   background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
   background: rgba(0, 0, 0, 0.8);
   padding: 0.5em 0.5em;
-
   display: none;
 
   &__link {
