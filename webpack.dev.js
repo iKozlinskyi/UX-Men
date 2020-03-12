@@ -36,6 +36,7 @@ module.exports = merge(common, {
         { from: /\/coffeeman/, to: "/coffeeman.html" },
         { from: /\/black-window/, to: "/blackWindow.html" },
         { from: /\/webstorm/, to: "/webstorm.html" },
+        { from: /\/serverman/, to: "/serverman.html" },
         { from: /^\/$/, to: "/landing.html" },
         { from: /./, to: "/not-found.html" },
       ],

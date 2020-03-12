@@ -31,6 +31,10 @@ app.get("/webstorm", (req, res) => {
   res.sendFile(path.join(__dirname, "dist/webstorm.ejs"));
 });
 
+app.get("/serverman", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist/maven.ejs"));
+});
+
 app.use("*", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "dist/notFound.html"));
 });
