@@ -2,7 +2,7 @@ import ParticleNetwork from "../../shared/components/particle-network/particle-n
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { activeLink } from "../../shared/utils/active-link-style";
-import { scrollTop } from "../../shared/utils/scroll-top";
+import { scrollTop } from "../../shared/components/scroll-top/scroll-top";
 
 AOS.init();
 AOS.init({
