@@ -212,8 +212,33 @@
         <div class="deadline__button-container">
             <button class="button deadline__button">You cannot stay aside!</button>
         </div>
+    </div>-->
+</section>
+<section class="pick-side">
+    <div class="pick-side__background-root"></div>
+    <h2 class="pick-side__title">
+        Which side would you choose?
+    </h2>
+    <div class="pick-side__message hidden-gently"></div>
+    <div class="pick-side__side">
+        <button data-side="heroes" class="pick-side__side-button pick-side__side-button--heroes glow-button">Heroes</button>
     </div>
-</section> -->
+    <div class="pick-side__side">
+        <button data-side="villains" class="pick-side__side-button pick-side__side-button--villains glow-button">Bugman</button>
+    </div>
+    <form action="#" class="pick-side__form form hidden-gently" method="get">
+        <button type="button" class="glow-button pick-side__cancel">Back</button>
+        <a href="#" class="glow-button pick-side__ok">Submit</a>
+    </form>
+    <div class="pick-side__poll poll hidden-gently">
+        <div class="poll__title poll__title">Heroes' allies: <span class="poll__heroes-allies"></span></div>
+        <div class="poll__title poll__title">Bugman's allies: <span class="poll__bugman-allies"></span></div>
+        <div class="poll__meter meter">
+            <div class="meter__level"></div>
+        </div>
+    </div>
+
+</section>
 
     <%- include('../../shared/components/footer/footer') %>
     <button class="button-go-top">Go Up</button>
