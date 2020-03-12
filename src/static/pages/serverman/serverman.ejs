@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+            rel="stylesheet"
+    />
+    <title>Serverman</title>
+</head>
+<body>
+
+
+<%- include('../../shared/components/hero/introduction/introduction.ejs',
+    {
+        realName: 'Ihor Kozlinskyi',
+        heroName: 'Serverman',
+        introText: 'The hero that is going to watch your back.'
+    })
+%>
+
+<%- include('../../shared/components/hero/superhero/superhero.ejs',
+    {
+        heroName: 'Serverman',
+        quote: 'With great power comes great RESTponsibility',
+        story: `The Serverman was not born with his powers. He was a regular high school tennager,
+        lived quet life in a small town. Once upon a time, during cleaning routine at home, he got scratched by an old
+        CPU. Yes, the central processor of a computer. After that, he started to notice something strange.
+        First of all, he could send the wireless data directly from his hands. Also, reading binary data was
+        not a problem for him anymore, and language of Ancient Javaians emerged in his head.
+        But, with great power comes great responsibility, you know. So now he learns how to handle all that
+        power, and use it for good of the whole mankind.`,
+        imagePath: '../../images/heroes/serverman-hp.png'
+    })
+%>
+
+<%- include('../../shared/components/hero/profile/profile.ejs',
+    {
+        heroName: 'Serverman',
+        placeOfBirth: `The Earth, Back-End city`,
+        gender: 'Male',
+        age: '23',
+        occupation: 'Self-Employed Savior',
+        likes: 'Long walks, quet nights, milk shakes',
+        height: '184',
+        weight: '72',
+        hair: 'Blond',
+        eyes: 'Green',
+        dislikes: 'Corrupted data, long git branches, early mornings'
+    })
+%>
+
+<%- include('../../shared/components/hero/connections/connections.ejs',
+    {
+        connectionType: 'Allies',
+            heroesList: [`Captain Maven`, `Coffeeman`, `Web Storm`, `Black Window`]
+        })
+        %>
+
+        <%- include('../../shared/components/hero/contacts/contacts.ejs',
+            {
+            heroName: 'Coffeeman',
+            social: { linkedIn: 'https://www.linkedin.com/in/ihor-kozlinskyi/',
+                github: 'https://github.com/iKozlinskyi'
+            }
+    })
+%>
+</body>
+</html>
