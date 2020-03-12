@@ -14,7 +14,7 @@
 
   &--serverman {
     @media (min-width: $bp-small) {
-      background-image: url("./images/backgrounds/heroes-page/serverman-bg.png");
+      background-image: url("/src/static/images/backgrounds/heroes-page/serverman-bg.png");
     }
 
     @media (min-width: $bp-xlarge) {
@@ -79,7 +79,7 @@
     }
 
     &--serverman {
-      background-image: url("./images/backgrounds/heroes-page/serverman-bg.jpg");
+      background-image: url("/src/static/images/backgrounds/heroes-page/serverman-bg.png");
 
       @media (min-width: $bp-small) {
         background-image: none;
