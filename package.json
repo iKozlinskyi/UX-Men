@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/iKozlinskyi/UX-Men#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "express": "^4.17.1"
   },
   "devDependencies": {
