@@ -1,5 +1,7 @@
 import {activeLink} from "../../shared/utils/active-link-style";
+import { scrollTop } from "../../shared/components/scroll-top/scroll-top";
 activeLink();
+scrollTop();
 
 import ParticleNetwork from  "../../shared/components/particle-network/particle-network";
 window.onload = function() {

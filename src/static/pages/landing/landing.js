@@ -2,10 +2,12 @@ import ParticleNetwork from "../../shared/components/particle-network/particle-n
 import { activeLink } from "../../shared/utils/active-link-style";
 import { printText } from "../../shared/utils/printText";
 import { aos } from "../../shared/utils/aos";
+import { scrollTop } from "../../shared/components/scroll-top/scroll-top";
 
 
 aos();
 activeLink();
+scrollTop();
 
 import { getFraction } from "../../shared/utils/getFraction";
 import { decimalToPercent } from "../../shared/utils/decimalToPercent";
