@@ -32,7 +32,6 @@ module.exports = merge(common, {
     historyApiFallback: {
       rewrites: [
         { from: /\/about/, to: "/about.html" },
-        { from: /\/heroes/, to: "/heroes.html" },
         { from: /\/captain-maven/, to: "/maven.html" },
         { from: /\/coffeeman/, to: "/coffeeman.html" },
         { from: /\/black-window/, to: "/blackWindow.html" },
