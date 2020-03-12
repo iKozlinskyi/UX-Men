@@ -2,6 +2,7 @@ import ParticleNetwork from "../../shared/components/particle-network/particle-n
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { activeLink } from "../../shared/utils/active-link-style";
+import { scrollTop } from "../../shared/utils/scroll-top";
 
 AOS.init();
 AOS.init({
@@ -16,6 +17,7 @@ AOS.init({
 });
 
 activeLink();
+scrollTop();
 
 import { getFraction } from "../../shared/utils/getFraction";
 import { decimalToPercent } from "../../shared/utils/decimalToPercent";

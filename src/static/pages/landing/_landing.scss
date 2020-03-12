@@ -725,3 +725,23 @@
   opacity: 0;
 }
 
+
+.button-go-top {
+  outline: none;
+  border: none;
+  position: fixed;
+  font-size: 24px;
+  right: 4%;
+  bottom: 8%;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-weight: $extra-bold;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0,0,0,.5);
+  z-index: 111;
+  &:hover {
+    background-color: $accent-color;
+  }
+}
