@@ -20,7 +20,12 @@ activeLink();
 import { getFraction } from "../../shared/utils/getFraction";
 import { decimalToPercent } from "../../shared/utils/decimalToPercent";
 import { toggleElementGently } from "../../shared/utils/toggleElementGently";
-import {heroPickerMessage, villainPickerMessage} from "../../shared/globals/constants";
+import {
+    heroPickerMessage,
+    heroResultMessage,
+    villainPickerMessage,
+    villainResultMessage
+} from "../../shared/globals/constants";
 /*Timer*/
 
 export let timer = setInterval(function() {
@@ -149,7 +154,7 @@ bugmanAlliesCounter.innerText = bugmanAlliesCount;
 
 const heroesButton = document.querySelector('.pick-side__side-button--heroes');
 const villainsButton = document.querySelector('.pick-side__side-button--villains');
-const mesageContainer = document.querySelector('.pick-side__message');
+const messageContainer = document.querySelector('.pick-side__message');
 
 const pollBlock = document.querySelector('.poll');
 
@@ -158,9 +163,15 @@ const showMessage = (element, text) => {
     element.innerText = text;
 };
 
+let clickedButton;
+
 heroesButton.addEventListener('click', function() {
-    toggleElementGently(pollBlock);
+    clickedButton = this;
+
+    toggleElementGently(form);
     toggleElementGently(villainsButton);
+    form.style.zIndex = '20';
+
 
     heroesSection.removeEventListener('mouseout', returnGradient);
     villainsSection.removeEventListener('mouseover', moveGradientToVillains);
@@ -169,13 +180,17 @@ heroesButton.addEventListener('click', function() {
     this.style.left = '100%';
     this.style.bottom = '50%';
     this.style.transform = 'translateX(-50%)';
+    this.disabled = true;
 
-    showMessage(mesageContainer, heroPickerMessage)
+    showMessage(messageContainer, heroPickerMessage)
 });
 
 villainsButton.addEventListener('click', function() {
-    toggleElementGently(pollBlock);
+    clickedButton = this;
+
     toggleElementGently(heroesButton);
+    toggleElementGently(form);
+    form.style.zIndex = '20';
 
     villainsSection.removeEventListener('mouseout', returnGradient);
     heroesSection.removeEventListener('mouseover', moveGradientToHeroes);
@@ -184,6 +199,54 @@ villainsButton.addEventListener('click', function() {
     this.style.right = '100%';
     this.style.bottom = '50%';
     this.style.transform = 'translateX(-50%)';
-    showMessage(mesageContainer, villainPickerMessage)
+    this.disabled = true;
 
+    showMessage(messageContainer, villainPickerMessage)
 });
+
+const okButton = document.querySelector('.pick-side__ok');
+const cancelButton = document.querySelector('.pick-side__cancel');
+const form = document.querySelector('.pick-side__form');
+
+cancelButton.addEventListener('click', () => {
+    toggleElementGently(form);
+    form.style.zIndex = '-1';
+    clickedButton.setAttribute('style', '');
+    toggleElementGently(messageContainer);
+
+    if (clickedButton === heroesButton) {
+        toggleElementGently(villainsButton);
+
+        heroesSection.addEventListener('mouseout', returnGradient);
+        villainsSection.addEventListener('mouseover', moveGradientToVillains);
+        villainsSection.addEventListener('mouseout', returnGradient);
+
+    } else {
+        toggleElementGently(heroesButton);
+
+        villainsSection.addEventListener('mouseout', returnGradient);
+        heroesSection.addEventListener('mouseover', moveGradientToHeroes);
+        heroesSection.addEventListener('mouseout', returnGradient);
+    }
+
+    clickedButton.disabled = false;
+});
+
+okButton.addEventListener('click', (e) => {
+    let message;
+
+    if (clickedButton === heroesButton) {
+        message = heroResultMessage;
+    } else {
+        message = villainResultMessage;
+    }
+
+    e.preventDefault();
+    toggleElementGently(pollBlock);
+    toggleElementGently(form);
+    form.style.zIndex = '20';
+
+    messageContainer.innerText = message;
+});
+
+

@@ -599,7 +599,7 @@
   &__title {
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 5%;
     transform: translateX(-50%);
     color: white;
     font-family: "Oxanium", cursive;
@@ -676,7 +676,11 @@
 
   &__form {
     @include center-transition;
-    top: 60%;
+    top: 65%;
+  }
+
+  &__ok {
+    color: rgb(60,130,60)
   }
 }
 
