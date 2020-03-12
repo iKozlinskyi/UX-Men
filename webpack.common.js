@@ -2,6 +2,10 @@ module.exports = {
     entry: {
         landing: "./src/static/pages/landing/landing.js",
         about: "./src/static/pages/about/about.js",
+        blackWindow: "./src/static/pages/blackWindow/blackWindow.js",
+        maven: "./src/static/pages/maven/maven.js",
+        notFound: "./src/static/pages/notFound/notFound.js",
+        skill: "./src/static/shared/components/skill/skill.js",
         styles: "./src/static/main.scss",
     },
     module: {

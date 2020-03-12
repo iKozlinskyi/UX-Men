@@ -1,0 +1,620 @@
+// ------------------ POSTER SECTION ------------------
+.poster {
+  background: url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat
+    center top / cover;
+  height: 100vh;
+  // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+  &__wrapper {
+    font-family: $ff-tertiary;
+    height: 100vh;
+    // padding: 10em 0;
+    @include flex(center, center, column);
+  }
+
+  &__text-container {
+    background-color: black;
+  }
+
+  &__title {
+    font-size: 8em;
+    font-weight: $bold;
+    font-family: $ff-title;
+    text-transform: uppercase;
+    color: $text-color--light;
+  }
+
+  &__accent {
+    color: $accent-color;
+  }
+}
+
+// ------------------ BEGIN STORY SECTION ------------------
+
+.story {
+  margin-top: -10%;
+  display: flex;
+  position: relative;
+  // background-color: $bg-color--dark;
+  background-color: rgb(240, 240, 240);
+  padding: 14% 0 14% 0;
+
+  &--gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+      url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat center top /
+        cover;
+  }
+
+  &--no-margin {
+    margin-top: 0;
+  }
+
+  &--bugman {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    padding: 8% 0;
+  }
+
+  &--clip-left {
+    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  &--clip-right {
+    clip-path: polygon(0 0%, 100% 7%, 100% 100%, 0 100%);
+  }
+
+  &--clip {
+    clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 91%);
+  }
+
+  &__wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &__article {
+    margin: auto;
+    text-align: center;
+
+    margin-bottom: 5%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5% 0;
+  }
+
+  &__item {
+    // flex: 0 1 50%;
+    width: 40%;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 4px solid $accent-color;
+  }
+
+  &__text {
+    @include basic-text($text-color--light);
+    // box-shadow: 7px -7px 0 #6cd1eb;
+    font-size: 1.2em;
+    padding: 5%;
+    margin-top: 5%;
+    // background-color: #191919;
+
+    &--black {
+      color: $text-color--dark;
+    }
+
+    &--framed {
+      box-shadow: 7px -7px 0 $accent-color;
+      background-color: $bg-color--dark;
+    }
+
+    &--odnoklassniki {
+      color: $accent-color--odnoklassniki;
+      text-transform: uppercase;
+      font-weight: $bold;
+      font-size: 2em;
+    }
+  }
+
+  &__text-accent {
+    color: $accent-color;
+    font-style: italic;
+  }
+}
+
+
+// ------------------ CONFLICT SECTION ------------------
+.conflict {
+  &__wrapper {
+    padding: 6% 0;
+  }
+
+  &__text-wrapper {
+    @include flex(space-between, center);
+  }
+
+  &__image-container {
+    z-index: 1;
+  }
+
+  &__text-container {
+    padding: 0 3% 1%;
+    background-color: #000000cc;
+    @include flex(center, center, column);
+    z-index: 1;
+  }
+
+  &__story-text {
+    font-size: 18px;
+    box-shadow: 2px -2px 0 #2bf5ff;
+    background-color: rgba(82, 178, 194, 0.64);
+    padding: 1.11111111em;
+    border-radius: 3px;
+  }
+
+  &__story-text--decorate {
+    color: #14e9ffe6;
+    font-weight: $bold;
+  }
+
+  &__story-text--text1 {
+    width: 35.1111111em;
+  }
+  &__story-text--text2 {
+    width: 27.111111em;
+    margin-left: 30%;
+    margin-top: 3%;
+  }
+
+  &__button-container {
+    margin-top: 8%;
+    text-align: center;
+  }
+
+  &__button {
+    background-color: rgba(82, 178, 194, 0.64);
+  }
+}
+
+// ------------------ TEAM SECTION ------------------
+
+.team {
+  background: url("./images/backgrounds/landing-page/team-section.png") center
+    center;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+
+  &__container {
+    padding: 8% 0;
+  }
+
+  &__text-container {
+    margin: 3.8888888em 0;
+    @include flex(space-around, flex-start);
+    flex-wrap: wrap;
+    padding-bottom: 0.8888888em;
+    background-color: #000000cc;
+  }
+
+  &__story-text {
+    font-size: 18px;
+    box-shadow: 2px -2px 0 #2bf5ff;
+    background-color: rgba(82, 178, 194, 0.64);
+    padding: 1.11111111em;
+    border-radius: 3px;
+  }
+
+  &__story-text--text1 {
+    width: 23.611111em;
+    order: 0;
+  }
+
+  &__story-text--text2 {
+    width: 19.7222222em;
+    order: 3;
+    margin-top: -1.94444444em;
+    margin-left: 8.88888888em;
+  }
+
+  &__story-text--text3 {
+    order: 2;
+    width: 27.22222222em;
+  }
+
+  &__story-text--text4 {
+    order: 4;
+    width: 21.66666666em;
+    margin-right: 1.125em;
+    margin-top: 1em;
+  }
+
+  &__story-text--decorate {
+    color: #14e9ffe6;
+    font-weight: $bold;
+  }
+
+  &__button-container {
+    padding: 3.84615385em 0;
+    text-align: center;
+  }
+
+  &__button {
+    margin: 0 3%;
+  }
+}
+
+// 1140px
+@media (max-width: $bp-medium-large) {
+  .team {
+    &__story-text--text2 {
+      margin-left: initial; //!!!!
+    }
+
+    &__story-text--text4 {
+      width: 21.66666666em;
+      margin-right: initial;
+    }
+  }
+}
+
+// 980px
+@media (max-width: $bp-medium-small) {
+  .team {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    &__text-container {
+      margin: 10%;
+      @include flex(center, center, column);
+      flex-wrap: wrap;
+      padding-bottom: 2%;
+    }
+
+    &__story-text {
+      font-size: 16px;
+      margin: 2.5% 0;
+    }
+
+    &__story-text--text1 {
+      width: 23.611111em;
+      order: 1;
+    }
+
+    &__story-text--text2 {
+      width: 30.611111em;
+      order: 2;
+    }
+
+    &__story-text--text3 {
+      order: 3;
+      width: 23.611111em;
+    }
+
+    &__story-text--text4 {
+      order: 4;
+      width: 21.611111em;
+    }
+
+    &__button-container {
+      padding: 0 0 8%;
+      text-align: center;
+    }
+
+    &__button {
+      margin: 1.5% 3%;
+      width: 16.666666666em;
+      padding: 1%;
+      font-size: 24px;
+    }
+  }
+}
+
+// 576px
+@media (max-width: $bp-xsmall) {
+  .team {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+    &__text-container {
+      margin: 1.875em;
+      padding-bottom: 2%;
+    }
+
+    &__story-text {
+      width: 75%;
+    }
+
+    &__button {
+      width: 56%;
+      padding: 1.2%;
+      font-size: 4vw;
+    }
+  }
+}
+
+// ------------------ DEADLINE SECTION ------------------
+
+.deadline {
+  font-family: $ff-title;
+  background-color: rgb(240, 240, 240);
+  clip-path: polygon(0 0%, 100% 7%, 100% 100%, 0 100%);
+  margin-top: -10%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 12% 0 12% 0;
+
+  }
+
+  &__title {
+    margin: 0 25px;
+    font-size: 2.1em;
+    height: 30%;
+    color: $text-color--dark;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: $bold;
+    letter-spacing: 2px;
+  }
+}
+
+.timer {
+  margin: 100px 25px 0 25px;
+  color: $text-color--dark;
+  text-transform: uppercase;
+  padding: 1em;
+  border: 4px solid #14e9ffe6;
+
+  &__item {
+    display: inline-block;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  &__date {
+    font-size: 2em;
+    display: block;
+    width: 190px;
+    text-align: center;
+    font-weight: $bold;
+  }
+}
+
+
+@media  (max-width: $bp-xsmall) {
+  .deadline {
+
+    &__title {
+      font-size: 1.2em;
+    }
+  }
+
+  .timer {
+    text-align: center;
+    margin-top: 50px;
+
+    &__item {
+      font-size: 1.2em;
+    }
+
+    &__date {
+      font-size: 1.2em;
+      width: 110px;
+    }
+  }
+}
+
+
+
+@media  (min-width: 577px) and (max-width: $bp-medium-small) {
+  .deadline {
+
+    &__title {
+      font-size: 1.6em;
+    }
+  }
+
+  .timer {
+    text-align: center;
+    margin-top: 80px;
+
+    &__item {
+      font-size: 1.5em;
+    }
+
+    &__date {
+      font-size: 1.5em;
+      width: 140px;
+    }
+  }
+}
+
+
+//------------------------------PICK SIDE SECTION-----------------------------------
+
+.glow-button {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.1em;
+  color: #FFFFFF;
+  text-align: center;
+  transition: background-color  0.2s;
+  background: transparent;
+  cursor: pointer;
+  font-family: "Oxanium", cursive;
+}
+
+.glow-button::before {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.pick-side {
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("https://opiniojuris.org/wp-content/uploads/29440531895_09f8f7f78c_k.jpg") center center;
+  background-size: cover;
+  font-family: "Oxanium", cursive;
+
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: "Oxanium", cursive;
+    font-size: 1.8em;
+  }
+
+  &__message {
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+  }
+
+  &__background-root {
+    height: 100%;
+    width: 200%;
+    left: -50%;
+    position: absolute;
+    background: rgb(0,58,88);
+    background: linear-gradient(90deg, rgba(0,58,88,1) 0%, rgba(0,0,0,0) 34%, rgba(24,0,0,0) 65%, rgba(133,0,0,1) 100%);
+    transition: 0.3s ease-out;
+  }
+
+  &__side {
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    position: relative;
+  }
+
+  $button-height: 75px;
+
+  &__side-button {
+    @include center-absolute;
+
+    width: 180px;
+    height: $button-height;
+    outline:none;
+  }
+
+  &__side-button--heroes {
+    border-color: #65c5eb;
+  }
+
+  &__side-button--villains {
+    border-color: #eb474c;
+  }
+
+  &__side-button--heroes:hover {
+    color:#000000;
+    background-color:lightblue;
+  }
+
+  &__side-button--villains:hover {
+    color: #000000;
+    background-color: lightcoral;
+  }
+
+  &__poll {
+    @include center-absolute;
+
+    position: absolute;
+    width: 80vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: auto;
+    color: white;
+    height: 100px;
+  }
+
+  &__form {
+    @include center-transition;
+    top: 65%;
+  }
+
+  &__ok {
+    color: rgb(60,130,60)
+  }
+}
+
+
+.poll {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: 0.4s ease;
+
+  &__meter {
+    width: 100%;
+    top: 0;
+  }
+}
+
+
+.meter {
+  height: 40px;
+  background: #b6002f;
+  border-radius: 2px;
+  box-shadow:
+          inset 0 2px 9px  rgba(255,255,255,0.3),
+          inset 0 -2px 6px rgba(0,0,0,0.4);
+
+  &__level {
+    height: 100%;
+    border-radius: 1px;
+    background-color: rgb(16, 114, 194);
+    box-shadow:
+            inset 0 2px 9px  rgba(255,255,255,0.3),
+            inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+  }
+}
+
+
+.hidden-gently {
+  height: 0;
+  min-height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+

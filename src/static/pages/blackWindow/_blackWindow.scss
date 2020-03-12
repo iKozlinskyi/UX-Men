@@ -1,0 +1,48 @@
+.superhero__story {
+
+  &-blackWindow {
+    width: 527px;
+    height: 350px;
+    background-color: black;
+    color: #1ff042;
+    padding: 30px;
+    text-align: justify;
+  }
+
+  &-description {
+    display: inline-block;
+  }
+
+  &-cursor {
+    width: 12px;
+    height: 22px;
+    background-color: #1ff042;
+    display: inline-block;
+    animation-name: cursor-blink;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+  }
+}
+
+
+.superhero__image-container-blackWidow {
+  min-width: 490px;
+}
+
+.introduction--black-window {
+  background-position: 5% 35%;
+}
+
+
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

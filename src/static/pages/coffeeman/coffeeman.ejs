@@ -11,6 +11,7 @@
     <title>Coffeeman</title>
   </head>
   <body>
+    <%- include('../../shared/components/header/header') %>
 
     <%- include('../../shared/components/hero/introduction/introduction.ejs',
       {
@@ -24,14 +25,14 @@
       { 
         heroName: 'Coffeeman',
         quote: 'No one is going to sleep tonight until we\'re done.',
-        story: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos,
-        placeat necessitatibus deserunt in ut cupiditate consequatur magnam alias
-        earum ex sint officia, quae numquam quo! Natus veritatis repellendus fuga
-        animi iure vel in eum, dolorem fugit aliquid error voluptatibus tempore sed
-        reiciendis dignissimos numquam nostrum sint repellat cupiditate. Expedita
-        eaque, repudiandae cumque sed cum maiores aliquam possimus sapiente optio
-        vero exercitationem nesciunt maxime dolorem iusto qui mollitia. Neque,
-        distinctio harum?`,
+        story: `Born and raised on the planet Aromakava which is 99% covered
+          with coffee plantations, knows everything about coffee. Has a gift
+          to turn any liquid into hot coffee. He plays a key role in
+          confronting the Bugman, as he supplies his team with endless
+          cups of coffee without what it is literally impossible to defeat
+          the Bugman and meet the deadline. Due to the enourmous concentration
+          of caffeine in his body he never sleeps and can sometimes hallucinate
+          and attack his teammates by spilling coffee on their pants.`,
         imagePath: '../../images/heroes/coffeeman-hp.png'
       })
     %>
@@ -39,7 +40,7 @@
     <%- include('../../shared/components/hero/profile/profile.ejs',
       { 
         heroName: 'Coffeeman',
-        placeOfBirth: `Planet Coffeeca`,
+        placeOfBirth: `Planet Aromakava`,
         gender: 'Male',
         age: '29',
         occupation: 'Barista',
@@ -68,5 +69,7 @@
           }
       })
     %>
+
+    <%- include('../../shared/components/footer/footer') %>
   </body>
 </html>

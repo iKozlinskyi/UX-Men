@@ -1,0 +1,51 @@
+.not-found {
+  font-family: $ff-title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+
+  &__description {
+    font-size: 26px;
+    font-weight: bold;
+
+    &-wrapper {
+      text-align: center;
+    }
+  }
+
+  &__button-back {
+    cursor: pointer;
+    margin: 20px auto 0 auto;
+    height: 50px;
+    width: 150px;
+    outline: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    background: linear-gradient(to bottom left, #0000CD, $accent-color--about);
+  }
+
+  &__img {
+    width: 450px;
+  }
+}
+
+
+@media (max-width: $bp-small) {
+  .not-found {
+    padding: 30px;
+
+    &__button-back {
+      margin-bottom: 50px;
+    }
+
+    &__img {
+      width: 250px;
+    }
+  }
+}

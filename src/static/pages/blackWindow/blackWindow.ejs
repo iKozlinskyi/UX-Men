@@ -19,42 +19,36 @@
       {
         realName: 'Yulia Chornenka',
         heroName: 'Black Window',
-        introText: 'Experienced supporting hero, who is welcome to any team.'
+        introText: 'Bugs identificator, who is welcome at any team'
       })
     %>
 
     <%- include('../../shared/components/hero/superhero/superhero.ejs', 
       { 
         heroName: 'Black Window',
-        quote: 'No one is going to sleep tonight until we\'re done.',
-        story: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos,
-        placeat necessitatibus deserunt in ut cupiditate consequatur magnam alias
-        earum ex sint officia, quae numquam quo! Natus veritatis repellendus fuga
-        animi iure vel in eum, dolorem fugit aliquid error voluptatibus tempore sed
-        reiciendis dignissimos numquam nostrum sint repellat cupiditate. Expedita
-        eaque, repudiandae cumque sed cum maiores aliquam possimus sapiente optio
-        vero exercitationem nesciunt maxime dolorem iusto qui mollitia. Neque,
-        distinctio harum?`,
+        quote: 'You can find any bug with my help.',
+        story: ``,
         imagePath: '../../images/heroes/black-window-hp.png'
       })
     %>
-    
+
     <%- include('../../shared/components/hero/profile/profile.ejs',
       { 
         heroName: 'Black Window',
-        placeOfBirth: `Planet Coffeeca`,
-        gender: 'Male',
+        placeOfBirth: `Planet Terminal`,
+        gender: 'Female',
         age: '26',
-        occupation: 'Barista',
-        likes: 'Dogs, Spiders, Rum',
-        height: '183',
-        weight: '78',
-        hair: 'Light Brown',
-        eyes: 'Grey',
-        dislikes: 'Noise, Heat, Radish'
+        occupation: 'Problem Identificator',
+        likes: 'Labradors, Salted caramel, Cartoons',
+        height: '156,5',
+        weight: '99',
+        hair: 'Black',
+        eyes: 'Black',
+        dislikes: 'Olives, Corn, Noise'
       })
     %>
-    
+
+
     <%- include('../../shared/components/hero/connections/connections.ejs',
       {
         connectionType: 'Allies',
@@ -66,10 +60,13 @@
       {
         heroName: 'Black Window',
         social: 
-          { linkedIn: 'https://www.linkedin.com/in/mikhail-kostiuk-28a915bb/',
-            github: 'https://github.com/mikhail-kostiuk'
+          { linkedIn: 'https://www.linkedin.com/in/yulia-chornenka-9570151a4/',
+            github: 'https://github.com/Yuliia-Chornenka'
           }
       })
     %>
+
+  <%- include('../../shared/components/footer/footer') %>
+
   </body>
 </html>

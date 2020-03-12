@@ -6,39 +6,60 @@
     <title>Captain Maven</title>
   </head>
   <body>
-    <!-- <%- include('../../shared/components/header/header', {
-    title: 'Heroes',
-    links: [{name: 'landing', href: '/'}, {name: 'about', href: '/about'}]
-}) %> -->
+    <%- include('../../shared/components/header/header') %>
+    <%- include('../../shared/components/hero/introduction/introduction.ejs', {
+      realName: "Daria Diachuk",
+      heroName: "Captain Maven",
+      introText: "Gathers everyone in one place at one time."
+    }) %>
+
+    <%- include('../../shared/components/hero/superhero/superhero.ejs', {
+      heroName: "Captain Maven",
+      quote: "This isn't about writing some piece of code. It's about creating something fascinating.",
+      story: "Well-organized, effective and extremely responsible. Your ideal project manager. \
+      Her main power is to gather all team members whenever necessary. Hates disorder and mess. \
+      Dirty job does not scare her. Able to clean your room in a second. Great psychologist. Has \
+      an inborn gift for resolving conflicts inside a team and giving useful advice. \
+      Has a power to arrange meetings and parties. Shares free fast Wi-Fi.",
+      imagePath: "../../images/heroes/captain-maven-hp.png"
+    }) %>
+
+    
+    <%- include('../../shared/components/hero/profile/profile.ejs', {
+      heroName: "Captain Maven",
+      placeOfBirth: "Javaland",
+      gender: "Female",
+      age: "22",
+      occupation: "",
+      likes: "Cats, Witty jokes, Graipfruits",
+      height: "167",
+      weight: "60",
+      hair: "Dark Brown",
+      eyes: "Green",
+      dislikes: "Bla, Stupid jokes, Bla"
+    }) %>
+    
+    <% const skills = [
+      { skillName: "Responsibility", color: "red", percentage: "90" },
+      { skillName: "Calmness", color: "pink", percentage: "35" },
+      { skillName: "Creativity", color: "yellow", percentage: "95" },
+      { skillName: "Communication", color: "green", percentage: "75" }            
+   ]; %>
 
     <section class="block features">
       <div class="block__wrapper">
         <h2 class="features__title">Personality</h2>
         <ul class="features__list">
-          <li class="features__item">
-            <%- include('../../shared/components/skill/skill', { skillName:
-            "Responsibility", color: "red", percentage: "90" }) %>
-          </li>
-          <li class="features__item">
-            <%- include('../../shared/components/skill/skill', { skillName:
-            "Humor", color: "blue", percentage: "80" }) %>
-          </li>
-          <li class="features__item">
-            <%- include('../../shared/components/skill/skill', { skillName:
-            "Calmness", color: "pink", percentage: "35" }) %>
-          </li>
-          <li class="features__item">
-            <%- include('../../shared/components/skill/skill', { skillName:
-            "Creativity", color: "yellow", percentage: "95" }) %>
-          </li>
-          <li class="features__item">
-            <%- include('../../shared/components/skill/skill', { skillName:
-            "Communication", color: "green", percentage: "75" }) %>
-          </li>
+          <% for (let skill of skills) { %>
+            <li class="features__item">
+              <%- include('../../shared/components/skill/skill.ejs', { skillName:
+                skill.skillName, color: skill.color, percentage: skill.percentage }) %>
+            </li>
+          <% } %>
         </ul>
       </div>
     </section>
-    <section class="features features--dark block">
+    <!-- <section class="features features--dark block">
       <div class="block__wrapper bubbles">
         <div class="bubbles__row">
           <div class="bubbles__item bubbles__item--bottom">
@@ -75,8 +96,21 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <!-- <%- include('../../shared/components/footer/footer') %> -->
+    <%- include('../../shared/components/hero/connections/connections.ejs', {
+      connectionType: "Allies",
+      heroesList: ["Serverman", "Black Window", "Coffeeman", "Web Storm"]
+    }) %>
+
+<%- include('../../shared/components/hero/contacts/contacts.ejs', {
+  heroName: 'Captain Maven',
+  social: 
+    { linkedIn:'https://www.linkedin.com/in/daria-diachuk-1509b91a4/',
+      github: 'https://github.com/StellarCrow'
+    }
+})%>
+
+    <%- include('../../shared/components/footer/footer') %>
   </body>
 </html>

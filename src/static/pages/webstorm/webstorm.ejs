@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+            rel="stylesheet"
+    />
+    <title>Web Storm</title>
+</head>
+<body>
+    <%- include('../../shared/components/header/header') %>
+
+    <%- include('../../shared/components/hero/introduction/introduction.ejs',
+        {
+        realName: 'Daria Kyrychenko',
+        heroName: 'Web Storm',
+        introText: 'First we create things, later we refactor them.'
+        })
+    %>
+
+    <%- include('../../shared/components/hero/superhero/superhero.ejs',
+        {
+        heroName: 'Web Storm',
+        quote: 'You made a mistake again, let me explain you why you are wrong.',
+        story: `Powerful and highly intelligent superhero. Cares a lot about environment. Always ready to help,
+        although it is not free of charge. It might seem hard to become friends with her for the first time, but if you
+        succeed, your friendship will be strong and last for years. Never try to deceive her, easily detects bad smells.
+        True perfectionist, loves giving instructions and putting meticulous remarks when people make mistakes. Extremely
+        proactive and always comes up with some ideas on how to defeat malicious bugs. Speaks all languages. Makes life of
+        her allies easier and happier. `,
+        imagePath: '../../images/heroes/web-storm-hp.png'
+        })
+    %>
+
+    <%- include('../../shared/components/hero/profile/profile.ejs',
+        {
+        heroName: 'Web Storm',
+        placeOfBirth: `JetBrains Galaxy`,
+        gender: 'Female',
+        age: '24',
+        occupation: 'Your Right Hand',
+        likes: 'Nature, Running, Learning languages',
+        height: '170',
+        weight: '62',
+        hair: 'Material Dark',
+        eyes: 'Material Oceanic',
+        dislikes: 'Illiterate people, Procrastination, Light colors.'
+        })
+    %>
+
+    <%- include('../../shared/components/hero/connections/connections.ejs',
+        {
+        connectionType: 'Allies',
+        heroesList: [`Captain Maven`, `Serverman`, `Black Window`, `Coffeeman`]
+        })
+    %>
+
+    <%- include('../../shared/components/hero/contacts/contacts.ejs',
+        {
+        heroName: 'Web Storm',
+        social:
+        { linkedIn: 'https://www.linkedin.com/in/daria-kyrychenko-330557142/',
+        github: 'https://gitlab.com/Dariaki'
+        }
+        })
+    %>
+
+    <%- include('../../shared/components/footer/footer') %>
+</body>
+</html>
