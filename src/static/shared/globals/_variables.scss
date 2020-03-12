@@ -6,7 +6,7 @@
 //----------BREAKPOINTS-------------
 
 $bp-xxsmall: 20em; // 320px
-$bp-xsmall: 36em;// 576px
+$bp-xsmall: 36em; // 576px
 $bp-small: 48em; // 768px
 $bp-medium-small: 61.25em; // 980px
 $bp-medium: 64em; // 1024px
@@ -52,6 +52,7 @@ $bg-color--dark: #191919;
 $accent-color: #6cd1eb;
 $accent-color--about: #6cd1eb;
 $accent-color--maven: #ebc96c;
+$accent-color--odnoklassniki: #eb9b6c;
 
 $danger-color: #f1a3a3;
 $warning-color: #f1c0a3;
@@ -59,11 +60,6 @@ $success-color: #cef1a3;
 
 $text-color--dark: rgb(82, 82, 82);
 $text-color--light: rgb(255, 255, 255);
-
-
-
-
-
 
 //-------------ANIMATIONS------------------
 
@@ -94,17 +90,14 @@ $text-color--light: rgb(255, 255, 255);
   }
 }
 
-
 @keyframes pulsationBig {
   0% {
-    transform: scale(1.0, 1.0);
+    transform: scale(1, 1);
   }
   50% {
     transform: scale(0.8, 0.8);
   }
   100% {
-    transform: scale(1.0, 1.0);
+    transform: scale(1, 1);
   }
 }
-
-
