@@ -22,12 +22,17 @@ app.get("/coffeeman", (req, res) => {
   res.sendFile(path.join(__dirname, "dist/coffeeman.html"));
 });
 
-app.get("/blackWindow", (req, res) => {
+app.get("/black-window", (req, res) => {
   res.sendFile(path.join(__dirname, "dist/blackWindow.html"));
 });
 
-app.get("/maven", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/maven.ejs"));
+app.get("/captain-maven", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist/maven.html"));
+});
+
+
+app.get("/webstorm", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist/webstorm.ejs"));
 });
 
 app.get("/serverman", (req, res) => {
@@ -35,7 +40,7 @@ app.get("/serverman", (req, res) => {
 });
 
 app.use("*", (req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "dist/not-found.html"));
+  res.status(404).sendFile(path.join(__dirname, "dist/notFound.html"));
 });
 
 app.listen(port, () => console.log("app is listening on 5050"));

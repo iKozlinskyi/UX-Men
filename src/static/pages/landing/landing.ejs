@@ -1,138 +1,206 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>UX-Men</title>
-<body>
+  </head>
+  <body>
+    <%- include('../../shared/components/header/header') %>
 
-<%- include('../../shared/components/header/header') %>
-
-
-<div class="block poster">
-    <div class="block__wrapper poster__wrapper">
-        <h1 class="poster__movie-title movie-title movie-title--clipped">UX-Men</h1>
-        <button class="button poster__button">Read the Story</button>
-    </div>
-</div>
-
-
-<section class="story">
-
-    <div class="begin-story">
-
-        <div class="begin-story__container">
-
-            <img src="../../images/landing/icon-heart.svg" alt="" class="begin-story__icon-love">
-
-            <div class="begin-story__description">
-                <p class="begin-story__description-paragraph">For many years people and programmers had lived in
-                    harmony.
-                    Without wars
-                    and code reviews.</p>
-                <p class="begin-story__description-paragraph">But once...</p>
-            </div>
-
-        </div>
-
+    <div class="block poster">
+      <div class="block__wrapper poster__wrapper">
+        <h1 class="poster__title">
+          <span class="poster__accent">UX</span>-Men
+        </h1>
+      </div>
     </div>
 
+    <section class="block story story--no-margin">
+      <div class="block__wrapper">
+        <article class="story__article">
+          <div class="story__wrapper">
+            <p class="story__text story__text--black" data-aos="fade-up">
+              For many years people and programmers had lived in harmony.
+              <br />Without wars and code reviews.
+            </p>
+            <p class="story__text story__text--black" data-aos="fade-up">
+              But once...
+            </p>
+            <p class="story__text story__text--black" data-aos="fade-up">
+              ...something horrible did happen –
+              <span class="story__text-accent">likes</span> from all social
+              media had suddenly
+              <span class="story__text-accent">started to disappear</span>.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <div class="no-likes">
-
-        <div class="block__wrapper no-likes__container">
-
-            <p class="no-likes__description"> ...something horrible did happen – likes from all social media had
-                suddenly started to disappear. And there was no possibility to like you friends’ pictures and no
-                possibility
-                to see who appreciated your posts. There was none. The panic broke out. The world was standing on
-                the
-                verge
-                of a total collapse. And this is how our story begins.</p>
-
-
-            <div class="no-likes__img-wrapper">
-                <img src="../../images/landing/nobodylikesyou.png" alt="" class="no-likes__img">
-
-                <div class="no-likes__left-tear no-likes__left-tear1"></div>
-                <div class="no-likes__left-tear no-likes__left-tear2"></div>
-                <div class="no-likes__left-tear no-likes__left-tear3"></div>
-                <div class="no-likes__left-tear no-likes__left-tear4"></div>
-                <div class="no-likes__left-tear no-likes__left-tear5"></div>
-
-                <div class="no-likes__right-tear no-likes__right-tear1"></div>
-                <div class="no-likes__right-tear no-likes__right-tear2"></div>
-                <div class="no-likes__right-tear no-likes__right-tear3"></div>
-                <div class="no-likes__right-tear no-likes__right-tear4"></div>
-                <div class="no-likes__right-tear no-likes__right-tear5"></div>
-
+    <section class="block story story--gradient story--clip-right">
+      <div class="block__wrapper">
+        <article class="story__article">
+          <div class="story__wrapper">
+            <p class="story__text" data-aos="fade-up">
+              And there was no possibility to like you friends’ pictures and no
+              possibility to see who appreciated your posts.
+            </p>
+            <p class="story__text" data-aos="fade-up">
+              There was <span class="story__text-accent">none</span>.
+            </p>
+          </div>
+          <div class="story__row">
+            <div class="story__item" data-aos="fade-right">
+              <img
+                src="../../images/landing/panic.jpg"
+                alt="image-panic"
+                class="story__image"
+              />
             </div>
-        </div>
-    </div>
-
-    <div class="story__button-wrapper">
-        <button class="button story__button">Continue reading</button>
-    </div>
-
-</section>
-
-<section class="block conflict" id="particle_canvas">
-    <div class="block__wrapper conflict__wrapper">
-        <div class="conflict__text-wrapper">
-            <div class="conflict__text-container">
-                <div class="conflict__story-text story-text conflict__story-text--text1">
-                    It turned our that a notorious villain <span class="conflict__story-text--decorate">Bugman</span> had edged
-                    into the Internet and broken the code of likes. The bugs he had made were spreading faster
-                    than a  <span class="conflict__story-text--decorate">coronavirus</span>.
-                </div>
-                <div class="conflict__story-text story-text conflict__story-text--text2">
-                    It seemed like nothing could stop his malicious plot, but where the power of common humans ends, the job
-                    for the <span class="conflict__story-text--decorate">UX-Men</span> begins.
-                </div>
+            <div class="story__item">
+              <p class="story__text" data-aos="fade-up" data-aos-delay="50">
+                The panic broke out.
+              </p>
             </div>
-            <div class="conflict__image-container">
-                <img class="conflict__image" src="../../images/backgrounds/landing-page/bugman.png" alt="Notorious villain Bugman">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block story story--clip-left">
+      <div class="block__wrapper">
+        <article class="story__article">
+          <div class="story__row">
+            <div class="story__item">
+              <p
+                class="story__text story__text--framed"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                The world was standing on the verge of a total collapse.
+                <br />And this is how our story begins.
+              </p>
             </div>
-        </div>
-        <div class="conflict__button-container">
-            <button class="button conflict__button">What is next?</button>
-        </div>
-    </div>
-</section>
-
-
-
-
-<section class="block team">
-    <div class="block__wrapper team__container">
-        <div class="team__text-container">
-            <div class="team__story-text team__story-text--text1 story-text">
-                The governments around the globe gathered behind closed doors to find a solution. There was no time
-                for second thoughts.
+            <div class="story__item" data-aos="fade-left">
+              <img
+                src="../../images/landing/collapse.jpg"
+                alt="image-panic"
+                class="story__image"
+              />
             </div>
-            <div class="team__story-text team__story-text--text2 story-text">
-                It was instantly decided to create a <span class="team__story-text--decorate">Fast React Team</span> of the most powerful
-                <span class="team__story-text--decorate">UX-Men</span> on Earth for this mission.
-            </div>
-            <div class="team__story-text team__story-text--text3 story-text">
-                To stop Bugman and ruin his plans UX-Men have to fight all bugs and go to the most <span class="team__story-text--decorate">dangerous</span> and
-                <span class="team__story-text--decorate">unexplainable place</span>  of the Internet – to <span class="team__story-text--decorate">Odnoklassniki</span>, to find an intact piece of code and heal all
-                other social media with it.
-            </div>
-            <div class="team__story-text team__story-text--text4 story-text">
-                But who are they, our heroes?
-            </div>
-        </div>
-        <div class="team__button-container">
-            <button class="button team__button team__button--clicked">Meet The Team</button>
-            <button class="button team__button">Continue reading</button>
-        </div>
-    </div>
-</section>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <section class="block story story--gradient story--clip-right">
+      <div class="block__wrapper">
+        <article class="story__article">
+          <div class="story__row">
+            <div class="story__item" data-aos="fade-right">
+              <img
+                src="../../images/heroes/bugman.jpg"
+                alt="Mantis in the hat, standing with a cane"
+                class="story__image"
+              />
+            </div>
+            <div class="story__item">
+              <p class="story__text" data-aos="fade-up" data-aos-delay="50">
+                It turned out that a notorious villain
+                <span class="story__text-accent">Bugman</span> had edged into
+                the Internet and broken the code of likes. The bugs he had made
+                were spreading faster than a
+                <span class="story__text-accent">coronavirus</span>.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<section class="deadline">
+    <section class="block story story--clip-left">
+      <div class="block__wrapper">
+        <article class="story__article">
+          <div class="story__row">
+            <div class="story__item">
+              <p
+                class="story__text story__text--framed"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                The governments around the globe gathered behind closed doors to
+                find a solution. There was no time for second thoughts.
+              </p>
+            </div>
+            <div class="story__item" data-aos="fade-left">
+              <img
+                src="../../images/landing/room.jpg"
+                alt="Control room"
+                class="story__image"
+              />
+            </div>
+          </div>
+          <div class="story__wrapper">
+            <p class="story__text story__text--black" data-aos="fade-up">
+              To stop Bugman and ruin his plans someone would have to find an
+              intact piece of code and heal all other social media with it,
+              fighing all bugs and going for that to the most
+              <span class="story__text-accent">dangerous</span> and
+              <span class="story__text-accent">inexplainable place</span> place
+              of the Internet...
+            </p>
+            <p class="story__text story__text--black" data-aos="fade-up">
+              ...to...
+            </p>
+            <p class="story__text story__text--black" data-aos="fade-up">
+              ...
+            </p>
+            <p class="story__text story__text--black" data-aos="fade-up">
+              ...
+            </p>
+            <p class="story__text story__text--black" data-aos="fade-up">
+              ...
+            </p>
+
+            <p
+              class="story__text story__text--black story__text--odnoklassniki"
+              data-aos="fade-up"
+              data-aos-delay="1000"
+            >
+              Odnoklassniki
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="block story story--gradient story--clip-right">
+      <div class="block__wrapper">
+        <article class="story__article">
+          <div class="story__wrapper">
+            <p class="story__text" data-aos="fade-up">
+              It was instantly decided to create a
+              <span class="story__text-accent">Fast React Team</span> of the
+              most powerful <span class="story__text-accent">UX-Men</span> on
+              Earth for this mission.
+            </p>
+            <p class="story__text" data-aos="fade-up">
+              Meet our <span class="story__text-accent">heroes!</span>.
+            </p>
+          </div>
+          <div class="story__row" data-aos="fade-up" data-aos-delay="1000">
+            <img
+              src="../../images/backgrounds/landing-page/poster-section.png"
+              alt="image-panic"
+              class="story__image"
+            />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- <section class="deadline">
     <div class="block__wrapper deadline__container">
         <div class="deadline__title"></div>
         <ul class="timer">
@@ -144,8 +212,34 @@
         <div class="deadline__button-container">
             <button class="button deadline__button">You cannot stay aside!</button>
         </div>
+    </div>-->
+</section>
+<section class="pick-side">
+    <div class="pick-side__background-root"></div>
+    <h2 class="pick-side__title">
+        Which side would you choose?
+    </h2>
+    <div class="pick-side__message hidden-gently"></div>
+    <div class="pick-side__side">
+        <button data-side="heroes" class="pick-side__side-button pick-side__side-button--heroes glow-button">Heroes</button>
     </div>
+    <div class="pick-side__side">
+        <button data-side="villains" class="pick-side__side-button pick-side__side-button--villains glow-button">Bugman</button>
+    </div>
+    <form action="#" class="pick-side__form form hidden-gently" method="get">
+        <button type="button" class="glow-button pick-side__cancel">Back</button>
+        <a href="#" class="glow-button pick-side__ok">Submit</a>
+    </form>
+    <div class="pick-side__poll poll hidden-gently">
+        <div class="poll__title poll__title">Heroes' allies: <span class="poll__heroes-allies"></span></div>
+        <div class="poll__title poll__title">Bugman's allies: <span class="poll__bugman-allies"></span></div>
+        <div class="poll__meter meter">
+            <div class="meter__level"></div>
+        </div>
+    </div>
+
 </section>
 
-</body>
+    <%- include('../../shared/components/footer/footer') %>
+  </body>
 </html>
