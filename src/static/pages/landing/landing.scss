@@ -50,6 +50,11 @@
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   }
 
+  &--bugman {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    padding: 8% 0;
+  }
+
   &__wrapper {
     width: 50%;
     margin: 0 auto;
