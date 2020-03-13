@@ -1,3 +1,5 @@
+@import '../../shared/globals/variables';
+
 // ------------------ POSTER SECTION ------------------
 .poster {
   background: url("./images/backgrounds/landing-page/bg-image.jpg") no-repeat
@@ -443,7 +445,7 @@
 //------------------------------PICK SIDE SECTION-----------------------------------
 
 .glow-button {
-  display: inline-block;
+  display: block;
   padding: 0.5em 1.5em;
   border: 1px solid $light-transparent-100;
   box-sizing: border-box;
@@ -456,6 +458,7 @@
   background: transparent;
   cursor: pointer;
   font-family: "Oxanium", cursive;
+  position: relative;
 }
 
 .glow-button::before {
@@ -474,7 +477,7 @@
 
 .pick-side {
   overflow: hidden;
-  display: flex;
+  //display: flex;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -482,24 +485,33 @@
   background-size: cover;
   font-family: "Oxanium", cursive;
 
+  &__chosen-side {
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__chosen-title {
+    padding: 15px 50px;
+    margin: 0 auto;
+
+    &--heroes {
+      border-color: $accent-color;
+    }
+
+    &--villains {
+      border-color: $signal-color;
+    }
+  }
 
   &__title {
-    position: absolute;
-    left: 50%;
-    top: 5%;
-    transform: translateX(-50%);
+    margin: 10vh 0;
     color: $light-transparent-100;
     font-family: "Oxanium", cursive;
     font-size: 1.8em;
-  }
-
-  &__message {
-    color: $light-transparent-100;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.5s;
+    text-align: center;
+    padding: 0 10px;
   }
 
   &__background-root {
@@ -515,62 +527,83 @@
   &__side {
     width: 50%;
     height: 100%;
-    z-index: 10;
-    position: relative;
+    //z-index: 10;
+
   }
 
   $button-height: 75px;
 
-  &__side-button {
-    @include center-absolute;
+  &__control-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20vh;
+  }
 
+  &__side-button {
     width: 180px;
     height: $button-height;
-    outline:none;
+    outline: none;
+
+    @media all and (max-width: $bp-xsmall) {
+      width: 120px;
+      height: 50px;
+    }
+
+    &--heroes {
+      border-color: $accent-color;
+    }
+
+    &--heroes:hover {
+      color: $dark-transparent-100;
+      background-color:lightblue;
+    }
+
+    &--villains {
+      border-color: $signal-color;
+    }
+
+    &--villains:hover {
+      color: $dark-transparent-100;
+      background-color: $danger-color;
+    }
+
   }
 
-  &__side-button--heroes {
-    border-color: $accent-color;
-  }
+    &__message {
+      color: $light-transparent-100;
+      transition: all 0.5s;
+      padding: 0 20px;
+      text-align: center;
+      margin-top: 5vh;
+    }
 
-  &__side-button--villains {
-    border-color: $signal-color;
-  }
+    &__form {
+      display: flex;
+      justify-content: center;
+    }
 
-  &__side-button--heroes:hover {
-    color: $dark-transparent-100;
-    background-color:lightblue;
-  }
+    &__ok {
+      color: $success-color;
+      margin-left: 50px;
+    }
 
-  &__side-button--villains:hover {
-    color: $dark-transparent-100;
-    background-color: $danger-color;
-  }
-
-  &__poll {
-    @include center-absolute;
-
-    position: absolute;
-    width: 80vw;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 50%;
-    margin: auto;
-    color: $light-transparent-100;
-    height: 100px;
-  }
-
-  &__form {
-    @include center-transition;
-    top: 65%;
-  }
-
-  &__ok {
-    color: $success-color;
-  }
+    &__poll {
+      width: 80vw;
+      color: $light-transparent-100;
+      height: 100px;
+      margin: 0 auto;
+    }
 }
 
+.animated-gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
 
 .poll {
   display: flex;
@@ -584,7 +617,6 @@
     top: 0;
   }
 }
-
 
 .meter {
   height: 40px;
@@ -606,7 +638,6 @@
     width: 70%;
   }
 }
-
 
 .hidden-gently {
   height: 0;

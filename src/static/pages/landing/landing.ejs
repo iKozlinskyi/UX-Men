@@ -214,21 +214,36 @@
 
 
 <section class="pick-side">
-    <div class="pick-side__background-root"></div>
+    <div class="animated-gradient">
+      <div class="pick-side__background-root"></div>
+      <!--these 2 elements below serve as sensors for mouse hover - and change of gradient (in JS code) -->
+      <div class="pick-side__side"></div>
+      <div class="pick-side__side"></div>
+      <!---->
+    </div>
+
     <h2 class="pick-side__title">
         Which side would you choose?
     </h2>
-    <div class="pick-side__message hidden-gently"></div>
-    <div class="pick-side__side">
-        <button data-side="heroes" class="pick-side__side-button pick-side__side-button--heroes glow-button">Heroes</button>
+
+    <div class="pick-side__chosen-side">
+      <h3 class="pick-side__chosen-title pick-side__chosen-title--heroes glow-button hidden-gently">Heroes</h3>
+      <h3 class="pick-side__chosen-title pick-side__chosen-title--villains glow-button hidden-gently hidden-gently">Bugman</h3>
     </div>
-    <div class="pick-side__side">
-        <button data-side="villains" class="pick-side__side-button pick-side__side-button--villains glow-button">Bugman</button>
+
+  <div class="pick-side__message hidden-gently"></div>
+
+  <div class="pick-side__control-buttons">
+      <button data-side="heroes" class="pick-side__side-button pick-side__side-button--heroes glow-button">Heroes</button>
+      <button data-side="villains" class="pick-side__side-button pick-side__side-button--villains glow-button">Bugman</button>
     </div>
+
+
     <form action="#" class="pick-side__form form hidden-gently" method="get">
         <button type="button" class="glow-button pick-side__cancel">Back</button>
-        <a href="#" class="glow-button pick-side__ok">Submit</a>
+        <button type="button" class="glow-button pick-side__ok">Submit</button>
     </form>
+
     <div class="pick-side__poll poll hidden-gently">
         <div class="poll__title poll__title">Heroes' allies: <span class="poll__heroes-allies"></span></div>
         <div class="poll__title poll__title">Bugman's allies: <span class="poll__bugman-allies"></span></div>
