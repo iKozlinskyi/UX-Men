@@ -45,6 +45,7 @@ $tertiary-color: rgb(149, 96, 80);
 $tertiary-color--lighter: rgb(212, 138, 115);
 
 $accent-color--maven: rgb(235, 201, 108);
+$accent-color--serverman: rgb(209, 53, 30);
 $accent-color--odnoklassniki: rgb(235, 155, 108);
 
 $terminal-color: rgb(31, 240, 66);
@@ -120,3 +121,21 @@ $light-transparent-30: rgba(255, 255, 255, 0.3);
   }
 }
 
+
+//-------------THEMES------------------
+
+$dark_color--text: #fff;
+$dark_color--primary: #323232;
+$dark_color--secondary: #202020;
+$dark_color--accent: #ffac41;
+
+$accent-color--maven: rgb(235, 201, 108);
+$accent-color--odnoklassniki: rgb(235, 155, 108);
+
+$terminal-color: rgb(31, 240, 66);
+$ocean-color: rgb(0, 0, 205);
+$attention-color: rgb(182, 0, 47);
+$signal-color: rgb(235, 71, 76);
+$danger-color: rgb(241, 163, 163);
+$warning-color: rgb(241, 192, 163);
+$success-color: rgb(206, 241, 163);
