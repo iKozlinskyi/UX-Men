@@ -149,11 +149,13 @@ const showMessage = (element, text) => {
 };
 
 let clickedButton;
+const [heroesTitle, villainsTitle] = document.querySelectorAll('.pick-side__chosen-title');
 
 heroesButton.addEventListener('click', function() {
   clickedButton = this;
 
   toggleElementGently(form);
+  toggleElementGently(heroesTitle);
   toggleElementGently(villainsButton);
   form.style.zIndex = '20';
 
@@ -174,6 +176,7 @@ villainsButton.addEventListener('click', function() {
   clickedButton = this;
 
   toggleElementGently(heroesButton);
+  toggleElementGently(villainsTitle);
   toggleElementGently(form);
   form.style.zIndex = '20';
 
@@ -201,6 +204,7 @@ cancelButton.addEventListener('click', () => {
 
   if (clickedButton === heroesButton) {
     toggleElementGently(villainsButton);
+    toggleElementGently(heroesTitle);
 
     heroesSection.addEventListener('mouseout', returnGradient);
     villainsSection.addEventListener('mouseover', moveGradientToVillains);
@@ -208,6 +212,7 @@ cancelButton.addEventListener('click', () => {
 
   } else {
     toggleElementGently(heroesButton);
+    toggleElementGently(villainsTitle);
 
     villainsSection.addEventListener('mouseout', returnGradient);
     heroesSection.addEventListener('mouseover', moveGradientToHeroes);
@@ -218,12 +223,14 @@ cancelButton.addEventListener('click', () => {
 });
 
 okButton.addEventListener('click', (e) => {
-  let message;
+  let message, activeTitle;
 
   if (clickedButton === heroesButton) {
     message = heroResultMessage;
+    activeTitle = heroesTitle;
   } else {
     message = villainResultMessage;
+    activeTitle = villainsTitle;
   }
 
   e.preventDefault();
@@ -237,6 +244,7 @@ okButton.addEventListener('click', (e) => {
     }
 
     toggleElementGently(pollBlock);
+    toggleElementGently(activeTitle);
     toggleElementGently(form);
     form.style.zIndex = '20';
 
