@@ -34,7 +34,7 @@
     }
 
     &--serverman {
-      background-image: url("/src/static/images/heroes/serverman-hp.png");
+      background-image: url("./images/heroes/serverman-hp.png");
     }
 
     &--captain-maven {
@@ -50,7 +50,7 @@
     height: 30%;
     background-color: #1d1d1d;
     font-family: Roboto, sans-serif;
-    color: #fff;
+    color: $light-transparent-100;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;

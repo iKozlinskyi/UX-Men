@@ -1,9 +1,16 @@
+@import '../../../globals/variables';
+
 .superhero {
   @media (min-width: $bp-small) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 100px;
+  }
+
+  &--dark {
+    color: $dark-color--text;
+    background-color: $dark_color--primary;
   }
 
   &__container {
@@ -74,11 +81,15 @@
 
   &__blockquote {
     padding: 10px 20px;
-    border-left: 5px solid #000;
+    border-left: 5px solid $dark-transparent-100;
     margin-top: 4px;
     background-color: #e7e7e7;
     font-style: italic;
     font-size: 18px;
+
+    &--dark {
+      background-color: $dark_color--primary;
+    }
 
     &--captain-maven {
       border-left-color: $accent-color--maven;
@@ -108,6 +119,10 @@
     color: #202020;
     font-size: 16px;
     letter-spacing: 0.5px;
+
+    &--dark {
+      color: $dark-color--text;
+    }
   }
 
   &__image-container {

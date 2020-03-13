@@ -39,27 +39,46 @@ $extra-bold: 800;
 $base-font-size: 16px;
 
 //-------------COLORS------------------
-$primary-color: #5e6e4a;
-$primary-color--lighter: #a0bb7f;
-$secondary-color: #adafac;
-$secondary-color--lighter: #dddfdb;
-$tertiary-color: #956050;
-$tertiary-color--lighter: #d48a73;
+$primary-color: rgb(94, 110, 74);
+$primary-color--lighter: rgb(160, 187, 127);
+$tertiary-color: rgb(149, 96, 80);
+$tertiary-color--lighter: rgb(212, 138, 115);
 
-$bg-color--light: #b1b1b1;
-$bg-color--dark: #191919;
+$accent-color--maven: rgb(235, 201, 108);
+$accent-color--serverman: rgb(209, 53, 30);
+$accent-color--odnoklassniki: rgb(235, 155, 108);
 
-$accent-color: #6cd1eb;
-$accent-color--about: #6cd1eb;
-$accent-color--maven: #ebc96c;
-$accent-color--odnoklassniki: #eb9b6c;
+$terminal-color: rgb(31, 240, 66);
+$ocean-color: rgb(0, 0, 205);
+$attention-color: rgb(182, 0, 47);
+$signal-color: rgb(235, 71, 76);
+$danger-color: rgb(241, 163, 163);
+$warning-color: rgb(241, 192, 163);
+$success-color: rgb(206, 241, 163);
 
-$danger-color: #f1a3a3;
-$warning-color: #f1c0a3;
-$success-color: #cef1a3;
+$bg-color--dark: rgb(25, 25, 25);
+$neutral-transparent-0: rgba(41, 41, 41, 0);
+$neutral-dark: rgb(82, 82, 82);
+$neutral-common: rgb(128, 128, 128);
+$neutral-light: rgb(177, 177, 177);
 
-$text-color--dark: rgb(82, 82, 82);
-$text-color--light: rgb(255, 255, 255);
+$bg-light-primary: rgb(240, 240, 240);
+
+$text-story-light: rgba(82, 178, 194, 0.64);
+$accent-color-90: rgba(20, 233, 255, 0.9);
+$accent-color: rgb(108, 209, 235);
+$stroke-color: rgb(43, 245, 255);
+
+$dark-transparent-100: rgb(0, 0, 0);
+$dark-transparent-80: rgba(0, 0, 0, 0.8);
+$dark-transparent-70: rgba(0, 0, 0, 0.7);
+$dark-transparent-50: rgba(0, 0, 0, 0.5);
+$dark-transparent-40: rgba(0, 0, 0, 0.4);
+
+$light-transparent-100: rgb(255, 255, 255);
+$light-transparent-30: rgba(255, 255, 255, 0.3);
+
+
 
 //-------------ANIMATIONS------------------
 
@@ -102,3 +121,21 @@ $text-color--light: rgb(255, 255, 255);
   }
 }
 
+
+//-------------THEMES------------------
+
+$dark_color--text: #fff;
+$dark_color--primary: #323232;
+$dark_color--secondary: #202020;
+$dark_color--accent: #ffac41;
+
+$accent-color--maven: rgb(235, 201, 108);
+$accent-color--odnoklassniki: rgb(235, 155, 108);
+
+$terminal-color: rgb(31, 240, 66);
+$ocean-color: rgb(0, 0, 205);
+$attention-color: rgb(182, 0, 47);
+$signal-color: rgb(235, 71, 76);
+$danger-color: rgb(241, 163, 163);
+$warning-color: rgb(241, 192, 163);
+$success-color: rgb(206, 241, 163);

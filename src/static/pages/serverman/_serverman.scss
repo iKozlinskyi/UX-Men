@@ -1,0 +1,31 @@
+@import '../../shared/globals/variables';
+
+.theme-toggle {
+  position: fixed;
+  bottom: 10%;
+
+  @media all and (max-width: $bp-small) {
+    position: absolute;
+    top: 80%;
+    left: 0;
+  }
+
+  &__button {
+    padding: 5px 5px;
+    border-width: 0;
+    background-color: rgba(24, 0, 6, 0.58);
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: inline-block;
+    background: url("https://img.icons8.com/plasticine/2x/crescent-moon.png") no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+
+    &--dark {
+      background: url("https://img.icons8.com/color/48/000000/summer.png") no-repeat;
+    }
+  }
+}
