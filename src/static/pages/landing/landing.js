@@ -150,6 +150,7 @@ const showMessage = (element, text) => {
 
 let clickedButton;
 const [heroesTitle, villainsTitle] = document.querySelectorAll('.pick-side__chosen-title');
+const controlButtonsSection = document.querySelector('.pick-side__control-buttons');
 
 heroesButton.addEventListener('click', function() {
   clickedButton = this;
@@ -164,10 +165,11 @@ heroesButton.addEventListener('click', function() {
   villainsSection.removeEventListener('mouseover', moveGradientToVillains);
   villainsSection.removeEventListener('mouseout', returnGradient);
 
-  this.style.left = '100%';
-  this.style.bottom = '50%';
-  this.style.transform = 'translateX(-50%)';
-  this.disabled = true;
+  controlButtonsSection.style.display = 'none';
+  // this.style.left = '100%';
+  // this.style.bottom = '50%';
+  // this.style.transform = 'translateX(-50%)';
+  // this.disabled = true;
 
   showMessage(messageContainer, heroPickerMessage)
 });
@@ -184,10 +186,12 @@ villainsButton.addEventListener('click', function() {
   heroesSection.removeEventListener('mouseover', moveGradientToHeroes);
   heroesSection.removeEventListener('mouseout', returnGradient);
 
-  this.style.right = '100%';
-  this.style.bottom = '50%';
-  this.style.transform = 'translateX(-50%)';
-  this.disabled = true;
+
+  controlButtonsSection.style.display = 'none';
+  // this.style.right = '100%';
+  // this.style.bottom = '50%';
+  // this.style.transform = 'translateX(-50%)';
+  // this.disabled = true;
 
   showMessage(messageContainer, villainPickerMessage)
 });
@@ -219,6 +223,7 @@ cancelButton.addEventListener('click', () => {
     heroesSection.addEventListener('mouseout', returnGradient);
   }
 
+  controlButtonsSection.style.display = 'flex';
   clickedButton.disabled = false;
 });
 
@@ -246,7 +251,7 @@ okButton.addEventListener('click', (e) => {
     toggleElementGently(pollBlock);
     toggleElementGently(activeTitle);
     toggleElementGently(form);
-    form.style.zIndex = '20';
+    // form.style.zIndex = '20';
 
     messageContainer.innerText = message;
     setPollResults(results);
