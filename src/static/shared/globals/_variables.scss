@@ -74,11 +74,10 @@ $dark-transparent-80: rgba(0, 0, 0, 0.8);
 $dark-transparent-70: rgba(0, 0, 0, 0.7);
 $dark-transparent-50: rgba(0, 0, 0, 0.5);
 $dark-transparent-40: rgba(0, 0, 0, 0.4);
+$dark-transparent-0: rgba(0, 0, 0, 0);
 
 $light-transparent-100: rgb(255, 255, 255);
 $light-transparent-30: rgba(255, 255, 255, 0.3);
-
-
 
 //-------------ANIMATIONS------------------
 
@@ -120,7 +119,6 @@ $light-transparent-30: rgba(255, 255, 255, 0.3);
     transform: scale(1, 1);
   }
 }
-
 
 //-------------THEMES------------------
 
