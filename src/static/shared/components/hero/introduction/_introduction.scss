@@ -1,9 +1,19 @@
+@import '../../../globals/variables';
+
 .introduction {
+  margin-bottom: -80px;
+
   @media (min-width: $bp-small) {
     height: 75vh;
     background-position: top;
     background-size: cover;
     clip-path: polygon(0 0, 0 98%, 100% 87%, 100% 0);
+  }
+
+  &--dark:before {
+    content: '';
+    display: block;
+    background-color: $dark-color--primary;
   }
 
   &--captain-maven {
