@@ -21,6 +21,10 @@
     font-family: $ff-title;
     text-transform: uppercase;
     color: $light-transparent-100;
+
+    @media (max-width: $bp-small) {
+      font-size: 4em;
+    }
   }
 
   &__accent {
@@ -36,6 +40,11 @@
   position: relative;
   background-color: $bg-light-primary;
   padding: 14% 0 14% 0;
+
+  @media (max-width: $bp-small) {
+    padding: 20% 0 20% 0;
+    margin-top: -15%;
+  }
 
   &--gradient {
     background: linear-gradient(to top, $dark-transparent-100, $dark-transparent-70),
@@ -84,13 +93,24 @@
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
     padding: 5% 0;
+    overflow: hidden;
+
+    @media (max-width: $bp-small) {
+      flex-flow: column nowrap;
+    }
   }
 
   &__item {
     // flex: 0 1 50%;
     width: 40%;
+
+    @media (max-width: $bp-small) {
+      width: 100%;
+      margin-bottom: 5%;
+    }
   }
 
   &__image {
@@ -122,6 +142,10 @@
       text-transform: uppercase;
       font-weight: $bold;
       font-size: 2em;
+
+      @media (max-width: $bp-small) {
+        font-size: 1em;
+      }
     }
   }
 
@@ -448,7 +472,7 @@
   border: 1px solid $light-transparent-100;
   box-sizing: border-box;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: $light;
   font-size: 1.1em;
   color: $light-transparent-100;
   text-align: center;
@@ -491,6 +515,7 @@
     color: $light-transparent-100;
     font-family: "Oxanium", cursive;
     font-size: 1.8em;
+    text-align: center;
   }
 
   &__message {
@@ -527,6 +552,12 @@
     width: 180px;
     height: $button-height;
     outline:none;
+
+    @media (max-width: $bp-small) {
+      width: 90%;
+      font-size: 1em;
+    }
+    
   }
 
   &__side-button--heroes {
