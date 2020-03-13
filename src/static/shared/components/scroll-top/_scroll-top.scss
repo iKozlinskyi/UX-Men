@@ -6,12 +6,12 @@
   right: 4%;
   bottom: 8%;
   border-radius: 5%;
-  color: #ffffff;
+  color: $light-transparent-100;
   font-weight: $extra-bold;
   display: block;
   width: 100px;
   height: 100px;
-  background-color: rgba(0,0,0,.5);
+  background-color: $dark-transparent-50;
   z-index: 111;
 
   &:hover {

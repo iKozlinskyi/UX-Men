@@ -14,7 +14,7 @@
 
   &--serverman {
     @media (min-width: $bp-small) {
-      background-image: url("/src/static/images/backgrounds/heroes-page/serverman-bg.png");
+      background-image: url("./images/backgrounds/heroes-page/serverman-bg.jpg");
     }
 
     @media (min-width: $bp-xlarge) {
@@ -79,7 +79,7 @@
     }
 
     &--serverman {
-      background-image: url("/src/static/images/backgrounds/heroes-page/serverman-bg.png");
+      background-image: url("./images/backgrounds/heroes-page/serverman-bg.jpg");
 
       @media (min-width: $bp-small) {
         background-image: none;
@@ -114,7 +114,7 @@
   &__main {
     width: 100%;
     padding: 40px 30px 60px 30px;
-    color: #fff;
+    color: $light-transparent-100;
     font-family: Roboto, sans-serif;
     letter-spacing: 0.5px;
     background-color: #1d1d1d;
