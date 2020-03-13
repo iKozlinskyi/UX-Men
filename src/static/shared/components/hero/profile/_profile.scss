@@ -1,9 +1,17 @@
+@import '../../../globals/variables';
+
 .profile {
   background-color: #e7e7e7;
   color: #202020;
   font-family: $ff-text;
   font-size: 14px;
   padding: 70px 0;
+
+  &--dark {
+    background-color: $dark_color--secondary;
+    color: $dark-color--text;
+  }
+
 
   @media (min-width: $bp-medium) {
     font-size: 16px;
@@ -14,7 +22,7 @@
   }
 
   &--serverman &__label {
-    color: #d11915;
+    color: $accent-color--serverman;
   }
 
   &--coffeeman &__label {
@@ -64,6 +72,10 @@
     padding: 10px 0;
     margin-top: 10px;
     border-bottom: 2px solid lightgrey;
+
+    &--dark {
+      border-bottom: 2px solid $dark_color--accent;
+    }
   }
 
   &__label {
