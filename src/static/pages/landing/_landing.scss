@@ -20,7 +20,7 @@
     font-weight: $bold;
     font-family: $ff-title;
     text-transform: uppercase;
-    color: $text-color--light;
+    color: $light-transparent-100;
 
     @media (max-width: $bp-small) {
       font-size: 4em;
@@ -38,11 +38,7 @@
   margin-top: -10%;
   display: flex;
   position: relative;
-<<<<<<< HEAD
-  background-color: rgb(240, 240, 240);
-=======
   background-color: $bg-light-primary;
->>>>>>> develop
   padding: 14% 0 14% 0;
 
   @media (max-width: $bp-small) {
