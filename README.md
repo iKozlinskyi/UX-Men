@@ -1,3 +1,5 @@
+**Site is available on https://ux-men.herokuapp.com/**
+
 ## Available scripts
 
 * `npm run dev` - starts dev server, performs hot-reloading
